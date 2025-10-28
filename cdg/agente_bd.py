@@ -5,14 +5,26 @@ from dotenv import load_dotenv
 import os
 import re
 import requests
+import logging # Importação necessária para logging
 
 from integracao_bd import integracaoBD
+
+# Obter a instância do logger para este módulo (agenteBD)
+logger = logging.getLogger(__name__)
 
 class agenteBD:
     
     def __init__(self, modelo, integracaoBd: integracaoBD):
         
         self.integracaoBd = integracaoBd
+        
+        # Carrega credenciais do .env para uso no método bancosBacen (se for mantido)
+        load_dotenv()
+        self.senha = os.getenv("SENHA_DB")
+        self.host = "localhost" # Assumindo valores do seu mvp.py
+        self.dbName = "postgres"
+        self.user = "postgres"
+        self.port = 5433
         
         # dados para exeucao da classe
         self.modelo = modelo
@@ -42,20 +54,35 @@ class agenteBD:
         self.tabelasCriadas = []
     
     def controleConsulta(self, msgUsuario, ids):
+        logger.info(f"Iniciando controleConsulta. IDs de APIs a processar: {ids}")
         
         for id in ids:
-            self.criaTabela(id)
-            self.mapFuncoesApis.get(id)()
-            
+            try:
+                self.criaTabela(id)
+                
+                # Assume que mapFuncoesApis.get(id) retorna uma função
+                funcao_api = self.mapFuncoesApis.get(id)
+                if funcao_api:
+                    funcao_api()
+                else:
+                    logger.warning(f"ID {id} não tem função de API mapeada em mapFuncoesApis.")
+            except Exception as e:
+                logger.error(f"Falha ao criar tabela ou executar API para ID {id}: {e}", exc_info=True)
+                
         return self.resposta(msgUsuario, ids)
         
     def criaTabela(self, id):
-        self.integracaoBd.criaTabelaTemp(self.queriesCriacao.get(id))
+        query = self.queriesCriacao.get(id)
+        if query:
+            self.integracaoBd.criaTabelaTemp(query)
+            logger.info(f"Tabela temporária criada para API ID: {id}")
+        else:
+            logger.warning(f"ID {id} não tem query de criação de tabela associada.")
     
     def resposta(self, msgUsuario: str, ids: list):
+        logger.info(f"Gerando query SQL para o LLM. Mensagem: '{msgUsuario}'")
         
         msg = f"""
-        
             Gere um comando em SQL que visa resolver essa questao: {msgUsuario}
             O comando ira rodar em uma base de dados representada abaixo:
         """
@@ -72,70 +99,85 @@ class agenteBD:
         retorno = self.modelo.invoke(msg)
         resposta = retorno.content
         
+        # Lógica de extração e sanitização da query
         resposta_limpa = re.sub(r"```.*?```", "", resposta, flags=re.DOTALL).strip()
         match = re.search(r"(select.*?)(;|$)", resposta_limpa, flags=re.IGNORECASE | re.DOTALL)
 
         query = None
         if match:
-            query = match.group(1) + ";"   # pega o texto da captura
+            query = match.group(1) + ";" 
             query = re.sub(r"=\s*'([^']+)'", r"ILIKE '%\1%'", query)
             query = re.sub(r"\bLIKE\b", "ILIKE", query, flags=re.IGNORECASE)
-            print("Query extraída:", query)
 
-        print("===========================")
-        print(retorno)
-        print(resposta)
-        print(query)
-        print("===========================")
+        logger.debug("===========================")
+        logger.debug(f"Retorno do modelo: {retorno}")
+        logger.debug(f"Resposta content: {resposta}")
+        logger.debug(f"Query final (se extraída): {query}")
+        logger.debug("===========================")
 
-        if query and query.strip().lower().startswith("select"):  # só permite consultas
-
+        if query and query.strip().lower().startswith("select"): 
+            logger.info("Executando query no banco de dados através de integracaoBd.")
             return self.integracaoBd.executaQuery(query)
             
+        logger.error(f"Query inválida ou tentativa de escrita detectada: {query}")
         return "Escrita nao permitida"
     
     def agencias_bacen(self):
+        logger.info("Iniciando requisição e populando tabela 'agencias_bancarias'.")
         
         self.tabelasCriadas.append("agencias_bancarias")
         
         link = "https://olinda.bcb.gov.br/olinda/servico/Informes_Agencias/versao/v1/odata/Agencias/"
         params = {
-            "$format": "json",              # Retorno em JSON
-            #"$top": 1000,                  # Quantas agências trazer por requisição (máximo permitido)
-            # "$skip": 0,                   # Para paginação (se quiser trazer mais de 1000)
-            # "$select": "CnpjBase,CnpjSequencial,CnpjDv,NomeIf,Segmento,CodigoCompe,NomeAgencia,Endereco,Numero,Complemento,Bairro,Cep,MunicipioIbge,Municipio,UF,DataInicio,DDD,Telefone,Posicao,CNPJ"
+            "$format": "json",
         }
         
-        response = requests.get(link, params=params)
-        data = response.json()
-
-        # Normalmente os registros estão em data['value']
-        agencias = data.get('value', [])
-        # Pega apenas as 10 primeiras agências como dicionários
-        agenciasLTDA = agencias[:10]  
+        try:
+            response = requests.get(link, params=params)
+            response.raise_for_status() 
+            data = response.json()
+            agencias = data.get('value', [])
+            logger.info(f"API BACEN retornou {len(agencias)} agências.")
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Erro ao acessar API do BACEN: {e}", exc_info=True)
+            return
+        except Exception as e:
+            logger.error(f"Erro ao processar JSON da API do BACEN: {e}", exc_info=True)
+            return
+        
+        agenciasLTDA = agencias[:10] 
         colunasRemover = ['DDD', 'Numero', 'Complemento', 'CnpjBase', 'CnpjSequencial', 'CnpjDv', 'UF']
 
         for agencia in agenciasLTDA:
-            
-            # trata os dados
-            agencia['Telefone'] = agencia['DDD'].strip() + ' ' + agencia['Telefone'].strip()
-            agencia['CNPJ'] = agencia['CnpjBase'] + agencia['CnpjSequencial'] + agencia['CnpjDv']
-            agencia["DataInicio"] = self.format_data_escrita(agencia["DataInicio"])
-            agencia["Posicao"] = self.format_data_escrita(agencia["Posicao"])
-            agencia['Endereco'] = self.padroniza_endereco(agencia['Endereco']) + ' ' + agencia['Numero'] + ' ' + agencia['Complemento']
-            agencia['estado'] = self.padronizaUF(agencia['UF'])
-            agencia['Cep'] = self.padronizaCEP(agencia['Cep'])
+            try:
+                # Trata os dados
+                agencia['Telefone'] = (agencia.get('DDD', '') or '').strip() + ' ' + (agencia.get('Telefone', '') or '').strip()
+                agencia['CNPJ'] = str(agencia.get('CnpjBase', '')) + str(agencia.get('CnpjSequencial', '')) + str(agencia.get('CnpjDv', ''))
+                agencia["DataInicio"] = self.format_data_escrita(agencia.get("DataInicio"))
+                agencia["Posicao"] = self.format_data_escrita(agencia.get("Posicao"))
+                agencia['Endereco'] = self.padroniza_endereco(agencia.get('Endereco', '')) + ' ' + (agencia.get('Numero', '') or '') + ' ' + (agencia.get('Complemento', '') or '')
+                agencia['estado'] = self.padronizaUF(agencia.get('UF', ''))
+                agencia['Cep'] = self.padronizaCEP(agencia.get('Cep', ''))
 
-            # remove colunas indesejadas
-            for coluna in colunasRemover:
-                agencia.pop(coluna, None)  # None evita erro se a chave não existir
+                # Remove colunas indesejadas
+                for coluna in colunasRemover:
+                    agencia.pop(coluna, None)
 
-            # popula no banco
-            self.integracaoBd.populaTabelaTemp("agencias_bancarias", agencia)
+                self.integracaoBd.populaTabelaTemp("agencias_bancarias", agencia)
+            except Exception as e:
+                logger.error(f"Erro ao processar e popular agência: {agencia.get('CNPJ')}. Erro: {e}", exc_info=True)
+
+        logger.info(f"{len(agenciasLTDA)} agências enviadas para o banco de dados.")
 
     
     def format_data_escrita(self, data_str):
-        return datetime.strptime(data_str, "%d/%m/%Y").date() if data_str else None
+        if not data_str:
+            return None
+        try:
+            return datetime.strptime(data_str, "%d/%m/%Y").date()
+        except ValueError:
+            logger.warning(f"Formato de data inválido: {data_str}. Retornando None.")
+            return None
 
 
     def padroniza_endereco(self, endereco: str) -> str:
@@ -146,13 +188,13 @@ class agenteBD:
 
         # Caminho 1: abreviação sem espaço
         endereco = re.sub(
-            r'^av\.(?=\w)',  # av. seguido de letra
+            r'^av\.(?=\w)', 
             'AVENIDA ',
             endereco,
             flags=re.IGNORECASE
         )
         endereco = re.sub(
-            r'^r\.(?=\w)',  # r. seguido de letra
+            r'^r\.(?=\w)', 
             'RUA ',
             endereco,
             flags=re.IGNORECASE
@@ -160,133 +202,40 @@ class agenteBD:
 
         # Caminho 2: abreviação ou palavra normal seguida de espaço
         endereco = re.sub(
-            r'^(av\.?|avenida)\s+',  # av., avenida seguidos de espaço
+            r'^(av\.?|avenida)\s+', 
             'AVENIDA ',
             endereco,
             flags=re.IGNORECASE
         )
         endereco = re.sub(
-            r'^(r\.?|rua)\s+',  # r., rua seguidos de espaço
+            r'^(r\.?|rua)\s+', 
             'RUA ',
             endereco,
             flags=re.IGNORECASE
         )
 
-        # Caixa alta para todo o endereço
         return endereco.upper()
 
     def padronizaUF(self, uf):
-        
         nomeEstados = {
-            "AC": "Acre AC",
-            "AL": "Alagoas AL",
-            "AP": "Amapa AP",
-            "AM": "Amazonas AM",
-            "BA": "Bahia BA",
-            "CE": "Ceara CE",
-            "DF": "Distrito Federal DF",
-            "ES": "Espirito Santo ES",
-            "GO": "Goias GO",
-            "MA": "Maranhao MA",
-            "MT": "Mato Grosso MT",
-            "MS": "Mato Grosso do Sul",
-            "MG": "Minas Gerais MG",
-            "PA": "Para PA",
-            "PB": "Paraiba PB",
-            "PR": "Parana PR",
-            "PE": "Pernambuco PB",
-            "PI": "Piaui PI",
-            "RJ": "Rio de Janeiro RJ",
-            "RN": "Rio Grande do Norte RN",
-            "RS": "Rio Grande do Sul RS",
-            "RO": "Rondonia RO",
-            "RR": "Roraima RR",
-            "SC": "Santa Catarina SC",
-            "SP": "Sao Paulo SP",
-            "SE": "Sergipe SE",
-            "TO": "Tocantins TO"
+            "AC": "Acre AC", "AL": "Alagoas AL", "AP": "Amapa AP", "AM": "Amazonas AM", "BA": "Bahia BA", "CE": "Ceara CE",
+            "DF": "Distrito Federal DF", "ES": "Espirito Santo ES", "GO": "Goias GO", "MA": "Maranhao MA", "MT": "Mato Grosso MT",
+            "MS": "Mato Grosso do Sul", "MG": "Minas Gerais MG", "PA": "Para PA", "PB": "Paraiba PB", "PR": "Parana PR", 
+            "PE": "Pernambuco PE", "PI": "Piaui PI", "RJ": "Rio de Janeiro RJ", "RN": "Rio Grande do Norte RN", 
+            "RS": "Rio Grande do Sul RS", "RO": "Rondonia RO", "RR": "Roraima RR", "SC": "Santa Catarina SC", 
+            "SP": "Sao Paulo SP", "SE": "Sergipe SE", "TO": "Tocantins TO"
         }
         
-        return nomeEstados[uf].upper()
+        return nomeEstados.get(uf, "").upper()
 
     def padronizaCEP(self, cep: str):
         return cep.replace("-", "")
     
     def apagaBD(self):
+        logger.warning(f"Iniciando exclusão das tabelas criadas: {self.tabelasCriadas}")
         for tabela in self.tabelasCriadas:
-            self.integracaoBd.apagaTabelas(tabela)
-    
-    def bancosBacen(self, msgUsuario):
-        
-        msg = f"""
-        
-            ###Input
-            Gere um comando em SQL que visa resolver essa questao: {msgUsuario}
-            O comando ira rodar em uma base de dados representada abaixo:
-            
-            CREATE OR REPLACE VIEW agencias_view AS
-            SELECT
-                CnpjBase || CnpjSequencial || CnpjDv AS cnpj,
-                NomeIf,
-                Segmento,
-                CodigoCompe,
-                NomeAgencia,
-                Endereco || ' ' || Numero || ' ' || Complemento AS endereco,
-                Bairro,
-                Cep,
-                MunicipioIbge,
-                Municipio,
-                UF,
-                DataInicio,
-                DDD || ' ' || Telefone AS telefone,
-                Posicao
-            FROM agenciasBancariasBacen;
-            
-            Retorne apenas o comando em SQL, sem aspas ou identificação, ou seja apenas o que estiver entre "select" e ";"
-            Sempre use operadores LIKE '%valor%' em vez de igualdade.
-        """
-        
-        retorno = self.modelo.invoke(msg)
-        resposta = retorno.content
-        
-        resposta_limpa = re.sub(r"```.*?```", "", resposta, flags=re.DOTALL).strip()
-        match = re.search(r"(select.*?);", resposta_limpa, flags=re.IGNORECASE | re.DOTALL)
-
-        query = None
-        if match:
-            query = match.group(1) + ";"   # pega o texto da captura
-            query = re.sub(r"=\s*'([^']+)'", r"LIKE '%\1%'", query)
-            print("Query extraída:", query)
-
-        print("===========================")
-        print(retorno)
-        print(resposta)
-        print(query)
-        print("===========================")
-
-        if query and query.strip().lower().startswith("select"):  # só permite consultas
             try:
-                conexao = psycopg2.connect(
-                    host=self.host,
-                    dbname=self.dbName,
-                    user=self.user,
-                    password=self.senha,
-                    port=self.port
-                )
-                cur = conexao.cursor()
-
-                cur.execute(query)
-                colunas = [desc[0] for desc in cur.description]
-                linhas = cur.fetchall()
-                # transforma tuplas em dicts
-                resultado = [dict(zip(colunas, linha)) for linha in linhas]
-
-                cur.close()
-                conexao.close()
-                return resultado
-
+                self.integracaoBd.apagaTabelas(tabela)
+                logger.info(f"Tabela '{tabela}' apagada com sucesso.")
             except Exception as e:
-                print(f"Erro ao executar consulta: {e}")
-                return None
-            
-        return "Escrita nao permitida"
+                logger.error(f"Falha ao apagar tabela '{tabela}': {e}", exc_info=True)

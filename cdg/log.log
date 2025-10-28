@@ -1,0 +1,24 @@
+2025-10-28 12:53:38,603 - log - INFO - log.py:21 - Sistema de logging inicializado no mvp.py.
+2025-10-28 12:53:39,904 - integracao_bd - INFO - integracao_bd.py:18 - Instância de integracaoBD criada e cursor obtido.
+2025-10-28 12:53:39,906 - agente_bd - INFO - agente_bd.py:55 - Instância de agenteBD criada e credenciais de BD carregadas.
+2025-10-28 12:53:40,221 - agente_chat - INFO - agente_chat.py:25 - Instância de agenteChat criada com sucesso.
+2025-10-28 12:53:40,221 - agente_chat - INFO - agente_chat.py:28 - Iniciando controleResposta para a mensagem: 'Como eu posso acessar os dados das cedulas naciona...'
+2025-10-28 12:53:45,140 - httpx - INFO - _client.py:1025 - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-10-28 12:53:45,202 - integracao_bd - INFO - integracao_bd.py:70 - Retornadas 4 tabelas relevantes do RAG.
+2025-10-28 12:53:45,203 - agente_chat - INFO - agente_chat.py:43 - Tabelas candidatas encontradas (RAG): [('http://www.ipeadata.gov.br/api/odata4/Territorios', 'Area de todos os territorios do Brasil(pais, regioes, estados e municipios). Inclui codigo, nome, capital e area', 3), ('https://olinda.bcb.gov.br/olinda/servico/BcBase/versao/v2/odata/TipoSituacaoPessoaJuridica', 'Categorizacao de dados cadastrais sobre a situacao de pessoa juridica. Inclui codigo e descricao da categoria', 4), ('https://olinda.bcb.gov.br/olinda/servico/Informes_Agencias/versao/v1/odata/Agencias', 'Apresentam as informações mais atuais das agências de instituições supervisionadas pelo Bacen. Inclui CNPJ, nome, segmento, codigo de competencia, nome da agencia, endereco, bairro, cep, nome do municipio, codigo do ibge, estado, data de inicio, telefone e posicao', 1), ('https://olinda.bcb.gov.br/olinda/servico/mecir_chancelas/versao/v1/swagger-ui3#/', 'Informacoes sobre todos os lotes de cedulas monetarias feitas pelo Banco Central. Inclui nome da moeda, descricao de valores, Ministro da Fazenda, presidente do Banco Central, codigo de serie inicial, codigo de serie final e serie de reposicao', 2)]
+2025-10-28 12:54:08,348 - httpx - INFO - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-10-28 12:54:08,579 - agente_chat - INFO - agente_chat.py:67 - Resposta Tipo Acao (LLM): 1 (Content: 1)
+2025-10-28 12:54:44,294 - httpx - INFO - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-10-28 12:54:45,128 - agente_chat - INFO - agente_chat.py:99 - =======================================
+2025-10-28 12:54:45,129 - agente_chat - INFO - agente_chat.py:100 - Lista das tabelas importantes (filtradas): [3]
+2025-10-28 12:54:45,130 - agente_chat - INFO - agente_chat.py:118 - Resultados finais (após filtragem do LLM): [('https://olinda.bcb.gov.br/olinda/servico/mecir_chancelas/versao/v1/swagger-ui3#/', 'Informacoes sobre todos os lotes de cedulas monetarias feitas pelo Banco Central. Inclui nome da moeda, descricao de valores, Ministro da Fazenda, presidente do Banco Central, codigo de serie inicial, codigo de serie final e serie de reposicao', 2)]
+2025-10-28 12:54:45,131 - agente_chat - INFO - agente_chat.py:122 - Ação definida como '1' (Explicação de Consulta). Chamando self.explicacaoConsulta.
+2025-10-28 12:54:45,131 - agente_chat - INFO - agente_chat.py:169 - Iniciando explicacaoConsulta para mensagem: 'Como eu posso acessar os dados das cedulas nacionais'. 1 APIs envolvidas.
+2025-10-28 12:54:45,132 - integracao_bd - INFO - integracao_bd.py:169 - Buscando dados de explicação para a API ID: 2
+2025-10-28 12:55:01,036 - httpx - INFO - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-10-28 12:56:11,341 - agente_chat - INFO - agente_chat.py:202 - Resposta de explicação gerada pelo LLM. Iniciando substituições.
+2025-10-28 12:56:11,342 - agente_chat - INFO - agente_chat.py:226 - Substituições concluídas.
+2025-10-28 12:56:11,346 - log - INFO - mvp.py:53 - Resposta processada em 151.1250 segundos.
+2025-10-28 12:56:19,082 - agente_chat - WARNING - agente_chat.py:230 - Chamando método para apagar tabelas do BD (agenteBd.apagaBD()).
+2025-10-28 12:56:19,083 - agente_bd - WARNING - agente_bd.py:241 - Iniciando exclusão das tabelas criadas: []
+2025-10-28 12:56:19,083 - integracao_bd - INFO - integracao_bd.py:190 - Cursor do BD fechado.

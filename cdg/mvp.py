@@ -8,6 +8,13 @@ from dotenv import load_dotenv
 import os
 import psycopg2
 
+import time
+from log import configurar_logging
+import logging # <--- Adicione a importação do logging aqui
+
+# Configure o logging antes de qualquer outra coisa
+log = configurar_logging()
+
 # conexao BD ====================================================================================
 
 load_dotenv()
@@ -33,13 +40,17 @@ agente_chat = agenteChat(modeloChat, agente_bd, modeloEmbedding, integracaoBd)
 
 # sistema ============================================================================
 
-entrada = "Quantas agencias existem no estado de Sao Paulo?"
+entrada = "Como eu posso acessar os dados das cedulas nacionais?"
 
 while not entrada.strip().lower().startswith("sair"):
     
     entrada = re.sub(r"[^a-zA-Z0-9\s]", "", entrada)
     
+    t1 = time.time()
     agente_chat.controleResposta(entrada)
+    t2 = time.time()
+    
+    log.info(f"Resposta processada em {t2 - t1:.4f} segundos.")
     
     entrada = input("Escreva sua pergunta: ") # proxima pergunta
     
