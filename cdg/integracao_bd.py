@@ -1,8 +1,4 @@
 from psycopg2.extensions import cursor, connection
-import os
-import json
-from datetime import datetime
-import re
 import logging
 from psycopg2 import Error as Psycopg2Error
 

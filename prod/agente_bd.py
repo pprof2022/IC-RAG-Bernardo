@@ -1,28 +1,14 @@
 from datetime import datetime
-from dotenv import load_dotenv
-import os
 import re
 import requests
-import logging # Importação necessária para logging
 
-from integracao_bd import integracaoBD
-
-# Obter a instância do logger para este módulo (agenteBD)
-logger = logging.getLogger(__name__)
+from bd import integracaoBD
 
 class agenteBD:
     
     def __init__(self, modelo, integracaoBd: integracaoBD):
         
         self.integracaoBd = integracaoBd
-        
-        # Carrega credenciais do .env para uso no método bancosBacen (se for mantido)
-        load_dotenv()
-        self.senha = os.getenv("SENHA_DB")
-        self.host = "localhost" # Assumindo valores do seu mvp.py
-        self.dbName = "postgres"
-        self.user = "postgres"
-        self.port = 5433
         
         # dados para exeucao da classe
         self.modelo = modelo
@@ -52,7 +38,7 @@ class agenteBD:
         self.tabelasCriadas = []
     
     def controleConsulta(self, msgUsuario, ids):
-        logger.info(f"Iniciando controleConsulta. IDs de APIs a processar: {ids}")
+        print(f"Iniciando controleConsulta. IDs de APIs a processar: {ids}")
         
         for id in ids:
             try:
@@ -63,9 +49,9 @@ class agenteBD:
                 if funcao_api:
                     funcao_api()
                 else:
-                    logger.warning(f"ID {id} não tem função de API mapeada em mapFuncoesApis.")
+                    print(f"ID {id} não tem função de API mapeada em mapFuncoesApis.")
             except Exception as e:
-                logger.error(f"Falha ao criar tabela ou executar API para ID {id}: {e}", exc_info=True)
+                print(f"Falha ao criar tabela ou executar API para ID {id}: {e}", exc_info=True)
                 
         return self.resposta(msgUsuario, ids)
         
@@ -73,12 +59,12 @@ class agenteBD:
         query = self.queriesCriacao.get(id)
         if query:
             self.integracaoBd.criaTabelaTemp(query)
-            logger.info(f"Tabela temporária criada para API ID: {id}")
+            print(f"Tabela temporária criada para API ID: {id}")
         else:
-            logger.warning(f"ID {id} não tem query de criação de tabela associada.")
+            print(f"ID {id} não tem query de criação de tabela associada.")
     
     def resposta(self, msgUsuario: str, ids: list):
-        logger.info(f"Gerando query SQL para o LLM. Mensagem: '{msgUsuario}'")
+        print(f"Gerando query SQL para o LLM. Mensagem: '{msgUsuario}'")
         
         msg = f"""
             Gere um comando em SQL que visa resolver essa questao: {msgUsuario}
@@ -107,21 +93,21 @@ class agenteBD:
             query = re.sub(r"=\s*'([^']+)'", r"ILIKE '%\1%'", query)
             query = re.sub(r"\bLIKE\b", "ILIKE", query, flags=re.IGNORECASE)
 
-        logger.debug("===========================")
-        logger.debug(f"Retorno do modelo: {retorno}")
-        logger.debug(f"Resposta content: {resposta}")
-        logger.debug(f"Query final (se extraída): {query}")
-        logger.debug("===========================")
+        print("===========================")
+        print(f"Retorno do modelo: {retorno}")
+        print(f"Resposta content: {resposta}")
+        print(f"Query final (se extraída): {query}")
+        print("===========================")
 
         if query and query.strip().lower().startswith("select"): 
-            logger.info("Executando query no banco de dados através de integracaoBd.")
+            print("Executando query no banco de dados através de integracaoBd.")
             return self.integracaoBd.executaQuery(query)
             
-        logger.error(f"Query inválida ou tentativa de escrita detectada: {query}")
+        print(f"Query inválida ou tentativa de escrita detectada: {query}")
         return "Escrita nao permitida"
     
     def agencias_bacen(self):
-        logger.info("Iniciando requisição e populando tabela 'agencias_bancarias'.")
+        print("Iniciando requisição e populando tabela 'agencias_bancarias'.")
         
         self.tabelasCriadas.append("agencias_bancarias")
         
@@ -135,12 +121,12 @@ class agenteBD:
             response.raise_for_status() 
             data = response.json()
             agencias = data.get('value', [])
-            logger.info(f"API BACEN retornou {len(agencias)} agências.")
+            print(f"API BACEN retornou {len(agencias)} agências.")
         except requests.exceptions.RequestException as e:
-            logger.error(f"Erro ao acessar API do BACEN: {e}", exc_info=True)
+            print(f"Erro ao acessar API do BACEN: {e}", exc_info=True)
             return
         except Exception as e:
-            logger.error(f"Erro ao processar JSON da API do BACEN: {e}", exc_info=True)
+            print(f"Erro ao processar JSON da API do BACEN: {e}", exc_info=True)
             return
         
         agenciasLTDA = agencias[:10] 
@@ -163,9 +149,9 @@ class agenteBD:
 
                 self.integracaoBd.populaTabelaTemp("agencias_bancarias", agencia)
             except Exception as e:
-                logger.error(f"Erro ao processar e popular agência: {agencia.get('CNPJ')}. Erro: {e}", exc_info=True)
+                print(f"Erro ao processar e popular agência: {agencia.get('CNPJ')}. Erro: {e}", exc_info=True)
 
-        logger.info(f"{len(agenciasLTDA)} agências enviadas para o banco de dados.")
+        print(f"{len(agenciasLTDA)} agências enviadas para o banco de dados.")
 
     
     def format_data_escrita(self, data_str):
@@ -174,7 +160,7 @@ class agenteBD:
         try:
             return datetime.strptime(data_str, "%d/%m/%Y").date()
         except ValueError:
-            logger.warning(f"Formato de data inválido: {data_str}. Retornando None.")
+            print(f"Formato de data inválido: {data_str}. Retornando None.")
             return None
 
 
@@ -230,10 +216,8 @@ class agenteBD:
         return cep.replace("-", "")
     
     def apagaBD(self):
-        logger.warning(f"Iniciando exclusão das tabelas criadas: {self.tabelasCriadas}")
         for tabela in self.tabelasCriadas:
             try:
                 self.integracaoBd.apagaTabelas(tabela)
-                logger.info(f"Tabela '{tabela}' apagada com sucesso.")
             except Exception as e:
-                logger.error(f"Falha ao apagar tabela '{tabela}': {e}", exc_info=True)
+                print(f"erro excluir tabela : {tabela}, erro: {e}")
