@@ -99,21 +99,21 @@ try:
             else:
                 print("Nenhuma tabela de usuário encontrada após a operação.")
                 
-            TABELA_ALVO = ''
+            TABELA_ALVO = 'embeddings'
             
-            #cursor.execute(f"select * from [{TABELA_ALVO}]")
+            cursor.execute(f"SELECT TOP 1 * FROM [{TABELA_ALVO}]")
             
             # 3. Recupera os resultados
-            #resultados = cursor.fetchall()
+            resultados = cursor.fetchall()
             
             # 4. Opcional: Recupera os nomes das colunas
             # Isso é útil para exibir os resultados de forma organizada
-            #colunas = [column[0] for column in cursor.description]
+            colunas = [column[0] for column in cursor.description]
             
-            #print(f"✅ Consulta executada com sucesso. Total de registros: {len(resultados)}")
-            #print(resultados)
+            print(colunas)
+            print(f"✅ Consulta executada com sucesso. Total de registros: {len(resultados)}")
+            print(resultados)
             
-            cursor.execute("SELECT TOP 5 * FROM embeddings;")
             print(cursor.fetchall())
 
 except pyodbc.Error as ex:

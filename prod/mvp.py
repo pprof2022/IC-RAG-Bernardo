@@ -17,7 +17,7 @@ agente_chat = agenteChat(modeloChat, agente_bd, modeloEmbedding, integracaoBd)
 
 # sistema ============================================================================
 
-entrada = "Onde eu posso encontrar dados sobre as agencias supervisionadas pelo Bacen"
+entrada = "Onde eu posso encontrar os dados dos deputados da Camara dos Deputados"
 
 while not entrada.strip().lower().startswith("sair"):
     
@@ -28,7 +28,6 @@ while not entrada.strip().lower().startswith("sair"):
     entrada = input("Escreva sua pergunta: ") # proxima pergunta
     
 print("debug")
-
 # finalizacao do sistema ==========================================================================================
 
 agente_chat.apagaTabelas()

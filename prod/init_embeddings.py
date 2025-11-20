@@ -19,7 +19,8 @@ query_endpoints = """
         E.Url, 
         E.ShortName,
         A.Documentation,
-        A.ResponseType
+        A.ResponseType,
+        A.Id as idApi
     FROM [Endpoints da API] AS E
     INNER JOIN APIs AS A
         ON E.ApiId = A.Id;
@@ -100,6 +101,7 @@ for endpoint in endpoints:
         "Url": endpoint["Url"],
         "Documentation": endpoint["Documentation"],
         "ResponseType": endpoint["ResponseType"],
+        "idApi": endpoint["idApi"],
         "Embedding_Text": descricao_final,
         "embedding": ""
     }
@@ -128,7 +130,3 @@ for dado in dados_finais_embeddings:
 
 # Fechamento da Conexão =====================================
 bd.fecharConexao()
-
-print("=====================================================")
-print("✅ TUDO DEU CERTO MÃE, PODE DESLIGAR O COMPUTADOR ✅")
-print("=====================================================")

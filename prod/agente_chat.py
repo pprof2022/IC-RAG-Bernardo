@@ -21,25 +21,9 @@ class agenteChat:
         
     def controleResposta (self, msg): # Verifica que tipo de resposta deve ser feita
         
-        flag = 0
+        flag = 1
         
         print(f"Mensagem: {msg}")
-        
-        # Geração do Embedding
-        resposta = self.ollamaClient.embed(
-            model=self.modeloEmbedding,
-            input=msg
-        )
-        
-        embedMsg = resposta["embeddings"][0]
-        
-        t1 = time.time()
-        # Busca RAG (Retrieval Augmented Generation)
-        resultados = self.integracaoBd.retTabelasEmbedding(5, embedMsg, 1.1)
-        print(f"Tempo para RAG: {time.time() - t1}")
-
-        # 2. Substituindo print(resultados) por log.info
-        print(f"Tabelas candidatas encontradas (RAG): {resultados}")
 
         # Definição do tipo de ação (0, 1, 2)
         msgDefinicaoAcao = f"""
@@ -49,8 +33,7 @@ class agenteChat:
 
             Contextos possiveis:
             0 -> Conversa normal
-            1 -> Explicacao sobre como acessar os dados
-            2 -> Consulta de dados, ou seja, qual e o dado    
+            1 -> Explicacao sobre como e onde acessar os dados 
             
             Retorne apenas o numero, fuck the explanation           
         """
@@ -72,6 +55,28 @@ class agenteChat:
             return
 
         # ==================================================================
+        
+        # Geração do Embedding
+        resposta = self.ollamaClient.embed(
+            model=self.modeloEmbedding,
+            input=msg
+        )
+        
+        embedMsg = resposta["embeddings"][0]
+        
+        t1 = time.time()
+        api = self.integracaoBd.retApiEmbedding(embedMsg)
+        print(f"Tempo para RAG: {time.time() - t1}")
+        
+        apiId = api[0][0] # id da api relevante
+        
+        t1 = time.time()
+        # Busca RAG (Retrieval Augmented Generation)
+        resultados = self.integracaoBd.retTabelasEmbedding(5, embedMsg, apiId)
+        print(f"Tempo para RAG: {time.time() - t1}")
+
+        # 2. Substituindo print(resultados) por log.info
+        print(f"Tabelas candidatas encontradas (RAG): {resultados}")
         
         entradaTratada = f"""
             Sua tarefa e retornar uma lista de numeros, 
@@ -177,13 +182,12 @@ class agenteChat:
             
         """
         
-        for i, resultado in enumerate(resultados):
-            id_api = resultado[2]
-            dados = self.integracaoBd.queryExplicacao(id_api)
+        for resultado in resultados:
+            parametros = self.integracaoBd.retParametros(resultado[0])
             print("===================================================")
-            print(dados)
+            print(parametros)
             print("===================================================")
-            saida += f"\n{dados[0]['short_name']}\nAPI: {resultados[0][0]}\nDocumentacao: {dados[0]["documentation"]}\nFormato da resposta: {dados[0]["responsetype"]}\n"
+            saida += f"\n{resultado[1]}\nAPI: {resultado[2]}\nDocumentacao: {resultado[3]}\nFormato da resposta: {resultado[4]}\n"
         
         print(saida)
     
