@@ -188,6 +188,11 @@ class agenteChat:
             print(parametros)
             print("===================================================")
             saida += f"\n{resultado[1]}\nAPI: {resultado[2]}\nDocumentacao: {resultado[3]}\nFormato da resposta: {resultado[4]}\n"
+            if parametros:
+                saida += "Parametros: \n"
+                for parametro in parametros:
+                    saida += f" - {parametro["Name"]}: {parametro["Description"]}\n"
+                saida += "\n"
         
         print(saida)
     
