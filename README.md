@@ -1,91 +1,111 @@
-# 📄 Geração de Embeddings com FAISS a partir de Dados do Bacen
+# 🧠 IC-RAG
 
-Este script automatiza o processo de:
-
-1. Baixar dados de agências do Banco Central do Brasil (Bacen),
-2. Processá-los em lotes,
-3. Gerar embeddings com o modelo [`nomic-embed-text`](https://ollama.com/library/nomic-embed-text) via [Ollama](https://ollama.com),
-4. Armazená-los em um índice local FAISS para recuperação semântica eficiente.
+Este projeto implementa um sistema de **RAG (Retrieval-Augmented Generation)** voltado para consultas inteligentes sobre dados armazenados em um banco PostgreSQL.  
+A aplicação é composta por diferentes módulos que evoluíram ao longo do desenvolvimento — desde testes locais até uma versão de produção totalmente integrada ao banco de dados.
 
 ---
 
-## 📁 Estrutura de Pastas Esperada
+## 📁 Estrutura do Projeto
 
 ```
-/projeto-raiz
+IC-RAG
 ├── cdg/
 ├── dados/
-│   ├── bruto/               ← onde o JSONL com os dados será salvo
-│   ├── checkpoints/         ← onde será salvo o progresso de leitura
-│   └── dados_faiss/         ← onde o índice vetorial FAISS será salvo
-└── seu_script.py
+├── prod/
+├── teste/
+└── requirements.txt
 ```
+
+### 📦 Descrição das pastas
+
+- **`cdg/`**  
+  Contém a proposta atual do sistema, adaptada para uso com **PostgreSQL**. É um **MVP funcional** que implementa a pipeline principal de RAG (ingestão, indexação e recuperação de dados).
+
+- **`prod/`**  
+  Versão preparada para **ambiente de produção**, com código ajustado para o contexto real de execução e acesso ao banco de dados.  
+  Inclui scripts SQL e utilitários para inicialização e carregamento de embeddings.
+
+- **`dados/`** e **`teste/`**  
+  Pastas legadas de experimentos anteriores, quando o RAG era testado diretamente sobre arquivos locais.  
+  **Não fazem parte da solução atual.**
+
+- **`requirements.txt`**  
+  Lista todas as dependências necessárias para execução do projeto.
 
 ---
 
-## 🚀 Como Usar
+## ⚙️ Como Rodar o Projeto
 
-1. **Instale as dependências**:
+### 1️⃣ Instale as dependências
+
+Certifique-se de ter o **Python 3.10+** instalado, e depois execute:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-2. **Certifique-se de que o Ollama está instalado e rodando**, com os modelos `nomic-embed-text` e `llama3.2:latest` disponível:
+---
+
+### 2️⃣ Configure o OLLama
+
+O sistema utiliza o **OLLama** para execução de modelos de linguagem localmente.  
+Verifique se o OLLama está instalado e que os modelos necessários estão disponíveis:
 
 ```bash
-ollama pull nomic-embed-text
-ollama pull llama3.2:latest
+ollama pull <nome_do_modelo>
 ```
 
-3. **Execute o script**:
+Por exemplo:
+```bash
+ollama pull llama3
+```
+
+---
+
+### 3️⃣ Prepare o banco de dados
+
+O sistema depende de um banco de dados **PostgreSQL** já populado.  
+Os scripts para criação e inserção de dados estão localizados em:
+
+```
+prod/sql/
+```
+
+Execute esses scripts para criar as tabelas e carregar os dados necessários.
+
+---
+
+### 4️⃣ Gere os embeddings iniciais
+
+Antes de iniciar o sistema, rode o script responsável por criar os embeddings e armazená-los no banco:
 
 ```bash
-python seu_script.py
+python prod/init_embedding.py
 ```
 
----
-
-## ✅ Funcionalidades
-
-- ✔️ Baixa automaticamente os dados da [API pública do Bacen](https://olinda.bcb.gov.br/).
-- ✔️ Gera embeddings com `OllamaEmbeddings`.
-- ✔️ Indexa os embeddings usando [FAISS](https://github.com/facebookresearch/faiss).
-- ✔️ Permite **interrupção segura** com `Ctrl+C` e retoma a partir do último ponto processado.
-- ✔️ Salva checkpoints automaticamente a cada lote de dados.
----
-
-## ⚙️ Detalhes Técnicos
-
-- **Lote padrão:** 10 documentos por batch.
-- **Checkpoint:** Salvo em `dados/checkpoints/checkpoint.txt`.
-- **Formato dos dados:** JSONL (`agencias.jsonl`) contendo informações de agências supervisionadas.
-- **Contexto dos embeddings:** Adiciona metadado `"contexto": "Dados de agências do Bacen"`.
+Esse passo é essencial para que o RAG consiga realizar buscas vetoriais eficientes.
 
 ---
 
-## 🧠 Exemplos de uso futuro
+## 💬 O que o sistema faz
 
-Após a criação do índice FAISS, você poderá carregá-lo em um sistema de **RAG (Retrieval-Augmented Generation)**, por exemplo com LangChain + Ollama, para responder perguntas com base nas informações do Bacen.
+O **IC-RAG** é um sistema de conversação inteligente com **acesso aumentado a dados**.  
+Ele combina **modelos de linguagem** com **recuperação de informações** em um banco de dados relacional para oferecer respostas precisas e contextualizadas.
 
----
+O fluxo principal funciona da seguinte forma:
 
-## 🛑 Interrupção Segura
+1. 🗣️ O usuário envia uma mensagem (consulta ou pergunta).  
+2. 🧩 O sistema interpreta a intenção do usuário — se é uma conversa comum, uma busca de fonte ou uma requisição direta de dado.  
+3. 🔍 Quando necessário, o modelo realiza uma busca vetorial para encontrar as informações mais relevantes no banco.  
+4. 📊 O dado é processado, resumido e retornado de forma clara e interpretável ao usuário.
 
-Caso pressione `Ctrl+C` durante o processamento, o script:
-
-- Conclui o **lote atual**,
-- Salva o progresso,
-- Encerra com segurança.
-
----
-
-## 📌 Observação
-
-O script foi projetado para ser executado a partir do diretório raiz do projeto, garantindo que os caminhos relativos apontem corretamente para as subpastas `dados/` e `cdg/`.
+Em resumo, o IC-RAG é capaz de:
+- Conduzir uma conversa natural;
+- Identificar automaticamente quando precisa consultar dados;
+- Recuperar, processar e explicar informações diretamente do banco de forma compreensível.
 
 ---
 
-## 📄 Licença
+## 🧾 Licença
 
-Este projeto é de uso livre para fins educacionais, acadêmicos ou pessoais.
+Este projeto é distribuído sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
