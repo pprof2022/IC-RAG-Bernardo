@@ -1,0 +1,755 @@
+1: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
+2: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
+3: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
+4: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
+5: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
+6: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
+7: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
+8: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
+9: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
+10: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
+11: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
+12: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
+13: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
+14: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
+15: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
+16: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
+17: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
+18: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
+19: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_DADOS_CONSOLIDADOS
+20: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_ENCAMINHAMENTO
+21: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_ESTATISTICA
+22: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_FLUXO_ATUARIAL
+23: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_FORMA_AMORTIZACAO
+24: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_HIPOTESE_ATUARIAL
+25: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_HIPOTESE_BIOMETRICA
+26: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_NOTIFICACAO
+27: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_ORGAO_ENTIDADE
+28: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_PARECER_ATUARIAL
+29: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_PLANO_AMORTIZACAO
+30: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_PLANO_AMORTIZACAO_DEFICIT
+31: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_PLANO_BENEFICIO
+32: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_PLANO_CUSTEIO
+33: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_RETIFICACAO_NOTIFICACAO
+34: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_SEGREGACAO_MASSA
+35: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/DRAA_VALORES_COMPROMISSOS
+36: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/RPPS_ALIQUOTA
+37: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/RPPS_CRP
+38: ❌ HTTPError: 502 Server Error: Bad Gateway for url: https://apicadprev.trabalho.gov.br/RPPS_REGIME_PREVIDENCIARIO
+753: 🟠 Divergencia de chaves. Esperava-se ['nome', 'agregados', 'id'], recebeu [].
+754: 🟠 Divergencia de chaves. Esperava-se ['nivel', 'nome', 'id'], recebeu [].
+755: 🟠 Divergencia de chaves. Esperava-se ['nome', 'variaveis', 'URL', 'nivelTerritorial', 'assunto', 'pesquisa', 'id', 'periodicidade'], recebeu ['nome', 'variaveis', 'URL', 'nivelTerritorial', 'classificacoes', 'assunto', 'pesquisa', 'id', 'periodicidade'].
+756: 🟠 Divergencia de chaves. Esperava-se ['literals', 'modificacao', 'id'], recebeu [].
+757: 🟠 Divergencia de chaves. Esperava-se ['variavel', 'unidade', 'resultados', 'id'], recebeu [].
+758: ❌ Erro ao interpretar ResponseExample (banco): Expecting value: line 36 column 1 (char 686)
+45: 🟠 Divergencia de chaves. Esperava-se ['registro_ans', 'nome_fantasia', 'razao_social', 'classificacao_sigla', '_links', 'ativa', 'cnpj'], recebeu ['registro_ans', 'razao_social', 'endereco_municipio_codigo', 'classificacao_sigla', 'endereco_municipio_nome', 'cnpj', 'registrada_em', 'telefone_numero', 'endereco_complemento', 'endereco_bairro', 'endereco_valido', '_links', 'classificacao_nome', 'endereco_numero', 'endereco_logradouro', 'endereco_cep', 'representante_cargo', 'email', 'fax_ddd', 'ativa', 'concessao_registro_definitivo_em', 'segmentacao_nome', 'nome_fantasia', 'site', 'autorizacao_funcionamento_em', 'telefone_ddd', 'segmentacao_sigla', 'representante_nome', 'endereco_uf_sigla'].
+46: ✅ Documentação atualizada.
+47: ✅ Documentação atualizada.
+48: ❌ Erro ao interpretar ResponseExample (banco): Expecting ',' delimiter: line 36 column 1 (char 1112)
+49: ✅ Documentação atualizada.
+50: ✅ Documentação atualizada.
+51: ✅ Documentação atualizada.
+52: ✅ Documentação atualizada.
+53: 🟠 Divergencia de chaves. Esperava-se [], recebeu ['titulo', 'id'].
+54: ✅ Documentação atualizada.
+55: 🟠 Divergencia de chaves. Esperava-se [], recebeu ['titulo', 'id'].
+56: ✅ Documentação atualizada.
+57: ✅ Documentação atualizada.
+60: ✅ Documentação atualizada.
+61: ✅ Documentação atualizada.
+64: ✅ Documentação atualizada.
+65: ✅ Documentação atualizada.
+66: ✅ Documentação atualizada.
+67: ✅ Documentação atualizada.
+68: ✅ Documentação atualizada.
+69: ✅ Documentação atualizada.
+70: ❌ Erro ao interpretar ResponseExample (banco): Expecting value: line 1 column 1 (char 0)
+72: ✅ Documentação atualizada.
+73: ✅ Documentação atualizada.
+74: ✅ Documentação atualizada.
+75: ✅ Documentação atualizada.
+77: ✅ Documentação atualizada.
+76: ✅ Documentação atualizada.
+78: ✅ Documentação atualizada.
+79: ✅ Documentação atualizada.
+85: ✅ Documentação atualizada.
+86: ✅ Documentação atualizada.
+87: ✅ Documentação atualizada.
+88: ✅ Documentação atualizada.
+89: ✅ Documentação atualizada.
+90: ✅ Documentação atualizada.
+91: ✅ Documentação atualizada.
+92: ✅ Documentação atualizada.
+93: ✅ Documentação atualizada.
+94: ✅ Documentação atualizada.
+95: ✅ Documentação atualizada.
+96: ✅ Documentação atualizada.
+97: ✅ Documentação atualizada.
+98: ✅ Documentação atualizada.
+99: ✅ Documentação atualizada.
+100: ✅ Documentação atualizada.
+101: ✅ Documentação atualizada.
+102: ✅ Documentação atualizada.
+103: ✅ Documentação atualizada.
+104: ✅ Documentação atualizada.
+105: ✅ Documentação atualizada.
+106: ✅ Documentação atualizada.
+107: ✅ Documentação atualizada.
+108: ✅ Documentação atualizada.
+109: ✅ Documentação atualizada.
+110: ✅ Documentação atualizada.
+111: ✅ Documentação atualizada.
+112: ✅ Documentação atualizada.
+113: ✅ Documentação atualizada.
+114: ✅ Documentação atualizada.
+115: ✅ Documentação atualizada.
+117: ✅ Documentação atualizada.
+118: ✅ Documentação atualizada.
+119: ✅ Documentação atualizada.
+120: ✅ Documentação atualizada.
+121: ✅ Documentação atualizada.
+122: ✅ Documentação atualizada.
+123: ✅ Documentação atualizada.
+124: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+125: ✅ Documentação atualizada.
+126: ✅ Documentação atualizada.
+127: ✅ Documentação atualizada.
+128: ✅ Documentação atualizada.
+129: ✅ Documentação atualizada.
+130: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+131: ❌ HTTPError: 500 Server Error: Internal Server Error for url: https://olinda.bcb.gov.br/olinda/servico/STR/versao/v1/odata/EstatisticasTransferenciasLiquidacaoDocumentosComCodigoBarras
+132: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+133: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+134: ✅ Documentação atualizada.
+135: ✅ Documentação atualizada.
+136: ✅ Documentação atualizada.
+137: ✅ Documentação atualizada.
+138: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+139: ✅ Documentação atualizada.
+140: ✅ Documentação atualizada.
+141: ✅ Documentação atualizada.
+142: ✅ Documentação atualizada.
+143: ✅ Documentação atualizada.
+144: ✅ Documentação atualizada.
+145: ✅ Documentação atualizada.
+146: ✅ Documentação atualizada.
+147: ✅ Documentação atualizada.
+148: ✅ Documentação atualizada.
+149: ✅ Documentação atualizada.
+150: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+151: ✅ Documentação atualizada.
+152: ✅ Documentação atualizada.
+153: ✅ Documentação atualizada.
+154: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+155: ✅ Documentação atualizada.
+156: ✅ Documentação atualizada.
+157: ✅ Documentação atualizada.
+158: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+159: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+160: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+161: ✅ Documentação atualizada.
+162: ✅ Documentação atualizada.
+163: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+164: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+165: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+166: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+167: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+168: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+169: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+170: ✅ Documentação atualizada.
+171: ✅ Documentação atualizada.
+172: ✅ Documentação atualizada.
+173: ✅ Documentação atualizada.
+177: ✅ Documentação atualizada.
+174: ✅ Documentação atualizada.
+175: ✅ Documentação atualizada.
+176: ✅ Documentação atualizada.
+178: ❌ Erro ao interpretar ResponseExample (banco): Extra data: line 96 column 1 (char 3123)
+179: ✅ Documentação atualizada.
+180: ✅ Documentação atualizada.
+181: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+182: ✅ Documentação atualizada.
+183: ✅ Documentação atualizada.
+184: ✅ Documentação atualizada.
+185: ✅ Documentação atualizada.
+186: ✅ Documentação atualizada.
+187: ✅ Documentação atualizada.
+188: ✅ Documentação atualizada.
+189: ✅ Documentação atualizada.
+190: ✅ Documentação atualizada.
+191: ✅ Documentação atualizada.
+192: ✅ Documentação atualizada.
+193: ❌ HTTPError: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/SML/versao/v1/odata/ExportacoesImportacoesSmlArgentina(DataInicial=@DataInicial,DataFinal=@DataFinal)?%40DataInicial=2000-01-01&%40DataFinal=2023-10-21
+194: ✅ Documentação atualizada.
+195: ✅ Documentação atualizada.
+196: ✅ Documentação atualizada.
+197: ✅ Documentação atualizada.
+198: ❌ Erro ao interpretar ResponseExample (banco): Extra data: line 101 column 1 (char 3214)
+199: ✅ Documentação atualizada.
+200: ✅ Documentação atualizada.
+201: ✅ Documentação atualizada.
+202: ✅ Documentação atualizada.
+203: ✅ Documentação atualizada.
+204: ❌ Erro ao interpretar ResponseExample (banco): Invalid control character at: line 104 column 17 (char 3712)
+205: ❌ HTTPError: 500 Server Error: Internal Server Error for url: https://www.bcb.gov.br/api/servico/sitebcb/ri/proximos-relatorios?inicioAgenda=2021-07-15
+206: ✅ Documentação atualizada.
+207: ✅ Documentação atualizada.
+208: ✅ Documentação atualizada.
+209: ✅ Documentação atualizada.
+210: ✅ Documentação atualizada.
+211: ✅ Documentação atualizada.
+212: ✅ Documentação atualizada.
+213: ✅ Documentação atualizada.
+214: ✅ Documentação atualizada.
+215: ✅ Documentação atualizada.
+216: ✅ Documentação atualizada.
+217: ✅ Documentação atualizada.
+218: ✅ Documentação atualizada.
+219: ✅ Documentação atualizada.
+220: ✅ Documentação atualizada.
+221: ✅ Documentação atualizada.
+222: ✅ Documentação atualizada.
+223: ✅ Documentação atualizada.
+224: ✅ Documentação atualizada.
+225: ✅ Documentação atualizada.
+226: ✅ Documentação atualizada.
+227: ✅ Documentação atualizada.
+228: ✅ Documentação atualizada.
+229: ✅ Documentação atualizada.
+230: ✅ Documentação atualizada.
+231: ✅ Documentação atualizada.
+232: ✅ Documentação atualizada.
+233: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+234: ✅ Documentação atualizada.
+235: ✅ Documentação atualizada.
+236: ✅ Documentação atualizada.
+237: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+238: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+239: ❌ HTTPError: 503 Server Error: Service Unavailable for url: http://servicos.cptec.inpe.br/XML/listaCidades
+240: ❌ HTTPError: 503 Server Error: Service Unavailable for url: http://servicos.cptec.inpe.br/XML/estacao/codigo_da_estacao/condicoesAtuais.xml
+248: ❌ HTTPError: 503 Server Error: Service Unavailable for url: http://servicos.cptec.inpe.br/XML/cidade/codigo_da_localidade/dia/dia/ondas.xml
+249: ❌ HTTPError: 503 Server Error: Service Unavailable for url: http://servicos.cptec.inpe.br/XML/cidade/codigo_da_localidade/todos/tempos/ondas.xml
+250: 🟠 Divergencia de chaves. Esperava-se ['items'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+251: 🟠 Divergencia de chaves. Esperava-se ['items'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+253: 🟠 Divergencia de chaves. Esperava-se ['items'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+254: 🟠 Divergencia de chaves. Esperava-se ['items'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+255: 🟠 Divergencia de chaves. Esperava-se ['items'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+256: 🟠 Divergencia de chaves. Esperava-se ['interessado', 'valor', 'data_status', 'num_pvl', 'tipo_credor', 'uf', 'tipo_operacao', 'status', 'cod_ibge', 'id_pleito', 'finalidade', 'moeda', 'pvl_assoc_divida', 'pvl_contratado_credor', 'data_protocolo', 'credor', 'num_processo', 'tipo_interessado'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+257: ❌ HTTPError: 404 Client Error: Not Found for url: https://apidatalake.tesouro.gov.br/ords/sadipem/tt/opc-cronograma-pagamentoss
+258: 🟠 Divergencia de chaves. Esperava-se ['ano', 'indicador_liberacoes', 'num_pvl', 'liberacoes_total', 'liberacoes_operacoes_sfn', 'id_pleito', 'liberacoes_aro', 'num_processo', 'liberacoes_demais'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+259: 🟠 Divergencia de chaves. Esperava-se ['id_pleito', 'taxa_cambio', 'data_taxa_cambio', 'moeda'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+260: 🟠 Divergencia de chaves. Esperava-se ['ano', 'operacao_pleiteada', 'num_pvl', 'id_pleito', 'demais_operacoes', 'num_processo'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+261: 🟠 Divergencia de chaves. Esperava-se ['num_pvl', 'situacao_ente', 'status', 'id_pleito', 'data_base', 'data_status', 'num_processo'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+262: ❌ HTTPError: 400 Client Error: Bad Request for url: https://apidatalake.tesouro.gov.br/ords/sadipem/tt/opnc-pvl-tramitacao-deferido%0A
+263: 🟠 Divergencia de chaves. Esperava-se ['anexo', 'demonstrativo', 'esfera'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+264: 🟠 Divergencia de chaves. Esperava-se ['regiao', 'co_cnpj', 'esfera', 'capital', 'ente', 'uf', 'cod_ibge', 'an_exercicio', 'populacao'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+265: 🟠 Divergencia de chaves. Esperava-se ['entregavel', 'periodo', 'status_relatorio', 'exercicio', 'instituicao', 'cod_ibge', 'forma_envio', 'tipo_relatorio', 'populacao', 'data_status', 'periodicidade'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+266: 🟠 Divergencia de chaves. Esperava-se ['conta', 'valor', 'periodo', 'uf', 'exercicio', 'instituicao', 'cod_ibge', 'rotulo', 'coluna', 'cod_conta', 'populacao', 'periodicidade', 'demonstrativo', 'anexo'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+267: 🟠 Divergencia de chaves. Esperava-se ['conta', 'valor', 'periodo', 'uf', 'exercicio', 'instituicao', 'cod_ibge', 'rotulo', 'coluna', 'cod_conta', 'populacao', 'periodicidade', 'anexo', 'co_poder'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+268: 🟠 Divergencia de chaves. Esperava-se ['items'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+269: 🟠 Divergencia de chaves. Esperava-se ['fonte_recursos', 'classe_conta', 'financeiro_permanente', 'divida_consolidada', 'valor', 'entrada_msc', 'ano_fonte_recursos', 'data_referencia', 'exercicio', 'tipo_matriz', 'cod_ibge', 'mes_referencia', 'natureza_conta', 'conta_contabil', 'tipo_valor', 'poder_orgao'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+270: 🟠 Divergencia de chaves. Esperava-se ['classe_conta', 'funcao', 'ano_fonte_recursos', 'mes_referencia', 'natureza_receita', 'poder_orgao', 'educacao_saude', 'data_referencia', 'exercicio', 'tipo_matriz', 'cod_ibge', 'natureza_conta', 'tipo_valor', 'subfuncao', 'fonte_recursos', 'valor', 'conta_contabil', 'entrada_msc', 'natureza_despesa', 'ano_inscricao'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+271: 🟠 Divergencia de chaves. Esperava-se ['classe_conta', 'funcao', 'ano_fonte_recursos', 'mes_referencia', 'poder_orgao', 'educacao_saude', 'data_referencia', 'exercicio', 'tipo_matriz', 'cod_ibge', 'natureza_conta', 'tipo_valor', 'subfuncao', 'fonte_recursos', 'valor', 'conta_contabil', 'entrada_msc', 'natureza_despesa', 'ano_inscricao'], recebeu ['count', 'limit', 'hasMore', 'items', 'offset', 'links'].
+272: ❌ HTTPError: 405 Client Error: METHOD NOT ALLOWED for url: https://apidadosabertos.saude.gov.br/autenticacao/login
+273: ❌ HTTPError: 405 Client Error: METHOD NOT ALLOWED for url: https://apidadosabertos.saude.gov.br/autenticacao/logout
+274: ✅ Documentação atualizada.
+275: ❌ HTTPError: 404 Client Error: NOT FOUND for url: https://apidadosabertos.saude.gov.br/cnes/tipounidades/1%0A
+276: ✅ Documentação atualizada.
+277: 🟠 Divergencia de chaves. Esperava-se ['codigo_atividade_ensino_unidade', 'codigo_cnes', 'estabelecimento_possui_centro_cirurgico', 'estabelecimento_possui_centro_obstetrico', 'codigo_municipio', 'estabelecimento_possui_atendimento_hospitalar', 'descricao_natureza_juridica_estabelecimento', 'codigo_cep_estabelecimento', 'numero_estabelecimento', 'codigo_tipo_unidade', 'codigo_uf', 'estabelecimento_possui_centro_neonatal', 'estabelecimento_possui_servico_apoio', 'nome_razao_social', 'endereco_estabelecimento', 'estabelecimento_faz_atendimento_ambulatorial_sus', 'codigo_motivo_desabilitacao_estabelecimento', 'descricao_nivel_hierarquia', 'longitude_estabelecimento_decimo_grau', 'codigo_identificador_turno_atendimento', 'numero_cnpj', 'numero_cnpj_entidade', 'codigo_natureza_organizacao_unidade', 'estabelecimento_possui_atendimento_ambulatorial', 'numero_telefone_estabelecimento', 'descricao_esfera_administrativa', 'tipo_gestao', 'latitude_estabelecimento_decimo_grau', 'descricao_turno_atendimento', 'codigo_estabelecimento_saude', 'nome_fantasia', 'codigo_nivel_hierarquia_unidade', 'bairro_estabelecimento', 'endereco_email_estabelecimento', 'codigo_esfera_administrativa_unidade', 'natureza_organizacao_entidade'], recebeu ['codigo_atividade_ensino_unidade', 'codigo_cnes', 'estabelecimento_possui_centro_cirurgico', 'estabelecimento_possui_centro_obstetrico', 'codigo_municipio', 'estabelecimento_possui_atendimento_hospitalar', 'descricao_natureza_juridica_estabelecimento', 'codigo_cep_estabelecimento', 'numero_estabelecimento', 'codigo_tipo_unidade', 'codigo_uf', 'estabelecimento_possui_centro_neonatal', 'estabelecimento_possui_servico_apoio', 'nome_razao_social', 'endereco_estabelecimento', 'estabelecimento_faz_atendimento_ambulatorial_sus', 'codigo_motivo_desabilitacao_estabelecimento', 'descricao_nivel_hierarquia', 'longitude_estabelecimento_decimo_grau', 'codigo_identificador_turno_atendimento', 'numero_cnpj', 'numero_cnpj_entidade', 'codigo_natureza_organizacao_unidade', 'estabelecimento_possui_atendimento_ambulatorial', 'numero_telefone_estabelecimento', 'descricao_esfera_administrativa', 'data_atualizacao', 'tipo_gestao', 'latitude_estabelecimento_decimo_grau', 'descricao_turno_atendimento', 'codigo_estabelecimento_saude', 'nome_fantasia', 'codigo_nivel_hierarquia_unidade', 'bairro_estabelecimento', 'endereco_email_estabelecimento', 'codigo_esfera_administrativa_unidade', 'natureza_organizacao_entidade'].
+278: ❌ HTTPError: 404 Client Error: NOT FOUND for url: https://apidadosabertos.saude.gov.br/sisagua/vigilancia-parametro-basicos
+279: ❌ Erro ao interpretar ResponseExample (banco): Expecting value: line 1 column 1 (char 0)
+280: ❌ HTTPError: 404 Client Error: NOT FOUND for url: https://apidadosabertos.saude.gov.br/sisagua/controle-mensal-parametro-basicos
+281: ✅ Documentação atualizada.
+282: ❌ HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: https://apidadosabertos.saude.gov.br/plataformabr/projetos
+283: ❌ HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: https://apidadosabertos.saude.gov.br/plataformabr/projetos/123
+284: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://elasticsearch-saps.saude.gov.br/desc-esus-notifica-estado-*/_search
+285: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+286: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+287: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+288: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+289: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+290: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+291: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+292: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+293: ❌ MissingSchema: Invalid URL 'Erro 500': No scheme supplied. Perhaps you meant https://Erro 500?
+294: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+295: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+296: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+297: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+298: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+299: ❌ MissingSchema: Invalid URL 'Erro 500': No scheme supplied. Perhaps you meant https://Erro 500?
+300: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+301: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+302: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+303: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+304: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+305: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+306: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+307: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+308: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+309: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+310: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+311: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+312: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+313: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+314: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+315: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+316: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+317: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+318: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+319: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+320: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+321: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+322: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+323: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+324: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+325: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+326: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+327: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+328: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+329: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+330: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+331: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+332: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+333: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+334: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+335: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+336: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+337: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+338: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+339: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+340: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+341: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+342: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+343: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+344: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+345: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+346: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+347: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+348: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+349: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+350: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+351: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+352: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+353: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+354: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+355: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+356: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+357: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+358: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+359: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+360: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+361: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+362: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+363: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+364: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+365: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+366: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+367: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+368: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+369: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+370: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+371: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+372: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+373: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+374: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+375: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+376: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+377: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+378: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+379: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+380: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+381: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+382: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+383: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+384: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+385: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+386: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+387: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+388: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+389: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+390: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+391: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+392: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+393: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+394: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+395: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+396: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+397: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+398: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+399: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+400: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+401: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+402: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+403: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+404: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+405: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=10)
+406: 🟠 Divergencia de chaves. Esperava-se ['data'], recebeu ['data', 'empty', 'totalRegistros', 'paginasRestantes', 'numeroPagina', 'totalPaginas'].
+407: 🟠 Divergencia de chaves. Esperava-se ['data'], recebeu ['data', 'empty', 'totalRegistros', 'paginasRestantes', 'numeroPagina', 'totalPaginas'].
+408: ❌ HTTPError: 422 Client Error:  for url: https://pncp.gov.br/api/consulta/v1/contratacoes/proposta?dataFinal=20231027&pagina=1
+409: 🟠 Divergencia de chaves. Esperava-se ['data'], recebeu ['data', 'empty', 'totalRegistros', 'paginasRestantes', 'numeroPagina', 'totalPaginas'].
+410: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+411: ❌ ReadTimeout: HTTPSConnectionPool(host='pncp.gov.br', port=443): Read timed out. (read timeout=10)
+412: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/projetos/233666
+413: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/projetos
+414: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/projetos/areas
+415: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/projetos/segmentos
+416: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/propostas
+417: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/propostas/1
+418: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/incentivadores
+419: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/incentivadores/924b95fdd2fccb4c6212a0eb4ec3f7155ecc56a916b4cd8b304862
+420: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/incentivadores/924b95fdd2fccb4c6212a0eb4ec3f7155ecc56a916b4cd8b304862/doacoes
+421: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/fornecedores
+422: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/fornecedores/6bf85a4fe302cdc962ce2b47dc362cd88b03fd9f00eb1186ff19de1a9d39
+423: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/fornecedores/6bf85a4fe302cdc962ce2b47dc362cd88b03fd9f00eb1186ff19de1a9d39/produtos
+424: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/proponentes
+425: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/proponentes/e27a32606cdbe92f520b05a4b8816565898c55e13cee047f3934cf
+426: ✅ Documentação atualizada.
+427: ✅ Documentação atualizada.
+428: 🟠 Divergencia de chaves. Esperava-se ['nome', 'email', 'siglaPartido', 'urlFoto', 'idLegislatura', 'uri', 'id', 'siglaUf', 'uriPartido'], recebeu ['dados', 'links'].
+429: ✅ Documentação atualizada.
+430: ✅ Documentação atualizada.
+431: ✅ Documentação atualizada.
+432: ✅ Documentação atualizada.
+433: ✅ Documentação atualizada.
+434: ❌ ReadTimeout: HTTPSConnectionPool(host='dadosabertos.camara.leg.br', port=443): Read timed out. (read timeout=10)
+435: ❌ HTTPError: 405 Client Error: Method Not Allowed for url: https://dadosabertos.camara.leg.br/api/v2/deputados/220645/mandatoExterno
+436: ✅ Documentação atualizada.
+437: ✅ Documentação atualizada.
+438: ✅ Documentação atualizada.
+439: ✅ Documentação atualizada.
+440: ❌ HTTPError: 404 Client Error: Not Found for url: https://dadosabertos.camara.leg.br/api/v2/legislaturas/220645/mesa
+441: ✅ Documentação atualizada.
+442: ✅ Documentação atualizada.
+443: ✅ Documentação atualizada.
+444: ✅ Documentação atualizada.
+445: ✅ Documentação atualizada.
+446: ✅ Documentação atualizada.
+448: ✅ Documentação atualizada.
+449: ✅ Documentação atualizada.
+450: ✅ Documentação atualizada.
+451: ✅ Documentação atualizada.
+452: ✅ Documentação atualizada.
+453: ✅ Documentação atualizada.
+454: ✅ Documentação atualizada.
+455: ✅ Documentação atualizada.
+458: ✅ Documentação atualizada.
+459: ✅ Documentação atualizada.
+460: ✅ Documentação atualizada.
+461: ✅ Documentação atualizada.
+462: ✅ Documentação atualizada.
+463: ✅ Documentação atualizada.
+464: ✅ Documentação atualizada.
+465: ✅ Documentação atualizada.
+466: ✅ Documentação atualizada.
+467: ✅ Documentação atualizada.
+468: ✅ Documentação atualizada.
+469: ✅ Documentação atualizada.
+470: ❌ Erro ao interpretar ResponseExample (banco): Expecting property name enclosed in double quotes: line 980 column 80 (char 32809)
+471: ✅ Documentação atualizada.
+472: ✅ Documentação atualizada.
+473: ✅ Documentação atualizada.
+474: ✅ Documentação atualizada.
+475: ✅ Documentação atualizada.
+476: ✅ Documentação atualizada.
+477: ✅ Documentação atualizada.
+478: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1294 column 13 (char 33178)
+479: ✅ Documentação atualizada.
+480: ✅ Documentação atualizada.
+481: ✅ Documentação atualizada.
+482: ✅ Documentação atualizada.
+483: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1294 column 13 (char 33178)
+484: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1236 column 17 (char 32854)
+485: ✅ Documentação atualizada.
+486: ✅ Documentação atualizada.
+487: ✅ Documentação atualizada.
+488: ✅ Documentação atualizada.
+489: ✅ Documentação atualizada.
+490: ✅ Documentação atualizada.
+491: ✅ Documentação atualizada.
+492: ✅ Documentação atualizada.
+493: ✅ Documentação atualizada.
+494: ✅ Documentação atualizada.
+495: ✅ Documentação atualizada.
+496: ✅ Documentação atualizada.
+497: ✅ Documentação atualizada.
+498: ✅ Documentação atualizada.
+499: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1294 column 13 (char 33178)
+500: ✅ Documentação atualizada.
+501: ✅ Documentação atualizada.
+502: ✅ Documentação atualizada.
+503: ✅ Documentação atualizada.
+504: ✅ Documentação atualizada.
+505: ✅ Documentação atualizada.
+506: ✅ Documentação atualizada.
+507: ✅ Documentação atualizada.
+508: ✅ Documentação atualizada.
+509: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1294 column 13 (char 33178)
+510: ✅ Documentação atualizada.
+511: ✅ Documentação atualizada.
+512: ✅ Documentação atualizada.
+513: ✅ Documentação atualizada.
+514: ✅ Documentação atualizada.
+515: ✅ Documentação atualizada.
+516: ✅ Documentação atualizada.
+517: 🟠 Divergencia de chaves. Esperava-se ['detail', 'title', 'status', 'instance', 'code'], recebeu ['dados', 'links'].
+518: ✅ Documentação atualizada.
+519: ✅ Documentação atualizada.
+520: ✅ Documentação atualizada.
+521: ✅ Documentação atualizada.
+522: ✅ Documentação atualizada.
+523: ✅ Documentação atualizada.
+524: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/viagens?dataIdaDe=01%2F09%2F2023&dataIdaAte=30%2F09%2F2023&dataRetornoDe=01%2F09%2F2023&dataRetornoAte=30%2F09%2F2023&codigoOrgao=26276&pagina=1
+525: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/viagens/495801256
+526: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/viagens-por-cpf?cpf=01971135755&pagina=1
+527: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/situacao-imovel
+528: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/permissionarios?pagina=1
+529: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/imoveis?pagina=1
+530: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/servidores?orgaoServidorExercicio=26276&pagina=1
+531: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/servidores/74314488
+532: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/servidores/remuneracao?id=74314488&mesAno=202301&pagina=1
+533: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/servidores/por-orgao?pagina=1
+534: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/servidores/funcoes-e-cargos?pagina=1
+535: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/peps?dataFimExercicioDe=01%2F01%2F2023&pagina=1
+536: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/seguro-defeso-por-municipio?mesAno=202301&codigoIbge=3106200&pagina=1
+537: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/seguro-defeso-codigo?codigo=10859427215&pagina=1
+538: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/seguro-defeso-beneficiario-por-municipio?mesAno=202301&codigoIbge=3106200&pagina=1
+539: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/safra-por-municipio?mesAno=202306&codigoIbge=2925931&pagina=1
+540: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/safra-codigo-por-cpf-ou-nis?codigo=16131096954&pagina=1
+541: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/safra-beneficiario-por-municipio?mesAno=202201&codigoIbge=2300200&pagina=1
+542: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/peti-por-municipio?mesAno=202204&codigoIbge=5201108&pagina=1
+543: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/peti-por-cpf-ou-nis?codigo=20033342568&pagina=1
+544: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/peti-beneficiario-por-municipio?mesAno=202205&codigoIbge=5201108&pagina=1
+545: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bpc-por-municipio?mesAno=202306&codigoIbge=2927408&pagina=1
+546: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bpc-por-cpf-ou-nis?codigo=29327474287&pagina=1
+547: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bpc-beneficiario-por-municipio?mesAno=202306&codigoIbge=2408003&pagina=1
+548: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bolsa-familia-sacado-por-nis?nis=20114231286&anoMesCompetencia=202009&pagina=1
+549: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bolsa-familia-sacado-beneficiario-por-municipio?mesAno=202009&codigoIbge=2609600&pagina=1
+550: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bolsa-familia-por-municipio?mesAno=202009&codigoIbge=2609600&pagina=1
+551: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bolsa-familia-disponivel-por-cpf-ou-nis?codigo=20114231286&anoMesReferencia=202009&pagina=1
+552: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bolsa-familia-disponivel-beneficiario-por-municipio?mesAno=202009&codigoIbge=2609600&pagina=1
+553: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-emergencial-por-municipio?mesAno=202302&codigoIbge=2111607&pagina=1
+554: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-emergencial-por-cpf-ou-nis?codigoBeneficiario=12466839301&pagina=1
+555: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-emergencial-beneficiario-por-municipio?mesAno=202009&codigoIbge=2111607&pagina=1
+556: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-brasil-sacado-por-nis?nis=16107330462&anoMesReferencia=202301&anoMesCompetencia=202301&pagina=1
+557: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-brasil-sacado-beneficiario-por-municipio?mesAno=202301&codigoIbge=1301001&pagina=1
+558: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-brasil-por-municipio?mesAno=202301&codigoIbge=1301001&pagina=1
+559: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/renuncias-valor?pagina=1
+560: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/renuncias-fiscais-empresas-imunes-isentas?pagina=1
+561: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/renuncias-fiscais-empresas-habilitadas-beneficios-fiscais?pagina=1
+562: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/orgaos-siape?pagina=1
+563: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/orgaos-siafi?pagina=1
+564: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/notas-fiscais?cnpjEmitente=05.301.941%2F0003-40&pagina=1
+565: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/notas-fiscais-por-chave?chaveUnicaNotaFiscal=%0915230905054903000179558900023410011490984407
+566: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes?dataInicial=29%2F05%2F2023&dataFinal=29%2F06%2F2023&codigoOrgao=26439&pagina=1
+567: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/823781039
+568: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/ugs?pagina=1
+569: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/por-ug-modalidade-numero?codigoUG=155021&numero=000852022&codigoModalidade=05
+570: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/por-processo?processo=23537013191%2F22-31
+571: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/participantes?codigoUG=155021&numero=000852022&codigoModalidade=05&pagina=1
+572: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/modalidades
+573: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/itens-licitados?id=837081231&pagina=1
+574: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/empenhos?codigoUG=155021&numero=000852022&codigoModalidade=05&pagina=1
+575: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/contratos-relacionados-licitacao?codigoUG=155021&numero=000852022&codigoModalidade=05
+576: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/emendas?pagina=1
+577: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/emendas/documentos/202371080006?pagina=1
+578: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/tipo-transferencia
+579: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/recursos-recebidos?mesAnoInicio=01%2F2023&mesAnoFim=12%2F2023&pagina=1
+580: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/por-orgao?ano=2023&orgaoSuperior=26000&pagina=1
+581: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/por-funcional-programatica?ano=2023&subfuncao=841&pagina=1
+582: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/por-funcional-programatica/movimentacao-liquida?ano=2023&subfuncao=841&pagina=1
+583: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/plano-orcamentario?ano=2023&pagina=1
+584: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/itens-de-empenho?codigoDocumento=170600000012023NE000001&pagina=1
+585: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/itens-de-empenho/historico?codigoDocumento=170600000012023NE000001&sequencial=01&pagina=1
+586: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/favorecidos-finais-por-documento?codigoDocumento=175004000012023NS000917&pagina=1
+587: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/empenhos-impactados?codigoDocumento=175004000012023NS000917&fase=2&pagina=1
+588: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos?unidadeGestora=175004&gestao=00001&dataEmissao=13%2F01%2F2023&fase=2&pagina=1
+589: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos/175004000012023NS000917
+590: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos-relacionados?codigoDocumento=175004000012023NS000917&fase=2
+591: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos-por-favorecido?codigoPessoa=88541354000194&fase=2&ano=2023&pagina=1
+592: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/coronavirus/transferencias?mesAno=202005&pagina=1
+593: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/coronavirus/movimento-liquido-despesa?mesAnoLancamento=202005&pagina=1
+594: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/convenios?dataVigenciaInicial=30%2F12%2F2022&dataVigenciaFinal=30%2F06%2F2025&convenente=INST%20INTERAMERICANO%20DE%20COOPERACAO%20PARA%20A%20AGRICULTURA&pagina=1
+595: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/convenios/tipo-instrumento
+596: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/convenios/numero?numero=677670&pagina=1
+597: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/convenios/numero-processo?numeroProcesso=04156.000012%2F2020-30&pagina=1
+598: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/convenios/numero-original?numeroOriginal=01%2F2020&pagina=1
+599: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/convenios/id?id=321727454
+600: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos?dataInicial=06%2F06%2F2023&dataFinal=06%2F06%2F2073&codigoOrgao=30000&pagina=1
+601: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/termo-aditivo?id=91725097
+602: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+603: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/numero?numero=492023&pagina=1
+604: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/itens-contratados?id=91725097&pagina=1
+605: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/id?id=91725097
+606: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/documentos-relacionados?id=91725097
+607: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/cpf-cnpj?cpfCnpj=02341470000144&pagina=1
+608: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/apostilamento?id=91725097
+609: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/cnep?pagina=1
+610: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/cnep/287975
+611: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/cepim?pagina=1
+612: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/cepim/140715645
+613: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/ceis?pagina=1
+614: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/ceis/285499
+615: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/ceaf?pagina=1
+616: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/ceaf/141911
+617: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/acordos-leniencia?pagina=1
+618: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/acordos-leniencia/1000005
+619: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/cartoes?mesExtratoInicio=01%2F2023&mesExtratoFim=10%2F2023&pagina=1
+620: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+621: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+622: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+623: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+624: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+625: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+626: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+627: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+628: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+629: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+630: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+631: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+632: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+633: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+634: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+80: ✅ Documentação atualizada.
+81: ✅ Documentação atualizada.
+82: ✅ Documentação atualizada.
+83: ✅ Documentação atualizada.
+759: ✅ Documentação atualizada.
+760: ✅ Documentação atualizada.
+761: ✅ Documentação atualizada.
+762: ✅ Documentação atualizada.
+763: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1 column 33112 (char 33111)
+764: ❌ HTTPError: 404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v1/bdg/local%0A
+765: ✅ Documentação atualizada.
+766: ✅ Documentação atualizada.
+767: ✅ Documentação atualizada.
+768: ✅ Documentação atualizada.
+769: ✅ Documentação atualizada.
+770: 🟠 Divergencia de chaves. Esperava-se ['descricao', 'observacoes', 'grupo', 'id'], r ecebeu [].
+771: ✅ Documentação atualizada.
+772: ✅ Documentação atualizada.
+773: ✅ Documentação atualizada.
+774: ✅ Documentação atualizada.
+775: ✅ Documentação atualizada.
+776: ✅ Documentação atualizada.
+777: ❌ HTTPError: 404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v2/cnae/grupos%20
+778: ✅ Documentação atualizada.
+779: ✅ Documentação atualizada.
+780: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1 column 33613 (char 33612)
+781: ✅ Documentação atualizada.
+782: ✅ Documentação atualizada.
+783: ✅ Documentação atualizada.
+784: ✅ Documentação atualizada.
+785: ✅ Documentação atualizada.
+786: ✅ Documentação atualizada.
+787: 🟠 Divergencia de chaves. Esperava-se [], recebeu ['classe', 'observacoes', 'descricao', 'id', 'atividades'].
+788: ❌ InvalidSchema: No connection adapters were found for 'curl -X POST -F tcoord=latlon -F arquivo=@arquivo_idlatlon.txt -F email=usuario@email.com https://servicodados.ibge.gov.br/api/v1/hgeohnor/arquivo'
+789: ✅ Documentação atualizada.
+790: ✅ Documentação atualizada.
+791: ✅ Documentação atualizada.
+792: ❌ InvalidSchema: No connection adapters were found for 'curl -X POST -F pontos=[{"lat":-20.3337673,"lon":-50.5612345},{"lat":-19.1234532,"lon":-51.8456751}] https://servicodados.ibge.gov.br/api/v1/hgeohnor/pontos'
+793: ✅ Documentação atualizada.
+794: ✅ Documentação atualizada.
+795: ✅ Documentação atualizada.
+796: ✅ Documentação atualizada.
+797: ✅ Documentação atualizada.
+798: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1 column 33255 (char 33254)
+799: ✅ Documentação atualizada.
+800: ✅ Documentação atualizada.
+801: ✅ Documentação atualizada.
+802: ✅ Documentação atualizada.
+803: ❌ HTTPError: 404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v1/localidades/mesorregioes%20
+804: ✅ Documentação atualizada.
+805: ✅ Documentação atualizada.
+806: ✅ Documentação atualizada.
+807: ✅ Documentação atualizada.
+808: ❌ HTTPError: 404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v1/localidades/microrregioes%20
+809: ✅ Documentação atualizada.
+810: ✅ Documentação atualizada.
+811: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1 column 32862 (char 32861)
+812: ✅ Documentação atualizada.
+813: ✅ Documentação atualizada.
+814: ❌ HTTPError: 404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v1/localidades/municipios%20
+815: ✅ Documentação atualizada.
+816: ✅ Documentação atualizada.
+817: ✅ Documentação atualizada.
+818: ✅ Documentação atualizada.
+819: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1 column 33157 (char 33156)
+820: ✅ Documentação atualizada.
+821: ✅ Documentação atualizada.
+822: ✅ Documentação atualizada.
+823: ✅ Documentação atualizada.
+824: ✅ Documentação atualizada.
+825: ✅ Documentação atualizada.
+826: ✅ Documentação atualizada.
+827: ✅ Documentação atualizada.
+828: ✅ Documentação atualizada.
+829: ✅ Documentação atualizada.
+830: ✅ Documentação atualizada.
+831: ✅ Documentação atualizada.
+832: ✅ Documentação atualizada.
+833: ✅ Documentação atualizada.
+834: ✅ Documentação atualizada.
+835: ✅ Documentação atualizada.
+836: ✅ Documentação atualizada.
+837: ✅ Documentação atualizada.
+838: ✅ Documentação atualizada.
+839: ✅ Documentação atualizada.
+840: ✅ Documentação atualizada.
+841: ✅ Documentação atualizada.
+842: ✅ Documentação atualizada.
+843: ✅ Documentação atualizada.
+844: ✅ Documentação atualizada.
+845: ✅ Documentação atualizada.
+846: ✅ Documentação atualizada.
+847: ✅ Documentação atualizada.
+848: ✅ Documentação atualizada.
+849: ✅ Documentação atualizada.
+866: ✅ Documentação atualizada.
+867: ✅ Documentação atualizada.
+868: ✅ Documentação atualizada.
+869: ✅ Documentação atualizada.
+870: ✅ Documentação atualizada.
+871: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1 column 32996 (char 32995)
+872: ✅ Documentação atualizada.
+873: ✅ Documentação atualizada.
+874: ✅ Documentação atualizada.
+875: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/indicadores/29171
+876: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/periodos/2022/indicadores/29171
+877: ✅ Documentação atualizada.
+878: ✅ Documentação atualizada.
+879: ✅ Documentação atualizada.
+880: ❌ HTTPError: 500 Server Error: Internal Server Error for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/indicadores/29171/ranking
+881: ❌ HTTPError: 500 Server Error: Internal Server Error for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/periodos/2022/indicadores/29171/ranking
+882: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/indicadores/29171/resultados/33
+883: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/periodos/2022/indicadores/29171/resultados/33
+884: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/indicadores/29171/resultados/33,35
+885: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/periodos/2022/indicadores/29171/resultados/33
+886: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/resultados/33
+887: ❌ InvalidSchema: No connection adapters were found for 'CURL -X POST https://servicodados.ibge.gov.br/api/v1/ppp -F arquivo=@mtnx1951.21o -F tipo-levantamento=estatico -F modelo-antena="TRM59800.00     NONE" -F altura-antena=0.1376 -F marco-ibge=SAT99612 -F email=usuario@dominio.com.br -F autorizacao-uso=true'
+888: ✅ Documentação atualizada.
+889: ✅ Documentação atualizada.
+890: ✅ Documentação atualizada.
+891: ❌ InvalidSchema: No connection adapters were found for 'curl -X POST -F referencialEntrada=sad69 -F tipoCoordenadaEntrada=lat_long_gms -F tipoCoordenadaSaida=lat_long_gd -F tipoEntrada=txt -F tipoSaida=arquivo -F arquivo=@idlatlon_gms.txt -F email=exemplo@ibge.gov.br https://servicodados.ibge.gov.br/api/v1/progrid/arquivo'
+892: ✅ Documentação atualizada.
+893: ✅ Documentação atualizada.
+894: ✅ Documentação atualizada.
+895: ✅ Documentação atualizada.
+896: ✅ Documentação atualizada.
+897: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+898: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+899: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+900: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+901: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+902: ✅ Documentação atualizada.
+903: ✅ Documentação atualizada.
+904: ✅ Documentação atualizada.
+905: ✅ Documentação atualizada.
+906: ✅ Documentação atualizada.
+907: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/rmpg/customizado/EMARC%7CEMSAN/1%7C33?momentoInicial=2022-01-07-10-00&momentoFinal=2022-01-07-13-00%20
+908: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+84: ✅ Documentação atualizada.
+909: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+910: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+911: ❌ InvalidSchema: No connection adapters were found for 'ttps://dados.gov.br/dados/api/publico/conjuntos-dados/objetivos-desenvolvimento-sustentavel'
+912: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)

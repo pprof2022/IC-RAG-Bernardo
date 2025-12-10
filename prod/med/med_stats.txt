@@ -1,0 +1,3 @@
+Erros (❌): 367
+Divergências (🟠): 44
+Corretos (✅): 344

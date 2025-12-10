@@ -1,0 +1,22 @@
+o pacote med serve para poder verificar se existe alguma inconsistencia entre o banco de dados e o mundo resultados
+
+a execução é feita nessa ordem:
+
+ - py med.py -> Ele vai vasculhar todos os endpoints para ver se eles realmente estão atualizados
+ - py med_stats.py -> Apenas contabiliza o total de endpoints atualizados, não atualizados e sem sucesso
+ - py med_filtra_timeout -> Filtra os endpoints sem sucesso que ocorreram por timeout para que sejam tratados separadamente
+ - py med_timeout -> Faz a mesma coisa que med.py, mas só para os que tiveram timeout, para poder adaptar o timeout de acordo com a demanda
+ - py med_filtra_warning -> Filtra os endpoints que tiveram as suas chaves modificadas
+ - py med_chaves -> Atualiza o banco de dados com um novo exemplo de resposta
+
+além disso há esses outros arquivos que tem essas funcionalidades:
+
+ - aux1.py -> Faz um relatório de todas as possibilidades de chaves do catalogo, listando por endpoint, agrupando por padrao e cria um map
+ - gerador_navegadores -> cria o arquivo de funções para universalizar a navegação entre os json, basta adicionar todas a um map e associar a chave do map à lista gerada pelo ultimo arquivo quando ele agrupa por padrao
+ - import_de_endpoints.py -> Arquivo simples para o desenvolvedor testar de o json de retorno está da forma esperada e se a função escrita no arquivo acima está correta
+ - navegadores_json -> é o arquivo criado por gerador_navegadores
+
+planos:
+
+ - mudar o nome do arquivo med.py e med.txt para diagnostico.py e diagnostico.txt, para ter um novo arquivo chamado med.py que faça tudo
+ - tratar todos os erros
