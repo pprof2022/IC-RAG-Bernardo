@@ -1,16 +1,16 @@
 1: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
 2: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
 3: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
-4: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
-5: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
+4: 🟠 Divergência de chaves: esperado ['results', 'queryDuration', 'queueDuration'], recebeu ['query', 'limit', 'count', 'success', 'offset', 'data']. | | timeout = 30
+5: 🟠 Divergência de chaves: esperado ['results', 'queryDuration', 'queueDuration'], recebeu ['query', 'limit', 'count', 'success', 'offset', 'data']. | | timeout = 30
 6: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
 7: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
-8: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
-9: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
+8: 🟠 Divergência de chaves: esperado ['results', 'queryDuration', 'queueDuration'], recebeu ['query', 'limit', 'count', 'success', 'offset', 'data']. | | timeout = 30
+9: ❌ Erro na requisição: HTTPError | timeout = 30
 10: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
 11: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
-12: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
-13: ❌ ReadTimeout: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Read timed out. (read timeout=10)
+12: ❌ Erro na requisição: HTTPError | timeout = 30
+13: ❌ Erro na requisição: HTTPError | timeout = 30
 14: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
 15: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
 16: 🟠 Divergencia de chaves. Esperava-se ['results', 'queueDuration', 'queryDuration'], recebeu ['count', 'limit', 'success', 'query', 'data', 'offset'].
@@ -118,13 +118,13 @@
 129: ✅ Documentação atualizada.
 130: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
 131: ❌ HTTPError: 500 Server Error: Internal Server Error for url: https://olinda.bcb.gov.br/olinda/servico/STR/versao/v1/odata/EstatisticasTransferenciasLiquidacaoDocumentosComCodigoBarras
-132: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
-133: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+132: ✅ Resposta OK | timeout = 30
+133: ✅ Resposta OK | timeout = 30
 134: ✅ Documentação atualizada.
 135: ✅ Documentação atualizada.
 136: ✅ Documentação atualizada.
 137: ✅ Documentação atualizada.
-138: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+138: ✅ Resposta OK | timeout = 30
 139: ✅ Documentação atualizada.
 140: ✅ Documentação atualizada.
 141: ✅ Documentação atualizada.
@@ -136,26 +136,26 @@
 147: ✅ Documentação atualizada.
 148: ✅ Documentação atualizada.
 149: ✅ Documentação atualizada.
-150: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+150: ✅ Resposta OK | timeout = 30
 151: ✅ Documentação atualizada.
 152: ✅ Documentação atualizada.
 153: ✅ Documentação atualizada.
-154: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+154: ✅ Resposta OK | timeout = 30
 155: ✅ Documentação atualizada.
 156: ✅ Documentação atualizada.
 157: ✅ Documentação atualizada.
-158: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
-159: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+158: ✅ Resposta OK | timeout = 30
+159: ✅ Resposta OK | timeout = 30
 160: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
 161: ✅ Documentação atualizada.
 162: ✅ Documentação atualizada.
-163: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
-164: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
-165: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+163: ✅ Resposta OK | timeout = 30
+164: ✅ Resposta OK | timeout = 30
+165: ✅ Resposta OK | timeout = 30
 166: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
-167: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
-168: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
-169: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+167: ✅ Resposta OK | timeout = 30
+168: ✅ Resposta OK | timeout = 30
+169: ✅ Resposta OK | timeout = 30
 170: ✅ Documentação atualizada.
 171: ✅ Documentação atualizada.
 172: ✅ Documentação atualizada.
@@ -219,12 +219,12 @@
 230: ✅ Documentação atualizada.
 231: ✅ Documentação atualizada.
 232: ✅ Documentação atualizada.
-233: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+233: ✅ Resposta OK | timeout = 30
 234: ✅ Documentação atualizada.
 235: ✅ Documentação atualizada.
 236: ✅ Documentação atualizada.
-237: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
-238: ❌ ReadTimeout: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Read timed out. (read timeout=10)
+237: ✅ Resposta OK | timeout = 30
+238: ✅ Resposta OK | timeout = 30
 239: ❌ HTTPError: 503 Server Error: Service Unavailable for url: http://servicos.cptec.inpe.br/XML/listaCidades
 240: ❌ HTTPError: 503 Server Error: Service Unavailable for url: http://servicos.cptec.inpe.br/XML/estacao/codigo_da_estacao/condicoesAtuais.xml
 248: ❌ HTTPError: 503 Server Error: Service Unavailable for url: http://servicos.cptec.inpe.br/XML/cidade/codigo_da_localidade/dia/dia/ondas.xml
@@ -412,7 +412,7 @@
 431: ✅ Documentação atualizada.
 432: ✅ Documentação atualizada.
 433: ✅ Documentação atualizada.
-434: ❌ ReadTimeout: HTTPSConnectionPool(host='dadosabertos.camara.leg.br', port=443): Read timed out. (read timeout=10)
+434: ✅ Resposta OK | timeout = 30
 435: ❌ HTTPError: 405 Client Error: Method Not Allowed for url: https://dadosabertos.camara.leg.br/api/v2/deputados/220645/mandatoExterno
 436: ✅ Documentação atualizada.
 437: ✅ Documentação atualizada.

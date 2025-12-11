@@ -4,7 +4,7 @@ import json
 
 DRIVER_NAME = 'ODBC Driver 17 for SQL Server'
 SERVER_NAME = '.'
-DATABASE_NAME = 'master'
+DATABASE_NAME = 'ic'
 
 CONNECTION_STRING = (
     f'DRIVER={{{DRIVER_NAME}}};'
@@ -16,17 +16,16 @@ CONNECTION_STRING = (
 conn = pyodbc.connect(CONNECTION_STRING)
 cursor = conn.cursor()
 
-# ----------------------------
-# 1. Ler arquivo endpoint_timeout.txt
-# ----------------------------
-
+# ------------------------------------------------
+# 1. Ler endpoint_timeout.txt
+# ------------------------------------------------
 with open("endpoint_timeout.txt", "r", encoding="utf-8") as f:
     timeout_lines = f.read().splitlines()
 
-# Vamos armazenar aqui as linhas que NÃO serão removidas (que falharam novamente)
+# Linhas que devem permanecer — somente ReadTimeout
 keep_lines = []
 
-# Carregar med.txt em memória para permitir atualização
+# Carrega med.txt em memória
 med_map = {}
 with open("med.txt", "r", encoding="utf-8") as f:
     for line in f:
@@ -34,10 +33,9 @@ with open("med.txt", "r", encoding="utf-8") as f:
             lid, msg = line.split(":", 1)
             med_map[lid.strip()] = msg.strip()
 
-# ----------------------------
-# 2. Processar cada linha de timeout
-# ----------------------------
-
+# ------------------------------------------------
+# 2. Processar cada ID
+# ------------------------------------------------
 for line in timeout_lines:
     if ":" not in line:
         keep_lines.append(line)
@@ -48,89 +46,84 @@ for line in timeout_lines:
 
     print(f"\nReprocessando ID: {endpoint_id}")
 
-    # ----------------------------
-    # Buscar Example e ResponseExample no banco
-    # ----------------------------
+    # Buscar URL e JSON esperado
     cursor.execute("""
         SELECT e.Example, ra.ResponseExample
         FROM [Endpoints da API] AS e
-        INNER JOIN [Respostas da API] AS ra
-            ON e.ApiResponseId = ra.Id
+        INNER JOIN [Respostas da API] AS ra ON e.ApiResponseId = ra.Id
         WHERE e.Id = ?
     """, endpoint_id)
 
     result = cursor.fetchone()
     if not result:
-        print(f"⚠️ ID {endpoint_id} não encontrado no banco. Mantendo no arquivo.")
-        keep_lines.append(line)
+        print(f"⚠️ ID {endpoint_id} não encontrado no banco.")
+        med_map[endpoint_id] = "❌ Erro: ID não encontrado no banco"
+        # remove do timeout.txt (não adiciona em keep_lines)
         continue
 
-    example_url = result[0]
-    response_example = result[1]
+    example_url, response_example = result
 
-    # ----------------------------
-    # Tentar requisição
-    # ----------------------------
     try:
         timeout = 30
         response = requests.get(example_url, timeout=timeout)
         response.raise_for_status()
 
-        # Tenta interpretar JSON retornado pela API
+        # Interpretar JSON retornado pela API
         try:
             json_returned = response.json()
         except Exception as e:
-            print(f"❌ Erro ao interpretar JSON retornado: {str(e)}")
-            keep_lines.append(line)
-            continue
+            error_name = type(e).__name__
+            med_map[endpoint_id] = f"❌ Erro ao interpretar JSON retornado: {error_name} | timeout = {timeout}"
+            continue  # remove da lista (não entra no keep_lines)
 
-        # Tenta interpretar JSON do banco
+        # Interpretar JSON esperado
         try:
             json_expected = json.loads(response_example)
         except Exception as e:
-            print(f"❌ Erro ao interpretar ResponseExample do banco: {str(e)}")
-            keep_lines.append(line)
-            continue
+            error_name = type(e).__name__
+            med_map[endpoint_id] = f"❌ Erro ao interpretar ResponseExample do banco: {error_name} | timeout = {timeout}"
+            continue  # remove da lista
 
-        # Obtém chaves
+        # Comparar as chaves
         keys_expected = set(json_expected.keys()) if isinstance(json_expected, dict) else set()
         keys_returned = set(json_returned.keys()) if isinstance(json_returned, dict) else set()
 
-        # ----------------------------
-        # Comparar chaves
-        # ----------------------------
         if keys_expected != keys_returned:
-            new_status = (
-                f"🟠 Divergencia de chaves. "
-                f"Esperava-se {list(keys_expected)}, recebeu {list(keys_returned)}."
+            med_map[endpoint_id] = (
+                f"🟠 Divergência de chaves: "
+                f"esperado {list(keys_expected)}, recebeu {list(keys_returned)}. | | timeout = {timeout}"
             )
         else:
-            new_status = f"✅ Resposta OK (timeout resolvido) | timeout = {timeout}"
+            med_map[endpoint_id] = f"✅ Resposta OK | timeout = {timeout}"
 
-        # Atualizar med.txt
-        med_map[endpoint_id] = new_status
+        # Em qualquer caso acima, REMOVE do arquivo (não põe em keep_lines)
 
     except Exception as e:
-        # Ainda falhou → mantém linha original
-        print(f"❌ Ainda falhou para {endpoint_id}: {type(e).__name__}")
-        keep_lines.append(line)
-        continue
+        # Identificar erro
+        error_name = type(e).__name__
 
+        if error_name == "ReadTimeout":
+            print(f"⏳ ReadTimeout em {endpoint_id}. Mantendo no arquivo e não alterando med.txt.")
+            keep_lines.append(line)  # mantém
+            continue
+        else:
+            print(f"❌ Erro em {endpoint_id}: {error_name}")
+            med_map[endpoint_id] = f"❌ Erro na requisição: {error_name} | timeout = {timeout}"
+            # REMOVE do arquivo (não adiciona em keep_lines)
+            continue
 
-# ----------------------------
-# 3. Reescrever endpoint_timeout.txt APENAS com os que falharam
-# ----------------------------
-
+# ------------------------------------------------
+# 3. Atualizar endpoint_timeout.txt
+# ------------------------------------------------
 with open("endpoint_timeout.txt", "w", encoding="utf-8") as f:
     for l in keep_lines:
         f.write(l + "\n")
 
 print("\nendpoint_timeout.txt atualizado.")
 
-# ----------------------------
-# 4. Reescrever med.txt atualizado
-# ----------------------------
-
+# ------------------------------------------------
+# 4. Atualizar med.txt
+# ------------------------------------------------
 with open("med.txt", "w", encoding="utf-8") as f:
     for id_key, msg in med_map.items():
         f.write(f"{id_key}: {msg}\n")

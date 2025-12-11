@@ -7,7 +7,7 @@ import navegadores_json
 
 DRIVER_NAME = 'ODBC Driver 17 for SQL Server'
 SERVER_NAME = '.'
-DATABASE_NAME = 'master'
+DATABASE_NAME = 'ic'
 
 CONNECTION_STRING = (
     f'DRIVER={{{DRIVER_NAME}}};'
@@ -23,7 +23,7 @@ cursor = conn.cursor()
 sql = """
     SELECT e.Example
     FROM [Endpoints da API] as e
-    where e.Id = 762
+    where e.Id = 3
 """
 
 cursor.execute(sql)
@@ -47,7 +47,7 @@ try:
         #dados_json = navegadores_json.navegador_id16(resposta.json())
         
         # Conversao na mao
-        dados_json = (resposta.json()[0].keys())
+        dados_json = (resposta.json()["data"][0])
         
         print(dados_json)
 

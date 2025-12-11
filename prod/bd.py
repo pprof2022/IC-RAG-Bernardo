@@ -7,7 +7,7 @@ class integracaoBD:
     
     DRIVER_NAME = 'ODBC Driver 17 for SQL Server'
     SERVER_NAME = '.'
-    DATABASE_NAME = 'master'
+    DATABASE_NAME = 'ic'
 
     CONNECTION_STRING = (
         f'DRIVER={{{DRIVER_NAME}}};'
