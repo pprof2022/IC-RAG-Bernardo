@@ -15,6 +15,7 @@ além disso há esses outros arquivos que tem essas funcionalidades:
  - gerador_navegadores -> cria o arquivo de funções para universalizar a navegação entre os json, basta adicionar todas a um map e associar a chave do map à lista gerada pelo ultimo arquivo quando ele agrupa por padrao
  - import_de_endpoints.py -> Arquivo simples para o desenvolvedor testar de o json de retorno está da forma esperada e se a função escrita no arquivo acima está correta
  - navegadores_json -> é o arquivo criado por gerador_navegadores
+ - relatorio_manual -> Estou analizando endpoint por endpoint manualmente, vendo o que ele retorna
 
 planos:
 

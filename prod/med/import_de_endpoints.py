@@ -23,7 +23,7 @@ cursor = conn.cursor()
 sql = """
     SELECT e.Example
     FROM [Endpoints da API] as e
-    where e.Id = 3
+    where e.Id = 912
 """
 
 cursor.execute(sql)
@@ -47,7 +47,7 @@ try:
         #dados_json = navegadores_json.navegador_id16(resposta.json())
         
         # Conversao na mao
-        dados_json = (resposta.json()["data"][0])
+        dados_json = (resposta)
         
         print(dados_json)
 

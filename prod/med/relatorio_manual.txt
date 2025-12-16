@@ -1,0 +1,102 @@
+758 -> Ele da essa resposta?: <Response [200]>
+48 -> Ele da essa resposta?: <Response [200]>
+70 -> Ele da essa resposta?: <Response [200]>
+131 -> Erro desconhecido: Problema na propria API aparentemente
+178 -> Ele da essa resposta?: <Response [200]>
+193 -> O nosso link de exemplo esta incorreto (https://olinda.bcb.gov.br/olinda/servico/SML/versao/v1/odata/ExportacoesImportacoesSmlArgentina(DataInicial=@DataInicial,DataFinal=@DataFinal)?%40DataInicial=2000-01-01&%40DataFinal=2023-10-21): The part '2000-01-01' is not defined
+    | -> aparentemente OData do Olinda, datas precisam ser passadas como datetime'YYYY-MM-DDTHH:MM:SS', então seria, %40DataInicial=datetime'2000-01-01T00:00:00' e %40DataFinal=datetime'2023-10-21T00:00:00'
+198 -> Ele da essa resposta?: <Response [200]>
+204 -> Ele da essa resposta?: <Response [200]>
+205 -> Problema interno da API, aparenetemente ela é feito para um consumo muito específico de front-end, então a requisição de uma pessoa de fora pode estar fora do esperado pelo back-end deles. Por mais que seja uma API aberta teoricamente
+239 -> Ele da essa resposta?: <Response [200]>
+240 -> O nosso link de exemplo está incorreto. Esqueceram de trocar o placeholder por um valor real
+248 -> O nosso link de exemplo está incorreto. Esqueceram de trocar o placeholder por um valor real
+249 -> O nosso link de exemplo está incorreto. Esqueceram de trocar o placeholder por um valor real
+257 -> Me retornou um site inteiro? Acho que a página não existe
+262 -> Me retornou um site inteiro? Acho que a página não existe
+272 -> A API não é tão aberta assim, a requisição de exemplo não tem autorização para fazer aquele pedido
+273 -> A API não é tão aberta assim, a requisição de exemplo não tem autorização para fazer aquele pedido
+275 -> URL não encontrada no servidor, nosso exemplo está errado
+278 -> URL não encontrada no servidor, nosso exemplo está errado
+279 -> Ele da essa resposta?: <Response [200]>
+280 -> URL não encontrada no servidor, nosso exemplo está errado
+282 -> Ele da essa resposta?: <Response [200]>
+283 -> Não existe projeto com id 123 aparenetemente
+284 -> A API não é tão aberta assim, a requisição de exemplo não tem autorização para fazer aquele pedido
+293 -> A API não é tão aberta assim, a requisição de exemplo não tem autorização para fazer aquele pedido
+299 -> Tem alguma coisa muito errada com a API deles, porque me retornou um json com o erro 500: [('Erro 500',)]
+408 -> Data Final deve ser maior ou igual a data atual
+410 -> Acredito que essa combinação de parametros não tenha nenhum registro
+412 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+413 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+414 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+415 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+416 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+417 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+418 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+419 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+420 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+421 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+422 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+423 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+424 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+425 -> Essa página não existe ou o formato dos parametros passado por link esta incorreto
+435 -> A API do SALIC não é RESTful nesse formato: /v1/proponentes/{id} | Forma correta de consultar proponentes. Exemplo genérico: https://api.salic.cultura.gov.br/v1/proponentes?nome=JOAO
+440 -> A URL passada se refere a um recurso que não existe no sistema
+470 -> Ele da essa resposta?: <Response [200]>
+478 -> Ele da essa resposta?: <Response [200]>
+483 -> Ele da essa resposta?: <Response [200]>
+484 -> Ele da essa resposta?: <Response [200]>
+499 -> Ele da essa resposta?: <Response [200]>
+509 -> Ele da essa resposta?: <Response [200]>
+(524-601) -> A API não é tão aberta assim, precisa de ter uma chave e se cadastrar com email. "Erro na API":"Chave de API não informada! Para obter a chave acesse http://www.portaldatransparencia.gov.br/api-de-dados/cadastrar-email"
+602 -> Não tem URL de exemplo no banco de dados
+(603 - 619) -> A API não é tão aberta assim, precisa de ter uma chave e se cadastrar com email. "Erro na API":"Chave de API não informada! Para obter a chave acesse http://www.portaldatransparencia.gov.br/api-de-dados/cadastrar-email"
+620 -> Ele da essa resposta?: <Response [200]>
+(621 - 623) -> Não tem URL de exemplo no banco de dados
+624 -> Ele da essa resposta?: <Response [200]>
+625 -> Ele da essa resposta?: <Response [200]>
+626 -> Ele da essa resposta?: <Response [200]>
+627 -> Não tem URL de exemplo no banco de dados
+628 -> Ele da essa resposta?: <Response [200]>
+629 -> Não tem URL de exemplo no banco de dados
+630 -> Não tem URL de exemplo no banco de dados
+631 -> Ele da essa resposta?: <Response [200]>
+632 -> Ele da essa resposta?: <Response [200]>
+633 -> Ele da essa resposta?: <Response [200]>
+634 -> Ele da essa resposta?: <Response [200]>
+763 -> Ele da essa resposta?: <Response [200]>
+764 -> Ele da essa resposta?: <Response [200]>
+777 -> Existe um espaço em branco no link salvo no banco
+780 -> Ele da essa resposta?: <Response [200]>
+788 -> Isso é o que ta salvo no banco de dados: 'curl -X POST -F tcoord=latlon -F arquivo=@arquivo_idlatlon.txt -F email=usuario@email.com https://servicodados.ibge.gov.br/api/v1/hgeohnor/arquivo'. Obviamente n é só a URL
+792 -> msd coisa do ultimo: ('curl -X POST -F pontos=[{"lat":-20.3337673,"lon":-50.5612345},{"lat":-19.1234532,"lon":-51.8456751}] https://servicodados.ibge.gov.br/api/v1/hgeohnor/pontos',)
+798 -> Ele da essa resposta?: <Response [200]>
+803 -> Existe um espaço em branco no link salvo no banco
+808 -> msm coisa do de cima, na verdade eu acho que é um endpoint que está duplicado
+811 -> idem
+814 -> Existe um espaço em branco no link salvo no banco
+819 -> Ele da essa resposta?: <Response [200]>
+871 -> Ele da essa resposta?: <Response [200]>
+875 -> Ele da essa resposta?: <Response [200]>
+876 -> Um ou mais períodos NÃO compartilham os mesmos indicadores! Especifique apenas períodos que possuem o mesmo valor para a propriedade versao. Acho que é um problema nos parametros
+880 -> statusCode":500,"message":"Internal server error. Aí n tem muito como fugir
+881 -> statusCode":500,"message":"Internal server error. Aí n tem muito como fugir
+882 -> Um ou mais períodos NÃO compartilham os mesmos indicadores! Especifique apenas períodos que possuem o mesmo valor para a propriedade versao. Acho que é um problema nos parametros
+883 -> Um ou mais períodos NÃO compartilham os mesmos indicadores! Especifique apenas períodos que possuem o mesmo valor para a propriedade versao. Acho que é um problema nos parametros
+884 -> Um ou mais períodos NÃO compartilham os mesmos indicadores! Especifique apenas períodos que possuem o mesmo valor para a propriedade versao. Acho que é um problema nos parametros
+885 -> Um ou mais períodos NÃO compartilham os mesmos indicadores! Especifique apenas períodos que possuem o mesmo valor para a propriedade versao. Acho que é um problema nos parametros
+886 -> Um ou mais períodos NÃO compartilham os mesmos indicadores! Especifique apenas períodos que possuem o mesmo valor para a propriedade versao. Acho que é um problema nos parametros
+887 -> Isso é o que ta salvo no banco de dados: 'CURL -X POST https://servicodados.ibge.gov.br/api/v1/ppp -F arquivo=@mtnx1951.21o -F tipo-levantamento=estatico -F modelo-antena="TRM59800.00     NONE" -F altura-antena=0.1376 -F marco-ibge=SAT99612 -F email=usuario@dominio.com.br -F autorizacao-uso=true'. Obviamente nao é so um link
+891 -> Isso é o que ta salvo no banco de dados: 'curl -X POST -F referencialEntrada=sad69 -F tipoCoordenadaEntrada=lat_long_gms -F tipoCoordenadaSaida=lat_long_gd -F tipoEntrada=txt -F tipoSaida=arquivo -F arquivo=@idlatlon_gms.txt -F email=exemplo@ibge.gov.br https://servicodados.ibge.gov.br/api/v1/progrid/arquivo'. Obviamente nao é so um link
+897 -> Ele da essa resposta?: <Response [200]>
+898 -> Ele da essa resposta?: <Response [200]>
+899 -> Ele da essa resposta?: <Response [200]>
+900 -> Ele da essa resposta?: <Response [200]>
+901 -> Ele da essa resposta?: <Response [200]>
+907 -> statusCode":400,"message":"Parâmetro \"momentoFinal\" com formato de data inválido. Formato esperado: aaaa-mm-dd-hh-mi
+908 -> Ele da essa resposta?: <Response [200]>
+909 -> Ele da essa resposta?: <Response [200]>
+910 -> Ele da essa resposta?: <Response [200]>
+911 -> No connection adapters were found for 'ttps://dados.gov.br/dados/api/publico/conjuntos-dados/objetivos-desenvolvimento-sustentavel'
+912 -> Ele da essa resposta?: <Response [200]>
