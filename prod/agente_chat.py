@@ -1,5 +1,4 @@
 from bd import integracaoBD
-from agente_bd import agenteBD
 
 import time
 import ast
