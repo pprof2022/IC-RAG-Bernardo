@@ -242,75 +242,6 @@ class integracaoBD:
             print(f"Erro ao executar busca de embeddings no SQL Server: {e.args[1]}")
             self.conexao.rollback()
             raise # Re-lança a exceção para o código chamador
-        
-    def criaTabelaTemp(self, query: str):
-        print("Executando query de criação de tabela temporária.")
-        print(f"Query: {query.strip()}")
-        try:
-            self.cur.execute(query)
-            self.conexao.commit()
-            print("Tabela temporária criada e commitada.")
-        except Error as e:
-            print(f"Erro ao criar tabela temporária: {e}", exc_info=True)
-            self.conexao.rollback()
-            raise
-    
-    def retPK(self, nomeTabela:str):
-        print(f"Buscando chave primária para a tabela: {nomeTabela}")
-        query = """
-                SELECT a.attname
-                FROM pg_index i
-                JOIN pg_attribute a ON a.attrelid = i.indrelid
-                                AND a.attnum = ANY(i.indkey)
-                WHERE i.indrelid = %s::regclass
-                AND i.indisprimary;
-            """
-        try:
-            self.cur.execute(query, (nomeTabela,))
-            result = self.cur.fetchall()
-            
-            if not result:
-                print(f"Tabela '{nomeTabela}' não possui chave primária.")
-                raise ValueError(f"Tabela {nomeTabela} não possui chave primária.")
-            
-            pks = [row[0] for row in result]
-            print(f"Chave(s) primária(s) encontrada(s): {pks}")
-            return pks
-        except Error as e:
-            print(f"Erro ao buscar chave primária para '{nomeTabela}': {e}", exc_info=True)
-            raise
-        except ValueError:
-            # Re-lança o erro de PK não encontrada
-            raise
-    
-    def populaTabelaTemp(self, nome_tabela: str, dados: dict):
-        if not dados:
-            print(f"Tentativa de popular a tabela '{nome_tabela}' com dados vazios.")
-            return # Sai da função silenciosamente
-            # Alternativa: raise ValueError("O dicionário de dados está vazio.")
-
-        try:
-            colunas = ", ".join(dados.keys())
-            placeholders = ", ".join(["%s"] * len(dados))
-            valores = tuple(dados.values())
-
-            pks = self.retPK(nome_tabela)
-            pk_clause = ", ".join(pks)
-            updates = ", ".join([f"{col} = EXCLUDED.{col}" for col in dados.keys() if col not in pks])
-
-            query = f"INSERT INTO {nome_tabela} ({colunas}) VALUES ({placeholders}) ON CONFLICT ({pk_clause}) DO UPDATE SET {updates}"
-
-            self.cur.execute(query, valores)
-            self.conexao.commit()
-            print(f"Dados inseridos/atualizados na tabela '{nome_tabela}'. PK: {pk_clause}")
-        except Error as e:
-            print(f"Erro ao popular a tabela '{nome_tabela}': {e}", exc_info=True)
-            self.conexao.rollback()
-            raise
-        except ValueError as e:
-            print(f"Erro na lógica de população da tabela '{nome_tabela}': {e}")
-            self.conexao.rollback()
-            raise
     
     def executaQuery(self, query: str) -> List[Dict[str, Any]]:
         
@@ -411,14 +342,3 @@ class integracaoBD:
     def fecharConexao(self):
         self.cur.close()
         self.conexao.close()
-        
-    def apagaTabelas(self, nomeTabela):
-        print(f"Executando DROP TABLE para: {nomeTabela}")
-        try:
-            # Uso de f-string é inevitável para DROP TABLE, mas logamos
-            self.cur.execute(f"DROP TABLE {nomeTabela}")
-            self.conexao.commit()
-            print(f"Tabela '{nomeTabela}' apagada com sucesso.")
-        except Error as e:
-            print(f"Erro ao apagar a tabela '{nomeTabela}': {e}", exc_info=True)
-            self.conexao.rollback()

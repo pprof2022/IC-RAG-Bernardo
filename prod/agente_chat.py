@@ -8,20 +8,17 @@ from langchain_ollama import ChatOllama
 
 class agenteChat:
     
-    def __init__(self, modelo: ChatOllama, agenteBd: agenteBD, modeloEmbedding: str, integracaoBd: integracaoBD):
+    def __init__(self, modelo: ChatOllama, modeloEmbedding: str, integracaoBd: integracaoBD):
         self.modelo: ChatOllama = modelo
         self.modeloEmbedding = modeloEmbedding
         self.integracaoBd = integracaoBd
-        self.agenteBd = agenteBd
         self.ollamaClient = ollama.Client()
         self.mapRespostas = {
             "0": self.respostaNatural,
-            "1": self.consultaSql
+            "1": self.explicacaoConsulta
         }
         
     def controleResposta (self, msg): # Verifica que tipo de resposta deve ser feita
-        
-        flag = 1
         
         print(f"Mensagem: {msg}")
 
@@ -122,19 +119,8 @@ class agenteChat:
         print("=======================================")
         print(f"Resultados finais (após filtragem do LLM): {resultados}")
             
-        if flag:
-            # Execução da ação final
-            if id == "1":
-                print("Ação definida como '1' (Explicação de Consulta). Chamando self.explicacaoConsulta.")
-                self.explicacaoConsulta(msg, resultados)
-            elif id == "2":
-                # A lista idResultados parece não estar sendo construída corretamente
-                # Se 'resultados' são (table_name, description, id), você precisa extrair o id
-                idResultados = [res[2] for res in resultados] # Assume que o ID está no índice 2
-                print(f"Ação definida como '2' (Consulta SQL). Chamando self.consultaSql com IDs: {idResultados}")
-                self.consultaSql(msg, idResultados)
-            else:
-                print(f"ID de ação desconhecido ou inválido recebido: {id}")
+        print("Ação definida como '1' (Explicação de Consulta). Chamando self.explicacaoConsulta.")
+        self.explicacaoConsulta(msg, resultados)
 
 
     def respostaNatural (self, msgUsuario):
@@ -143,35 +129,6 @@ class agenteChat:
         
         print(f"Resposta Natural gerada: {resposta}")
         print(resposta) # Mantenha o print se a intenção é mostrar a resposta final ao usuário
-        
-    def consultaSql (self, msgUsuario, ids):
-        
-        print(f"Iniciando consultaSql para mensagem: '{msgUsuario}'. IDs de API: {ids}")
-        
-        resposta = self.agenteBd.controleConsulta(msgUsuario, ids)
-        
-        if resposta == []:
-            # 2. Substituindo print por log.warning
-            print("SQL não retornou dados. Retornando mensagem ao usuário.")
-            print("Desculpa, nao foi possivel recuperar os dados pedidos, ou eles nao existem no nosso banco de dados.")
-            return
-        
-        if resposta == "Escrita nao permitida":
-            # 2. Substituindo print por log.error
-            print("Tentativa de escrita/modificação de banco de dados detectada e bloqueada.")
-            print("Foi detectada uma tentativa de modificar o banco de dados, o que nao e permitido")
-            return
-        
-        msg = f"""
-            O usuario fez essa requisicao: {msgUsuario}.
-            O nosso banco de dados retornou esses dados: {resposta[0]}
-            
-            Responda o usuario em linguagem natural baseando-se nos dados recuperados pelo banco de dados
-        """
-        
-        resposta_final = self.modelo.invoke(msg).content
-        print(f"Resposta final da consulta SQL (linguagem natural): {resposta_final}")
-        print(resposta_final)
     
     def explicacaoConsulta(self, msg: str, resultados: list):
         
@@ -195,7 +152,3 @@ class agenteChat:
                 saida += "\n"
         
         print(saida)
-    
-    def apagaTabelas(self):
-        print("Chamando método para apagar tabelas do BD (agenteBd.apagaBD()).")
-        self.agenteBd.apagaBD()
