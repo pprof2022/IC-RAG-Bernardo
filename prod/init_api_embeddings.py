@@ -53,13 +53,10 @@ dados_finais_embeddings = []
 for api in apis:
     api_id = api["Id"]
 
-    # Lista de endpoints da API
     lista_endpoints = endpoints_por_api.get(api_id, [])
-
-    # Converte lista em string tipo: "EP1, EP2, EP3"
+    
     endpoints_str = ", ".join(lista_endpoints) if lista_endpoints else "Nenhum endpoint registrado"
 
-    # Texto final rico
     descricao_final = (
         f"{api['Name']}. "
         f"{api['Description']}. "
@@ -76,7 +73,6 @@ for api in apis:
 
     dados_finais_embeddings.append(dicionario_final)
 
-# Exibindo o resultado final
 print("\n--- Prévia do Processamento ---")
 if dados_finais_embeddings:
     print(dados_finais_embeddings[0])

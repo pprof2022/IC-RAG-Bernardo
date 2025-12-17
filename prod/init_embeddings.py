@@ -47,7 +47,7 @@ parametros = bd.executaQuery(query_parametros)
 
 # 3. CRIAÇÃO DO HASH MAP (DICIONÁRIO DE LOOKUP) =========================
 
-# Agrupa os parâmetros por Id do Endpoint para O(1) lookup
+# Agrupa os parâmetros por Id do Endpoint para consulta O(1)
 parametros_por_endpoint: Dict[int, List[Dict[str, Any]]] = {}
 
 for p in parametros:
@@ -71,21 +71,16 @@ dados_finais_embeddings = []
 for endpoint in endpoints:
     endpoint_id = endpoint["Id"]
     
-    # Busca a lista de parâmetros para este endpoint
     lista_de_parametros = parametros_por_endpoint.get(endpoint_id, [])
     
-    # 5. CONSTRUÇÃO DA STRING FINAL (Embedding_Text)
     parametros_formatados = []
     
     for param in lista_de_parametros:
-        # Formato: "ParameterName": ParameterDescription
+        
         param_str = f'"{param["name"]}": {param["description"]}'
         parametros_formatados.append(param_str)
         
-    # Junta as strings de parâmetro
     string_parametros_final = ", ".join(parametros_formatados)
-    
-    # Define ShortName (usa Name se ShortName for NULL)
     short_name = endpoint["ShortName"] if endpoint["ShortName"] is not None else endpoint["Name"]
     
     descricao_final = (
@@ -94,7 +89,6 @@ for endpoint in endpoints:
         f"{string_parametros_final}"
     )
     
-    # 6. Cria o Dicionário Final
     dicionario_final = {
         "Id": endpoint["Id"],
         "Name": endpoint["Name"],
@@ -108,7 +102,6 @@ for endpoint in endpoints:
     
     dados_finais_embeddings.append(dicionario_final)
 
-# Exibindo o resultado final do processamento
 print("\n--- Resultado do Processamento ---")
 if dados_finais_embeddings:
     print(dados_finais_embeddings[0])
