@@ -25,9 +25,6 @@ class integracaoBD:
         
     def criaTabelaEmbeddingsApis(self): # Cria a Tabela que armazena o embedding da descricao de cada API
         
-        print("Inicaindo criação da tabela embeddings_api")
-        print("=======================================")
-        
         sqlDrop = "IF OBJECT_ID('embeddings_api', 'U') IS NOT NULL DROP TABLE embeddings_api;"
         
         sqlCreate = """
@@ -44,20 +41,13 @@ class integracaoBD:
         try:
             
             self.cur.execute(sqlDrop)
-            self.cur.execute(sqlCreate),
-            print("Tabela 'embeddings_api' criada/verificada com sucesso.")
-            print("=======================================")
+            self.cur.execute(sqlCreate)
             
         except pyodbc.Error as e:
-            print(f"❌ Erro ao criar tabelas de embeddings: {e.args[1]}")
-            print("=======================================")
             self.conexao.rollback()
             raise
          
     def addTabelaEmbeddingApi(self, linha: Dict): # adiciona o embedding da respectiva API
-        
-        print(f"Adicionando embedding para api: {linha['Name']}")
-        print("=======================================")
         
         try:
            
@@ -79,21 +69,13 @@ class integracaoBD:
                 sql_insert, 
                 (id, nome, descricao, embedding_json_string)
             )
-            
-            print(f"✅ Embedding da api '{nome}' inserido e commitado.")
-            print("=======================================")
-            
+                        
         except pyodbc.Error as e:
-            print(f"❌ Erro ao adicionar embedding para '{nome}': {e.args[1]}")
-            print("=======================================")
             self.conexao.rollback()
             raise
         
     def criaTabelasEmbeddings(self): # Cria a Tabela que armazena o embedding da descricao de cada endpoint
-        
-        print("Iniciando criação da tabela 'embeddings'.")
-        print("=======================================")
-        
+                
         sql_drop = "IF OBJECT_ID('embeddings', 'U') IS NOT NULL DROP TABLE embeddings;"
         
         sql_create = """
@@ -117,21 +99,13 @@ class integracaoBD:
             
             self.cur.execute(sql_drop)
             self.cur.execute(sql_create)
-            
-            print("Tabela 'embeddings' criada/verificada com sucesso.")
-            print("=======================================")
-            
+                        
         except pyodbc.Error as e:
-            print(f"❌ Erro ao criar tabelas de embeddings: {e.args[1]}")
-            print("=======================================")
             self.conexao.rollback()
             raise
         
     def addTabelaEmbedding(self, linha: Dict): # adiciona o embedding da respectiva API
-        
-        print(f"Adicionando embedding para endpoint: {linha['Name']}")
-        print("=======================================")
-        
+                
         try:
             
             embedding_json_string = json.dumps(linha.get("embedding", ""))
@@ -155,26 +129,16 @@ class integracaoBD:
                 sql_insert, 
                 (id, nome, url, documentacao, tipo_resposta, idApi, texto_embedding, embedding_json_string)
             )
-            
-            print(f"✅ Embedding da tabela '{nome}' inserido e commitado.")
-            print("=======================================")
-            
+                        
         except pyodbc.Error as e:
-            print(f"❌ Erro ao adicionar embedding para '{nome}': {e.args[1]}")
-            print("=======================================")
             self.conexao.rollback()
             raise
         
     def retApiEmbedding(self, embed_list:List[float]): # Busca a api com o embedding mais similar da msg do usuario 
-        
-        print(f"Buscando a API mais conexa com o pedido")
-        print("=======================================")
-        
+                
         try:
             embed_json_string = json.dumps(embed_list)
         except Exception as e:
-            print(f"❌ Erro ao converter vetor Python para JSON: {e}")
-            print("=======================================")
             return []
 
         sql_query = f"""
@@ -199,21 +163,14 @@ class integracaoBD:
             return resultados
             
         except pyodbc.Error as e:
-            print(f"Erro ao executar busca de embeddings no SQL Server: {e.args[1]}")
-            print("=======================================")
             self.conexao.rollback()
             raise
     
     def retTabelasEmbedding(self, max_tabelas: int, embed_list: List[float], idApi: int): # Busca os top X endpoints com o embedding mais similar da msg do usuario
-        
-        print(f"Buscando {max_tabelas} endpoints mais próximos dentro da API id={idApi}.")
-        print("=======================================")
-        
+                
         try:
             embed_json_string = json.dumps(embed_list)
         except Exception as e:
-            print(f"❌ Erro ao converter vetor Python para JSON: {e}")
-            print("=======================================")
             return []
 
         sql_query = f"""
@@ -241,19 +198,12 @@ class integracaoBD:
             self.cur.execute(sql_query)
             
             resultados = self.cur.fetchall()
-            print(f"Retornados {len(resultados)} endpoints relevantes da API id={idApi}.")
-            print("=======================================")
             return resultados
             
         except pyodbc.Error as e:
-            print(f"Erro ao executar busca de embeddings no SQL Server: {e.args[1]}")
             self.conexao.rollback()
     
     def executaQuery(self, query: str) -> List[Dict[str, Any]]: # Executa uma query qlqr
-        
-        print("Executando consulta SQL passada por parametro")
-        print(f"Query: {query.strip()}")
-        print("=======================================")
         
         try:
             
@@ -262,9 +212,6 @@ class integracaoBD:
             if self.cur.description is None:
                 
                 self.conexao.commit()
-                linhas_afetadas = self.cur.rowcount
-                print(f"Query DML/DDL executada com sucesso. Linhas afetadas: {linhas_afetadas}.")
-                print("=======================================")
                 
                 return []
                 
@@ -293,14 +240,9 @@ class integracaoBD:
                 
                 resultados.append(resultado_linha)
             
-            print(f"Query SELECT executada com sucesso. Retornou {len(resultados)} linha(s).")
-            print("=======================================")
             return resultados
         
         except pyodbc.Error as e:
-            
-            print(f"\n❌ ERRO ao executar a query SQL: {e.args[1]}")
-            print("=======================================")
             self.conexao.rollback()
             
             return []
@@ -326,8 +268,6 @@ class integracaoBD:
             return [dict(zip(colunas, linha)) for linha in linhas]
         
         except Error as e:
-            print(f"Erro ao buscar parametros do endpoint {id}: {e}", exc_info=True)
-            print("=======================================")
             return []
     
     def fecharConexao(self): # fecha a conexao

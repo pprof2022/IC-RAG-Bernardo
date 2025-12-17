@@ -24,7 +24,7 @@ while not entrada.strip().lower().startswith("sair"):
     
     entrada = input("Escreva sua pergunta: ") # proxima pergunta
     
-print("debug")
+print("Fim")
 # finalizacao do sistema ==========================================================================================
 
 integracaoBd.fecharConexao()

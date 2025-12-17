@@ -102,12 +102,6 @@ for endpoint in endpoints:
     
     dados_finais_embeddings.append(dicionario_final)
 
-print("\n--- Resultado do Processamento ---")
-if dados_finais_embeddings:
-    print(dados_finais_embeddings[0])
-else:
-    print("Nenhum dado processado.")
-
 bd.criaTabelasEmbeddings()
 
 for dado in dados_finais_embeddings:

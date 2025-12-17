@@ -73,12 +73,6 @@ for api in apis:
 
     dados_finais_embeddings.append(dicionario_final)
 
-print("\n--- Prévia do Processamento ---")
-if dados_finais_embeddings:
-    print(dados_finais_embeddings[0])
-else:
-    print("Nenhuma API encontrada.")
-
 # 5. GERAR EMBEDDINGS E SALVAR NO BANCO =================================
 
 for dado in dados_finais_embeddings:
