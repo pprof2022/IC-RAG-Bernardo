@@ -1,4 +1,5 @@
 from bd import integracaoBD
+from classe_faiss import Faiss
 
 import time
 import ast
@@ -16,6 +17,7 @@ class agenteChat:
             "0": self.respostaNatural,
             "1": self.explicacaoConsulta
         }
+        self.faiss = Faiss()
     
     def defTipoResposta(self, msg:str): # Verifica que tipo de resposta deve ser feita
         
@@ -64,17 +66,36 @@ class agenteChat:
         
         t1 = time.time()
         api = self.integracaoBd.retApiEmbedding(embedMsg) # retorna a API mais relevante para a msg do usuario
-        print(f"Tempo para RAG: {time.time() - t1}")
+        print(f"Tempo para RAG API: {time.time() - t1}")
         print("===================================================")
         
         apiId = api[0][0] # extrai o id da api do retorno da consulta
         
         t1 = time.time()
         resultados = self.integracaoBd.retTabelasEmbedding(5, embedMsg, apiId) # retorna os 5 endpoints mais relevante para a msg do usuario
-        print(f"Tempo para RAG: {time.time() - t1}")
+        print(f"Tempo para RAG Endpoint: {time.time() - t1}")
         print("===================================================")
 
         print(f"Tabelas candidatas encontradas (RAG): {resultados}")
+        print("===================================================")
+        
+        print("Teste FAISS")
+        print("===================================================")
+        
+        t1 = time.time()
+        idApi = self.faiss.ret_api_mais_similar(embedMsg)
+        print(f"Tempo para RAG API: {time.time() - t1}")
+        print("===================================================")
+        
+        t1 = time.time()
+        idsEndpoints = self.faiss.ret_top_endpoints(embedMsg, idApi)
+        if idsEndpoints:
+            ids_formatados = tuple(idsEndpoints) if len(idsEndpoints) > 1 else f"({idsEndpoints[0]})"
+        query = f"select id, nome, url, documentacao, tipo_resposta, texto from embeddings where id in {ids_formatados}"
+        resultadosFaiss = self.integracaoBd.executaQuery(query)
+        print(f"Tempo para RAG Endpoint: {time.time() - t1}")
+        print("===================================================")
+        print(resultadosFaiss)
         print("===================================================")
         
         promptSelecaoEndpoints = f"""
