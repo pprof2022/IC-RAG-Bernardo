@@ -9,25 +9,36 @@ A aplicação é composta por diferentes módulos que evoluíram ao longo do des
 
 ```
 IC-RAG
-├── cdg/
-├── dados/
 ├── prod/
-├── teste/
+    ├─── med/
+    ├─── sql_atualizado/
+    ├─── sql_original/
+    ├─── agente_chat.py
+    ├─── bd.py
+    ├─── init_api_embeddings.py
+    ├─── init_banco_via-BAK.py
+    ├─── init_banco_via-SQL.py
+    ├─── init_embeddings.py
+    ├─── init_banco_via-SQL.py
+    ├─── init_embeddings.py
+    ├─── mvp.py
+    ├─── navegadores_json.py
+    ├─── teste.py
+├── README.md
 └── requirements.txt
 ```
 
 ### 📦 Descrição das pastas
 
-- **`cdg/`**  
-  Contém a proposta atual do sistema, adaptada para uso com **PostgreSQL**. É um **MVP funcional** que implementa a pipeline principal de RAG (ingestão, indexação e recuperação de dados).
-
 - **`prod/`**  
   Versão preparada para **ambiente de produção**, com código ajustado para o contexto real de execução e acesso ao banco de dados.  
   Inclui scripts SQL e utilitários para inicialização e carregamento de embeddings.
 
-- **`dados/`** e **`teste/`**  
-  Pastas legadas de experimentos anteriores, quando o RAG era testado diretamente sobre arquivos locais.  
-  **Não fazem parte da solução atual.**
+- **`med`**  
+  Arquivos para realização de relatórios sobre a veracidade do banco de dados
+
+- **`sql_atualizado` e `sql_original`**  
+  Arquivos para reconstrução do banco de dados
 
 - **`requirements.txt`**  
   Lista todas as dependências necessárias para execução do projeto.
@@ -38,7 +49,7 @@ IC-RAG
 
 ### 1️⃣ Instale as dependências
 
-Certifique-se de ter o **Python 3.10+** instalado, e depois execute:
+Certifique-se de ter o **Python 3.10+** instalado, e depois execute no diretório IC-RAG:
 
 ```bash
 pip install -r requirements.txt
@@ -49,29 +60,33 @@ pip install -r requirements.txt
 ### 2️⃣ Configure o OLLama
 
 O sistema utiliza o **OLLama** para execução de modelos de linguagem localmente.  
-Verifique se o OLLama está instalado e que os modelos necessários estão disponíveis:
+Verifique se o OLLama está instalado e que os modelos necessários estão disponíveis, digitando em um terminal qualquer (variáveis de ambiente já configuradas):
 
 ```bash
-ollama pull <nome_do_modelo>
-```
-
-Por exemplo:
-```bash
-ollama pull llama3
+ollama pull qwen2:7b
+ollama pull embeddinggemma:latest
 ```
 
 ---
 
 ### 3️⃣ Prepare o banco de dados
 
-O sistema depende de um banco de dados **PostgreSQL** já populado.  
-Os scripts para criação e inserção de dados estão localizados em:
+O sistema depende de um banco de dados **SQLServer** já populado.  
+Para criar e popular o banco você tem duas opções, via .sql ou .bak:
+
+Via terminal entre no diretório do projeto `IC-RAG` e depois em `prod`, depois execute na linha de comando
 
 ```
-prod/sql/
+py init_banco_via_SQL.py
 ```
 
-Execute esses scripts para criar as tabelas e carregar os dados necessários.
+ou 
+
+```
+py init_banco_via_BAK.py
+```
+
+Execute esses scripts para criar as tabelas e carregar os dados necessários. Caso opte por `init_banco_via_BAK.py`, o próximo passo não precisará ser executado
 
 ---
 
@@ -80,7 +95,8 @@ Execute esses scripts para criar as tabelas e carregar os dados necessários.
 Antes de iniciar o sistema, rode o script responsável por criar os embeddings e armazená-los no banco:
 
 ```bash
-python prod/init_embedding.py
+py init_api_embedding.py
+py init_embedding.py
 ```
 
 Esse passo é essencial para que o RAG consiga realizar buscas vetoriais eficientes.
