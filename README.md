@@ -103,6 +103,14 @@ Esse passo é essencial para que o RAG consiga realizar buscas vetoriais eficien
 
 ---
 
+### 5️⃣ Rode o mvp
+
+Agora, para testar o projeto execute essa linha de comando no terminal e siga as intruções do mesmo:
+
+```bash
+py mvp.py
+```
+
 ## 💬 O que o sistema faz
 
 O **IC-RAG** é um sistema de conversação inteligente com **acesso aumentado a dados**.  
