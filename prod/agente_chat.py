@@ -33,11 +33,7 @@ class agenteChat:
             Retorne apenas o numero, fuck the explanation 
         """
         
-        t1 = time.time()
         respotaTipoAcao = self.modelo.invoke(prompotDefineAcao) # Define qual das acoes listadas pela string acima sera executada
-        print(f"Tempo para definir acao: {time.time() - t1}")
-        print("===================================================")
-        
         id = respotaTipoAcao.content.strip()
 
         print(f"Resposta Tipo Acao (LLM): {id} (Content: {respotaTipoAcao.content})")
@@ -46,10 +42,6 @@ class agenteChat:
         return id
         
     def controleResposta (self, msg:str): # Centro de controle de execucao, gerencia todas as funcoes e dados nescessarios
-        
-        print("===================================================")
-        print(f"Mensagem do usuario: {msg}")
-        print("===================================================")
         
         id = self.defTipoResposta(msg)
 
@@ -63,26 +55,13 @@ class agenteChat:
         print("===================================================")
         
         embedMsg = self.retEmbedMsg(msg) # gera o embedding da msg
-        
-        print("Teste FAISS")
-        print("===================================================")
-        
-        t1 = time.time()
-        idApi = self.faiss.ret_api_mais_similar(embedMsg)
-        print(f"Tempo para RAG API: {time.time() - t1}")
-        print("===================================================")
-        
-        t1 = time.time()
-        idsEndpoints = self.faiss.ret_top_endpoints(embedMsg, idApi)
+        idsEndpoints = self.faiss.ret_top_endpoints(embedMsg)
         
         if idsEndpoints:
             ids_formatados = tuple(idsEndpoints) if len(idsEndpoints) > 1 else f"({idsEndpoints[0]})"
             
-        query = f"select id, nome, url, documentacao, tipo_resposta, texto from embeddings where id in {ids_formatados}"
-        resultadosFaiss = self.integracaoBd.executaQuery(query)
+        resultadosFaiss = self.integracaoBd.retEndpoints(ids_formatados)
         
-        print(f"Tempo para RAG Endpoint: {time.time() - t1}")
-        print("===================================================")
         print(resultadosFaiss)
         print("===================================================")
         
@@ -98,18 +77,13 @@ class agenteChat:
         promptSelecaoEndpoints += f"\n\nMensagem do usuario: {msg}"
         # Instrução final para forçar formato
         promptSelecaoEndpoints += "\nIMPORTANTE: Retorne apenas uma lista com os numeros (exemplo: [0, 2, 4]), sem explicar"
-        print("===================================")
         
         print(f"Mensagem tradada para filtragem de endpoints: {promptSelecaoEndpoints}")
         print("===================================")
         
         try:
             
-            t1 = time.time()
             endpointsRelevantes = self.modelo.invoke(promptSelecaoEndpoints)
-            print(f"Tempo para definir tabelas relevantes: {time.time() - t1}")
-            print("===================================")
-            
             lista = ast.literal_eval(endpointsRelevantes.content.strip())
             
             print(f"Lista das tabelas importantes (filtradas): {lista}")
@@ -157,9 +131,6 @@ class agenteChat:
         for resultado in resultados:
             
             parametros = self.integracaoBd.retParametros(resultado["id"]) # passa o id do endpoint
-            
-            print(parametros)
-            print("===================================================")
             
             # Adiciona nome, link da api, link da documentacao e formato da resposta, respectivamente
             resposta += f"\n{resultado["nome"]}\nAPI: {resultado["url"]}\nDocumentacao: {resultado["documentacao"]}\nFormato da resposta: {resultado["tipo_resposta"]}\n"

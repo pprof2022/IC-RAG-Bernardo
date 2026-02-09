@@ -97,6 +97,7 @@ Antes de iniciar o sistema, rode o script responsável por criar os embeddings e
 ```bash
 py init_api_embedding.py
 py init_embedding.py
+py conversao_faiss.py
 ```
 
 Esse passo é essencial para que o RAG consiga realizar buscas vetoriais eficientes.
