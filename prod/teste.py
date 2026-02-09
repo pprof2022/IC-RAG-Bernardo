@@ -99,9 +99,9 @@ try:
             else:
                 print("Nenhuma tabela de usuário encontrada após a operação.")
                 
-            TABELA_ALVO = 'embeddings'
+            TABELA_ALVO = 'Endpoints da API'
             
-            cursor.execute(f"SELECT TOP 1 * FROM [{TABELA_ALVO}]")
+            cursor.execute(f"SELECT * FROM [{TABELA_ALVO}] where ")
             
             # 3. Recupera os resultados
             resultados = cursor.fetchall()

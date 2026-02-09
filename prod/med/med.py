@@ -42,7 +42,7 @@ for row in cursor.fetchall():
 
     # Tenta fazer requisição
     try:
-        response = requests.get(example_url, timeout=10)
+        response = requests.get(example_url, timeout=60) # modifique momentaneamente o timeout
         response.raise_for_status()  # dispara exceção em caso de 4xx/5xx
 
         # Tenta interpretar JSON
@@ -81,8 +81,8 @@ for row in cursor.fetchall():
 
 
 # Salva o relatório
-with open("med.txt", "w", encoding="utf-8") as f:
+with open("med_novo.txt", "w", encoding="utf-8") as f: # modifiquei momentaneamente o caminho do arquivo
     for line in report_lines:
         f.write(line + "\n")
 
-print("\nRelatório salvo em med.txt")
+print("\nRelatório salvo em med_novo.txt")

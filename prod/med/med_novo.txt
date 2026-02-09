@@ -1,0 +1,755 @@
+583: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/plano-orcamentario?ano=2023&pagina=1
+584: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/itens-de-empenho?codigoDocumento=170600000012023NE000001&pagina=1
+585: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/itens-de-empenho/historico?codigoDocumento=170600000012023NE000001&sequencial=01&pagina=1
+586: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/favorecidos-finais-por-documento?codigoDocumento=175004000012023NS000917&pagina=1
+587: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/empenhos-impactados?codigoDocumento=175004000012023NS000917&fase=2&pagina=1
+588: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos?unidadeGestora=175004&gestao=00001&dataEmissao=13%2F01%2F2023&fase=2&pagina=1
+589: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos/175004000012023NS000917
+590: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos-relacionados?codigoDocumento=175004000012023NS000917&fase=2
+591: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos-por-favorecido?codigoPessoa=88541354000194&fase=2&ano=2023&pagina=1
+592: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/coronavirus/transferencias?mesAno=202005&pagina=1
+593: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/coronavirus/movimento-liquido-despesa?mesAnoLancamento=202005&pagina=1
+594: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/convenios?dataVigenciaInicial=30%2F12%2F2022&dataVigenciaFinal=30%2F06%2F2025&convenente=INST%20INTERAMERICANO%20DE%20COOPERACAO%20PARA%20A%20AGRICULTURA&pagina=1
+595: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/convenios/tipo-instrumento
+596: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/convenios/numero?numero=677670&pagina=1
+597: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/convenios/numero-processo?numeroProcesso=04156.000012%2F2020-30&pagina=1
+598: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/convenios/numero-original?numeroOriginal=01%2F2020&pagina=1
+599: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/convenios/id?id=321727454
+600: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos?dataInicial=06%2F06%2F2023&dataFinal=06%2F06%2F2073&codigoOrgao=30000&pagina=1
+601: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/termo-aditivo?id=91725097
+602: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+603: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/numero?numero=492023&pagina=1
+604: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/itens-contratados?id=91725097&pagina=1
+605: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/id?id=91725097
+606: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/documentos-relacionados?id=91725097
+607: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/cpf-cnpj?cpfCnpj=02341470000144&pagina=1
+608: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/contratos/apostilamento?id=91725097
+609: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/cnep?pagina=1
+610: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/cnep/287975
+611: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/cepim?pagina=1
+612: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/cepim/140715645
+613: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/ceis?pagina=1
+614: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/ceis/285499
+615: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/ceaf?pagina=1
+616: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/ceaf/141911
+617: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/acordos-leniencia?pagina=1
+618: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/acordos-leniencia/1000005
+619: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/cartoes?mesExtratoInicio=01%2F2023&mesExtratoFim=10%2F2023&pagina=1
+620: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+621: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+622: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+623: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+624: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+625: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+626: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+627: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+628: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+629: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+630: ❌ MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+631: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+632: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+633: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+634: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+80: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_Correspondentes/versao/v1/odata/Correspondentes?%24top=1
+81: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/BcBase/versao/v2/odata/TipoSituacaoPessoaJuridica
+82: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/BcBase/versao/v2/odata/TipoEntidadeSupervisionada
+83: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/BcBase/versao/v2/odata/NaturezaJuridica
+759: ✅ Documentação atualizada.
+760: ✅ Documentação atualizada.
+761: ✅ Documentação atualizada.
+762: ✅ Documentação atualizada.
+763: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1 column 33112 (char 33111)
+764: ❌ HTTPError: 404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v1/bdg/local%0A
+765: ✅ Documentação atualizada.
+766: ✅ Documentação atualizada.
+767: ✅ Documentação atualizada.
+768: ✅ Documentação atualizada.
+769: ✅ Documentação atualizada.
+770: 🟠 Divergencia de chaves. Esperava-se ['observacoes', 'grupo', 'id', 'descricao'], recebeu [].
+771: ✅ Documentação atualizada.
+772: ✅ Documentação atualizada.
+773: ✅ Documentação atualizada.
+774: ✅ Documentação atualizada.
+775: ✅ Documentação atualizada.
+776: ✅ Documentação atualizada.
+777: ❌ HTTPError: 404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v2/cnae/grupos%20
+778: ✅ Documentação atualizada.
+779: ✅ Documentação atualizada.
+780: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1 column 33613 (char 33612)
+781: ✅ Documentação atualizada.
+782: ✅ Documentação atualizada.
+783: ✅ Documentação atualizada.
+784: ✅ Documentação atualizada.
+785: ✅ Documentação atualizada.
+786: ✅ Documentação atualizada.
+787: ✅ Documentação atualizada.
+788: ❌ InvalidSchema: No connection adapters were found for 'curl -X POST -F tcoord=latlon -F arquivo=@arquivo_idlatlon.txt -F email=usuario@email.com https://servicodados.ibge.gov.br/api/v1/hgeohnor/arquivo'
+789: ✅ Documentação atualizada.
+790: ✅ Documentação atualizada.
+791: ✅ Documentação atualizada.
+792: ❌ InvalidSchema: No connection adapters were found for 'curl -X POST -F pontos=[{"lat":-20.3337673,"lon":-50.5612345},{"lat":-19.1234532,"lon":-51.8456751}] https://servicodados.ibge.gov.br/api/v1/hgeohnor/pontos'
+793: ✅ Documentação atualizada.
+794: ✅ Documentação atualizada.
+795: ✅ Documentação atualizada.
+796: ✅ Documentação atualizada.
+797: ✅ Documentação atualizada.
+798: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1 column 33255 (char 33254)
+799: ✅ Documentação atualizada.
+800: ✅ Documentação atualizada.
+801: ✅ Documentação atualizada.
+802: ✅ Documentação atualizada.
+803: ❌ HTTPError: 404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v1/localidades/mesorregioes%20
+804: ✅ Documentação atualizada.
+805: ✅ Documentação atualizada.
+806: ✅ Documentação atualizada.
+807: ✅ Documentação atualizada.
+808: ❌ HTTPError: 404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v1/localidades/microrregioes%20
+809: ✅ Documentação atualizada.
+810: ✅ Documentação atualizada.
+811: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1 column 32862 (char 32861)
+812: ✅ Documentação atualizada.
+813: ✅ Documentação atualizada.
+814: ❌ HTTPError: 404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v1/localidades/municipios%20
+815: ✅ Documentação atualizada.
+816: ✅ Documentação atualizada.
+817: ✅ Documentação atualizada.
+818: ✅ Documentação atualizada.
+819: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1 column 33157 (char 33156)
+820: ✅ Documentação atualizada.
+821: ✅ Documentação atualizada.
+822: ✅ Documentação atualizada.
+823: ✅ Documentação atualizada.
+824: ✅ Documentação atualizada.
+825: ✅ Documentação atualizada.
+826: ✅ Documentação atualizada.
+827: ✅ Documentação atualizada.
+828: ✅ Documentação atualizada.
+829: ✅ Documentação atualizada.
+830: ✅ Documentação atualizada.
+831: ✅ Documentação atualizada.
+832: ✅ Documentação atualizada.
+833: ✅ Documentação atualizada.
+834: ✅ Documentação atualizada.
+835: ✅ Documentação atualizada.
+836: ✅ Documentação atualizada.
+837: ✅ Documentação atualizada.
+838: ✅ Documentação atualizada.
+839: ✅ Documentação atualizada.
+840: ✅ Documentação atualizada.
+841: ✅ Documentação atualizada.
+842: ✅ Documentação atualizada.
+843: ✅ Documentação atualizada.
+844: ✅ Documentação atualizada.
+845: ✅ Documentação atualizada.
+846: ✅ Documentação atualizada.
+847: ✅ Documentação atualizada.
+848: ✅ Documentação atualizada.
+849: ✅ Documentação atualizada.
+866: ✅ Documentação atualizada.
+867: ✅ Documentação atualizada.
+868: ✅ Documentação atualizada.
+869: ✅ Documentação atualizada.
+870: ✅ Documentação atualizada.
+871: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1 column 32996 (char 32995)
+872: ✅ Documentação atualizada.
+873: ✅ Documentação atualizada.
+874: ✅ Documentação atualizada.
+875: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/indicadores/29171
+876: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/periodos/2022/indicadores/29171
+877: ✅ Documentação atualizada.
+878: ✅ Documentação atualizada.
+879: ✅ Documentação atualizada.
+880: ❌ HTTPError: 500 Server Error: Internal Server Error for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/indicadores/29171/ranking
+881: ❌ HTTPError: 500 Server Error: Internal Server Error for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/periodos/2022/indicadores/29171/ranking
+882: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/indicadores/29171/resultados/33
+883: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/periodos/2022/indicadores/29171/resultados/33
+884: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/indicadores/29171/resultados/33,35
+885: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/periodos/2022/indicadores/29171/resultados/33
+886: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/pesquisas/1/resultados/33
+887: ❌ InvalidSchema: No connection adapters were found for 'CURL -X POST https://servicodados.ibge.gov.br/api/v1/ppp -F arquivo=@mtnx1951.21o -F tipo-levantamento=estatico -F modelo-antena="TRM59800.00     NONE" -F altura-antena=0.1376 -F marco-ibge=SAT99612 -F email=usuario@dominio.com.br -F autorizacao-uso=true'
+888: ✅ Documentação atualizada.
+889: ✅ Documentação atualizada.
+890: ✅ Documentação atualizada.
+891: ❌ InvalidSchema: No connection adapters were found for 'curl -X POST -F referencialEntrada=sad69 -F tipoCoordenadaEntrada=lat_long_gms -F tipoCoordenadaSaida=lat_long_gd -F tipoEntrada=txt -F tipoSaida=arquivo -F arquivo=@idlatlon_gms.txt -F email=exemplo@ibge.gov.br https://servicodados.ibge.gov.br/api/v1/progrid/arquivo'
+892: ✅ Documentação atualizada.
+893: ✅ Documentação atualizada.
+894: ✅ Documentação atualizada.
+895: ✅ Documentação atualizada.
+896: ✅ Documentação atualizada.
+897: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+898: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+899: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+900: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+901: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+902: ✅ Documentação atualizada.
+903: ✅ Documentação atualizada.
+904: ✅ Documentação atualizada.
+905: ✅ Documentação atualizada.
+906: ✅ Documentação atualizada.
+907: ❌ HTTPError: 400 Client Error: Bad Request for url: https://servicodados.ibge.gov.br/api/v1/rmpg/customizado/EMARC%7CEMSAN/1%7C33?momentoInicial=2022-01-07-10-00&momentoFinal=2022-01-07-13-00%20
+84: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/BcBase/versao/v2/odata/EsferaPublica
+908: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+909: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+910: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+911: ❌ InvalidSchema: No connection adapters were found for 'ttps://dados.gov.br/dados/api/publico/conjuntos-dados/objetivos-desenvolvimento-sustentavel'
+912: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+1: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DAIR_APLICACOES_RESGATE (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+2: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DAIR_CARTEIRA (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+3: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DAIR_FORMA_GESTAO (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+4: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DAIR_FUNDO_INVEST_ANALISADOS (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+5: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DAIR_GOVERNANCA (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+6: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DAIR_IDENTIFICACAO (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+7: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DAIR_INSTITUICAO_CREDENCIADA (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+8: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DAIR_REGIME_ATA (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+9: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DIPR (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+10: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_BASE_CALCULO_AMORTIZACAO (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+11: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_BASE_CALCULO_ENTE (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+12: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_COMPARATIVO_AVALIACAO (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+13: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_COMPARATIVO_RECEITA (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+14: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_CONTRIBUICAO (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+15: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_CUSTO_NORMAL_BENEF_CAPIT (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+16: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_CUSTO_NORMAL_BENEF_COB (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+17: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_CUSTO_NORMAL_REP_APOS (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+18: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_CUSTO_NORMAL_REP_AUX (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+19: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_DADOS_CONSOLIDADOS (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+20: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_ENCAMINHAMENTO (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+21: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_ESTATISTICA (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+22: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_FLUXO_ATUARIAL (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+23: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_FORMA_AMORTIZACAO (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+24: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_HIPOTESE_ATUARIAL (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+25: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_HIPOTESE_BIOMETRICA (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+26: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_NOTIFICACAO (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+27: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_ORGAO_ENTIDADE (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+28: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_PARECER_ATUARIAL (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+29: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_PLANO_AMORTIZACAO (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+30: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_PLANO_AMORTIZACAO_DEFICIT (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+31: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_PLANO_BENEFICIO (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+32: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_PLANO_CUSTEIO (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+33: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_RETIFICACAO_NOTIFICACAO (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+34: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_SEGREGACAO_MASSA (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+35: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /DRAA_VALORES_COMPROMISSOS (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+36: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /RPPS_ALIQUOTA (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+37: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /RPPS_CRP (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+38: ❌ SSLError: HTTPSConnectionPool(host='apicadprev.trabalho.gov.br', port=443): Max retries exceeded with url: /RPPS_REGIME_PREVIDENCIARIO (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+753: 🟠 Divergencia de chaves. Esperava-se ['nome', 'id', 'agregados'], recebeu [].
+754: 🟠 Divergencia de chaves. Esperava-se ['nivel', 'nome', 'id'], recebeu [].
+755: 🟠 Divergencia de chaves. Esperava-se ['assunto', 'pesquisa', 'id', 'variaveis', 'URL', 'nome', 'nivelTerritorial', 'periodicidade'], recebeu ['assunto', 'pesquisa', 'id', 'classificacoes', 'variaveis', 'URL', 'nome', 'nivelTerritorial', 'periodicidade'].
+756: 🟠 Divergencia de chaves. Esperava-se ['modificacao', 'id', 'literals'], recebeu [].
+757: 🟠 Divergencia de chaves. Esperava-se ['resultados', 'variavel', 'id', 'unidade'], recebeu [].
+758: ❌ Erro ao interpretar ResponseExample (banco): Expecting value: line 36 column 1 (char 686)
+45: ✅ Documentação atualizada.
+46: ✅ Documentação atualizada.
+47: ✅ Documentação atualizada.
+48: ❌ Erro ao interpretar ResponseExample (banco): Expecting ',' delimiter: line 36 column 1 (char 1112)
+49: ✅ Documentação atualizada.
+50: ✅ Documentação atualizada.
+51: ✅ Documentação atualizada.
+52: ✅ Documentação atualizada.
+53: ✅ Documentação atualizada.
+54: ✅ Documentação atualizada.
+55: ✅ Documentação atualizada.
+56: ✅ Documentação atualizada.
+57: ✅ Documentação atualizada.
+60: ✅ Documentação atualizada.
+61: ✅ Documentação atualizada.
+64: ✅ Documentação atualizada.
+65: ✅ Documentação atualizada.
+66: ✅ Documentação atualizada.
+67: ✅ Documentação atualizada.
+68: ✅ Documentação atualizada.
+69: ✅ Documentação atualizada.
+70: ❌ Erro ao interpretar ResponseExample (banco): Expecting value: line 1 column 1 (char 0)
+72: ✅ Documentação atualizada.
+73: ✅ Documentação atualizada.
+74: ✅ Documentação atualizada.
+75: ✅ Documentação atualizada.
+77: ✅ Documentação atualizada.
+76: ✅ Documentação atualizada.
+78: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_Agencias/versao/v1/odata/Agencias
+79: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/mecir_chancelas/versao/v1/odata/TodosDadosChancelas
+85: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/BcBase/versao/v2/odata/ClasseCooperativa
+86: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/BcBase/versao/v2/odata/TipoCooperativa
+87: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/BcBase/versao/v2/odata/CategoriaCooperativa
+88: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/BcBase/versao/v2/odata/Cooperativas(dataBase=@dataBase)?@dataBase='12-31-2017'&$top=2&$format=json
+89: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/BcBase/versao/v2/odata/EntidadesSupervisionadas(dataBase=@dataBase)?@dataBase='12-31-2017'&$top=2&$format=json
+90: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/CadastroContraparte
+91: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/CadastroPenalidade
+92: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/AtaRegistroPreco
+93: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/InstrumentoContratual
+94: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/InstrumentoAlteracao
+95: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/Ocorrencia
+96: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/Conformidade
+97: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/Rescisao
+98: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/Anulacao
+99: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/GarantiaFinanceira
+100: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/GarantiaTecnica
+101: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/MaoObraTerceirizada
+102: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/Recebimento
+103: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/DocumentoCobranca
+104: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/RelatorioInstrumentoContratual
+105: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SAIC/versao/v1/odata/RecebimentoPagamento
+106: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/mecir_dinheiro_em_circulacao/versao/v1/odata/informacoes_diarias
+107: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/mecir_dinheiro_em_circulacao/versao/v1/odata/informacoes_diarias_com_categoria
+108: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas
+109: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao=%2710-06-2023%27&$top=100&$format=json
+110: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial='09-01-2023'&@dataFinalCotacao='09-30-2023'&$top=100&$format=json
+111: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaDia(moeda=@moeda,dataCotacao=@dataCotacao)?@moeda='EUR'&@dataCotacao='10-06-2023'&$top=100&$format=json
+112: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodo(moeda=@moeda,dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@moeda='EUR'&@dataInicial='10-01-2023'&@dataFinalCotacao='10-15-2023'&$top=100&$format=json
+113: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaAberturaOuIntermediario(codigoMoeda=@codigoMoeda,dataCotacao=@dataCotacao)?@codigoMoeda='EUR'&@dataCotacao='10-06-2023'&$format=json
+114: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodoFechamento(codigoMoeda=@codigoMoeda,dataInicialCotacao=@dataInicialCotacao,dataFinalCotacao=@dataFinalCotacao)?@codigoMoeda='EUR'&@dataInicialCotacao='10-01-2023'&@dataFinalCotacao='10-15-2023'&$format=json
+115: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/MPV_DadosAbertos/versao/v1/odata/Quantidadeetransacoesdecartoes(trimestre=@trimestre)?@trimestre='20232'&$top=100&$format=json
+117: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Pix_DadosAbertos/versao/v1/odata/TransacoesPixPorMunicipio(DataBase=@DataBase)?@DataBase='20232'&$top=100&$format=json
+118: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SPI/versao/v1/odata/PixLiquidadosAtual
+119: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SPI/versao/v1/odata/PixLiquidadosIntradia
+120: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SPI/versao/v1/odata/PixRemuneracaoContaPI
+121: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SPI/versao/v1/odata/PixDisponibilidadeSPI
+122: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/STR/versao/v1/odata/GiroEvolucaoDiaria
+123: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/STR/versao/v1/odata/GiroDetalhamento
+124: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/STR/versao/v1/odata/PagamentosIntradia
+125: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/STR/versao/v1/odata/TEDEvolucaoDiaria
+126: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/STR/versao/v1/odata/TEDHistograma21Dias
+127: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/STR/versao/v1/odata/RedescontoBCBIntradia
+128: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/STR/versao/v1/odata/PortabilidadeDeCredito
+129: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/STR/versao/v1/odata/PortabilidadeDeCreditoPJEArrendamentoMercantil
+130: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/STR/versao/v1/odata/PortabilidadeDeCreditoPessoaNatural
+131: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/STR/versao/v1/odata/EstatisticasTransferenciasLiquidacaoDocumentosComCodigoBarras
+132: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/selic_clientes/versao/v1/odata/QuantidadePorTipoCliente(Data=@Data)?@Data='2020-10-06'&$top=100&$format=json
+133: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/selic_contas/versao/v1/odata/QuantidadePorTipoConta(Data=@Data)?@Data='2022-10-06'&$top=100&$format=json
+134: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/selic_operacoes/versao/v1/odata/DatasOperacoesSelic
+135: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/selic_operacoes/versao/v1/odata/OperacoesEmUmaData(Data=@Data)?@Data='2023-10-06'&$top=100&$format=json
+136: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/selic_operacoes/versao/v1/odata/OperacoesEmUmAno(Ano=@Ano)?@Ano='2023'&$top=100&$format=json
+137: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/selic_participantes/versao/v1/odata/QuantidadePorTipoParticipante(Data=@Data)?@Data='2023-10-06'&$top=100&$format=json
+138: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativaMercadoMensais?%24top=10
+139: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic?%24top=10
+140: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoTrimestrais?%24top=10
+141: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24top=10
+142: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoInflacao12Meses?%24top=10
+143: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoInflacao24Meses?$top=100&$format=json
+144: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoTop5Mensais?%24top=10
+145: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoTop5Selic?%24top=10
+146: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoTop5Anuais?%24top=10
+147: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_FiliaisAdministradorasConsorcios/versao/v1/odata/Filiais?%24top=10
+148: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/IFDATA/versao/v1/odata/IfDataCadastro(AnoMes=@AnoMes)?%40AnoMes=202310
+149: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/IFDATA/versao/v1/odata/ListaDeRelatorio()
+150: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/IFDATA/versao/v1/odata/IfDataValores(AnoMes=@AnoMes,TipoInstituicao=@TipoInstituicao,Relatorio=@Relatorio)?@AnoMes=202303&@TipoInstituicao=1&@Relatorio='1'&$top=100&$format=json
+151: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SGPro2_DadosAbertosIndicadores/versao/v1/odata/ObterDadosAbertosIndicadores(idIndicadorPar=@idIndicadorPar,situacaoIndicadorPar=@situacaoIndicadorPar,anoBaseMetaPar=@anoBaseMetaPar)?$top=100&$format=json
+152: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/regimes_especiais/versao/v1/odata/Regimes
+153: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/CCR/versao/v1/odata/InstituicoesFinanceirasAutorizadas
+154: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/CusteioMunicipioProduto?%24top=5
+155: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/ComercRegiaoUFProduto?%24top=5
+156: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/CusteioRegiaoUFProduto?%24top=5
+157: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/Faixa?%24top=5
+158: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/FonteRecursos?%24top=5
+159: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/FonteRecursosIF?%24top=5
+160: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/FaixaUF?%24top=5
+161: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/InvestMunicipioProduto?%24top=55
+162: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/InvestRegiaoUFProduto?%24top=5
+163: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/ProgramaSubprograma?%24top=5
+164: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/ProgramaSubprogramaRegiaoUF?%24top=5
+165: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/RegiaoUF?%24top=5
+166: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/RegiaoUFGenero?%24top=5
+167: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/SegmentoIF?%24top=5
+168: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/SegmentoIFRegiaoUF?%24top=5
+169: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/SegmentoTipoPessoa?%24top=5
+170: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/mecir_moedas_comemorativas/versao/v1/odata/informacoes_diarias?%24top=5
+171: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SGM/versao/v1/odata/ObterMultas?%24top=5
+172: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SOR_OperacoesOrcamentarias/versao/v1/odata/BuscaOperacoesOrcamentarias(Data_inicio=@Data_inicio,Data_fim=@Data_fim)?@Data_inicio='2023-10-06'&@Data_fim='2023-10-20'&$top=5&$format=json
+173: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_Ouvidorias/versao/v1/odata/Ouvidorias?%24top=5
+177: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_PostosDeAtendimento/versao/v1/odata/PostosAtendimento?%24top=5
+174: ✅ Documentação atualizada.
+175: ✅ Documentação atualizada.
+176: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/DASFN/versao/v1/odata/Recursos?$top=5&$filter=Api%20eq%20'pix_saque'&$format=json
+178: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_PostosDeAtendimentoEletronico/versao/v1/odata/PostosAtendimentoEletronico?%24top=5
+179: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Gepad_QuadrosGeraisInternet/versao/v1/odata/QuadroGeralInabilitados?%24top=5
+180: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Gepad_QuadrosGeraisInternet/versao/v1/odata/QuadroGeralProibidos?%24top=5
+181: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Processos_Autorizacao/versao/v1/odata/ProcessosAutorizacaoFuncionamentoEmAberto(dataBase=@dataBase)?%24top=5
+182: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SGPro2_DadosAbertosProjetos/versao/v1/odata/ObterDadosAbertosProjetos?%24top=5
+183: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SML/versao/v1/odata/InstituicoesBrasilArgentina
+184: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SML/versao/v1/odata/InstituicoesArgentinaBrasil
+185: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SML/versao/v1/odata/InstituicoesBrasilUruguai
+186: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SML/versao/v1/odata/InstituicoesUruguaiBrasil
+187: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SML/versao/v1/odata/InstituicoesBrasilParaguai
+188: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SML/versao/v1/odata/InstituicoesParaguaiBrasil
+189: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SML/versao/v1/odata/FeriadosArgentina
+190: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SML/versao/v1/odata/FeriadosUruguai
+191: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SML/versao/v1/odata/FeriadosParaguai
+192: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SML/versao/v1/odata/AgregadoExportacao(MesInicial=@MesInicial,AnoInicial=@AnoInicial,MesFinal=@MesFinal,AnoFinal=@AnoFinal)?%40MesInicial=1&%40AnoInicial=2019&%40MesFinal=3&%40AnoFinal=2019
+193: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/SML/versao/v1/odata/ExportacoesImportacoesSmlArgentina(DataInicial=@DataInicial,DataFinal=@DataFinal)?%40DataInicial=2000-01-01&%40DataFinal=2023-10-21
+194: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/RDE_Publicacao/versao/v1/odata/TodosRegistros?%24top=5
+195: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/RDE_Publicacao/versao/v1/odata/RegistrosIED?%24top=5
+196: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/RDE_Publicacao/versao/v1/odata/RegistrosPorMes(Mes=@Mes,Ano=@Ano)?%40Mes=1&%40Ano=2020&%24top=5
+197: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/RankingOuvidorias/versao/v1/odata/Periodos?%24top=5
+198: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/RankingOuvidorias/versao/v1/odata/Relatorios(Ano=@Ano,Periodo=@Periodo,TipoPeriodo=@TipoPeriodo)?@Ano=2018&@Periodo=1&@TipoPeriodo='T'&$top=5&$format=json
+199: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Instituicoes_em_funcionamento/versao/v1/odata/SedesBancoComMultCE?%24top=5
+200: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Instituicoes_em_funcionamento/versao/v1/odata/SedesCooperativas?%24top=5
+201: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Instituicoes_em_funcionamento/versao/v1/odata/SedesSociedades?%24top=5
+202: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Instituicoes_em_funcionamento/versao/v1/odata/SedesConsorcios?%24top=5
+203: ✅ Documentação atualizada.
+204: ❌ Erro ao interpretar ResponseExample (banco): Invalid control character at: line 104 column 17 (char 3712)
+205: ❌ HTTPError: 500 Server Error: Internal Server Error for url: https://www.bcb.gov.br/api/servico/sitebcb/ri/proximos-relatorios?inicioAgenda=2021-07-15
+206: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/DadosAbertosTextuais/versao/v1/odata/ouvidoria?%24top=5
+207: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Saldos_BCB/versao/v1/odata/Saldos_Mensais_BCB(Data_base=@Data_base,Data_fim=@Data_fim)?@Data_base='2020-01-01'&@Data_fim='2020-12-31'&$top=5&$format=json
+208: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/CADIP_DADOS_PUBLICOS/versao/v1/odata/ModalidadeOperacao()?%24top=5
+209: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/CADIP_DADOS_PUBLICOS/versao/v1/odata/EndividamentoEntePublico(Data=@Data)?%40Data=202010&%24top=5
+210: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/CADIP_DADOS_PUBLICOS/versao/v1/odata/CadastroOperacoes(Ano=@Ano)?%40Ano=2020&%24top=5
+211: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/CADIP_DADOS_PUBLICOS/versao/v1/odata/MovimentoLiberacao(Ano=@Ano)?%40Ano=2020&%24top=5
+212: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/CADIP_DADOS_PUBLICOS/versao/v1/odata/MovimentoPagamento(Ano=@Ano)?%40Ano=2020&%24top=5
+213: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/CADIP_DADOS_PUBLICOS/versao/v1/odata/InformacaoMensal(Ano=@Ano)?%40Ano=2020&%24top=5
+214: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/CADIP_DADOS_PUBLICOS/versao/v1/odata/CronogramaOperacao(Ano=@Ano)?%40Ano=2020&%24top=5
+215: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/CADIP_DADOS_PUBLICOS/versao/v1/odata/EvolucaoLimiteDiario(Ano=@Ano,Modalidade=@Modalidade)?@Ano=2020&@Modalidade='AS'&$top=5&$format=json
+216: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/DASFN/versao/v1/odata/Recursos?$top=5&$filter=Api%20eq%20'pilar3'&$format=json
+217: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/GruposConsolidados
+218: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaInstituicoesDeGrupoConsolidado(CodigoGrupoConsolidado=@CodigoGrupoConsolidado)?@CodigoGrupoConsolidado='02'&$top=5&$format=json
+219: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='J'&@CNPJ='00000000'&$top=5&$format=json
+220: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifaPorValores/versao/v1/odata/GruposConsolidados?%24top=5
+221: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifaPorValores/versao/v1/odata/ServicosBancarios?%24top=5
+222: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifaPorValores/versao/v1/odata/ListaTarifasPorValores(CodigoGrupoConsolidado=@CodigoGrupoConsolidado,CodigoServico=@CodigoServico)?@CodigoGrupoConsolidado='02'&@CodigoServico='1101'&$top=5&$format=json
+223: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_ListaValoresDeServicoBancario/versao/v1/odata/GruposConsolidados?%24top=5
+224: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Informes_ListaValoresDeServicoBancario/versao/v1/odata/ListaValoresServicoBancario(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CodigoGrupoConsolidado=@CodigoGrupoConsolidado)?@PessoaFisicaOuJuridica='J'&@CodigoGrupoConsolidado='02'&$top=5&$format=json
+225: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?%24top=5
+226: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='10-20-2023'&$top=100&$format=json
+227: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial='10-01-2023'&@dataFinalCotacao='10-20-2023'&$top=100&$format=json
+228: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaDia(moeda=@moeda,dataCotacao=@dataCotacao)?@moeda='EUR'&@dataCotacao='10-20-2023'&$top=100&$format=json
+229: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodo(moeda=@moeda,dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@moeda='EUR'&@dataInicial='10-01-2023'&@dataFinalCotacao='10-22-2023'&$top=100&$format=json
+230: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaAberturaOuIntermediario(codigoMoeda=@codigoMoeda,dataCotacao=@dataCotacao)?@codigoMoeda='EUR'&@dataCotacao='10-20-2023'&$format=json
+231: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodoFechamento(codigoMoeda=@codigoMoeda,dataInicialCotacao=@dataInicialCotacao,dataFinalCotacao=@dataFinalCotacao)?@codigoMoeda='EUR'&@dataInicialCotacao='10-01-2023'&@dataFinalCotacao='10-22-2023'&$format=json
+232: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/DASFN/versao/v1/odata/Recursos?$top=5&$filter=Api%20eq%20'taxas_cartoes'&$format=json
+233: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/taxaJuros/versao/v2/odata/TaxasJurosDiariaPorInicioPeriodo?%24top=5
+234: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/taxaJuros/versao/v2/odata/TaxasJurosMensalPorMes?%24top=5
+235: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/taxaJuros/versao/v2/odata/ParametrosConsulta?%24top=5
+236: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/taxaJuros/versao/v2/odata/ConsultaDatas?%24top=5
+237: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/taxaJuros/versao/v2/odata/ConsultaUnificada?%24top=5
+238: ❌ HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/PoliticaMonetaria_TitulosOperacoesConjugadas/versao/v1/odata/TitulosOperacoesConjugadas(Data=@Data)?@Data='2023-10-06'&$top=5&$format=json
+239: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+240: ❌ HTTPError: 404 Client Error: Not Found for url: http://servicos.cptec.inpe.br/XML/estacao/codigo_da_estacao/condicoesAtuais.xml
+248: ❌ HTTPError: 404 Client Error: Not Found for url: http://servicos.cptec.inpe.br/XML/cidade/codigo_da_localidade/dia/dia/ondas.xml
+249: ❌ HTTPError: 404 Client Error: Not Found for url: http://servicos.cptec.inpe.br/XML/cidade/codigo_da_localidade/todos/tempos/ondas.xml
+250: ✅ Documentação atualizada.
+251: ✅ Documentação atualizada.
+253: ✅ Documentação atualizada.
+254: ✅ Documentação atualizada.
+255: ✅ Documentação atualizada.
+256: ✅ Documentação atualizada.
+257: ❌ HTTPError: 404 Client Error: Not Found for url: https://apidatalake.tesouro.gov.br/ords/sadipem/tt/opc-cronograma-pagamentoss
+258: ✅ Documentação atualizada.
+259: ✅ Documentação atualizada.
+260: ✅ Documentação atualizada.
+261: ✅ Documentação atualizada.
+262: ❌ HTTPError: 400 Client Error: Bad Request for url: https://apidatalake.tesouro.gov.br/ords/sadipem/tt/opnc-pvl-tramitacao-deferido%0A
+263: ✅ Documentação atualizada.
+264: ✅ Documentação atualizada.
+265: ✅ Documentação atualizada.
+266: ✅ Documentação atualizada.
+267: ✅ Documentação atualizada.
+268: ✅ Documentação atualizada.
+269: ✅ Documentação atualizada.
+270: ✅ Documentação atualizada.
+271: ✅ Documentação atualizada.
+272: ❌ HTTPError: 405 Client Error: METHOD NOT ALLOWED for url: https://apidadosabertos.saude.gov.br/autenticacao/login
+273: ❌ HTTPError: 405 Client Error: METHOD NOT ALLOWED for url: https://apidadosabertos.saude.gov.br/autenticacao/logout
+274: ✅ Documentação atualizada.
+275: ❌ HTTPError: 404 Client Error: NOT FOUND for url: https://apidadosabertos.saude.gov.br/cnes/tipounidades/1%0A
+276: ✅ Documentação atualizada.
+277: ✅ Documentação atualizada.
+278: ❌ HTTPError: 404 Client Error: NOT FOUND for url: https://apidadosabertos.saude.gov.br/sisagua/vigilancia-parametro-basicos
+279: ❌ Erro ao interpretar ResponseExample (banco): Expecting value: line 1 column 1 (char 0)
+280: ❌ HTTPError: 404 Client Error: NOT FOUND for url: https://apidadosabertos.saude.gov.br/sisagua/controle-mensal-parametro-basicos
+281: ✅ Documentação atualizada.
+282: ❌ Erro ao interpretar ResponseExample (banco): Expecting value: line 1 column 1 (char 0)
+283: ❌ HTTPError: 404 Client Error: NOT FOUND for url: https://apidadosabertos.saude.gov.br/plataformabr/projetos/123
+284: ❌ HTTPError: 404 Client Error: Not Found for url: https://elasticsearch-saps.saude.gov.br/desc-esus-notifica-estado-*/_search
+285: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+286: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+287: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+288: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+289: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+290: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+291: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+292: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+293: ❌ MissingSchema: Invalid URL 'Erro 500': No scheme supplied. Perhaps you meant https://Erro 500?
+294: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+295: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+296: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+297: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+298: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+299: ❌ MissingSchema: Invalid URL 'Erro 500': No scheme supplied. Perhaps you meant https://Erro 500?
+300: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+301: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+302: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+303: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+304: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+305: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+306: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+307: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+308: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+309: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+310: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+311: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+312: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+313: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+314: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+315: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+316: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+317: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+318: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+319: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+320: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+321: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+322: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+323: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+324: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+325: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+326: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+327: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+328: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+329: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+330: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+331: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+332: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+333: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+334: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+335: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+336: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+337: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+338: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+339: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+340: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+341: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+342: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+343: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+344: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+345: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+346: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+347: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+348: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+349: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+350: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+351: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+352: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+353: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+354: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+355: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+356: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+357: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+358: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+359: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+360: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+361: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+362: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+363: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+364: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+365: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+366: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+367: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+368: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+369: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+370: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+371: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+372: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+373: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+374: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+375: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+376: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+377: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+378: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+379: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+380: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+381: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+382: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+383: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+384: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+385: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+386: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+387: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+388: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+389: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+390: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+391: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+392: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+393: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+394: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+395: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+396: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+397: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+398: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+399: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+400: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+401: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+402: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+403: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+404: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+405: ❌ ReadTimeout: HTTPSConnectionPool(host='compras.dados.gov.br', port=443): Read timed out. (read timeout=60)
+406: ✅ Documentação atualizada.
+407: ✅ Documentação atualizada.
+408: ❌ HTTPError: 422 Client Error:  for url: https://pncp.gov.br/api/consulta/v1/contratacoes/proposta?dataFinal=20231027&pagina=1
+409: ✅ Documentação atualizada.
+410: ❌ Erro ao interpretar JSON retornado: Expecting value: line 1 column 1 (char 0)
+411: ❌ Erro ao interpretar ResponseExample (banco): Expecting ',' delimiter: line 27 column 10 (char 947)
+412: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/projetos/233666
+413: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/projetos
+414: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/projetos/areas
+415: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/projetos/segmentos
+416: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/propostas
+417: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/propostas/1
+418: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/incentivadores
+419: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/incentivadores/924b95fdd2fccb4c6212a0eb4ec3f7155ecc56a916b4cd8b304862
+420: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/incentivadores/924b95fdd2fccb4c6212a0eb4ec3f7155ecc56a916b4cd8b304862/doacoes
+421: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/fornecedores
+422: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/fornecedores/6bf85a4fe302cdc962ce2b47dc362cd88b03fd9f00eb1186ff19de1a9d39
+423: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/fornecedores/6bf85a4fe302cdc962ce2b47dc362cd88b03fd9f00eb1186ff19de1a9d39/produtos
+424: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/proponentes
+425: ❌ HTTPError: 404 Client Error: Not Found for url: https://api.salic.cultura.gov.br/v1/proponentes/e27a32606cdbe92f520b05a4b8816565898c55e13cee047f3934cf
+426: ✅ Documentação atualizada.
+427: ✅ Documentação atualizada.
+428: ✅ Documentação atualizada.
+429: ✅ Documentação atualizada.
+430: ✅ Documentação atualizada.
+431: ✅ Documentação atualizada.
+432: ❌ HTTPError: 504 Server Error: Gateway Timeout for url: https://dadosabertos.camara.leg.br/api/v2/deputados/220645/eventos?ordem=ASC&ordenarPor=dataHoraInicio
+433: ✅ Documentação atualizada.
+434: ✅ Documentação atualizada.
+435: ❌ HTTPError: 405 Client Error: Method Not Allowed for url: https://dadosabertos.camara.leg.br/api/v2/deputados/220645/mandatoExterno
+436: ✅ Documentação atualizada.
+437: ✅ Documentação atualizada.
+438: ✅ Documentação atualizada.
+439: ✅ Documentação atualizada.
+440: ❌ HTTPError: 404 Client Error: Not Found for url: https://dadosabertos.camara.leg.br/api/v2/legislaturas/220645/mesa
+441: ✅ Documentação atualizada.
+442: ✅ Documentação atualizada.
+443: ✅ Documentação atualizada.
+444: ✅ Documentação atualizada.
+445: ✅ Documentação atualizada.
+446: ✅ Documentação atualizada.
+448: ✅ Documentação atualizada.
+449: ✅ Documentação atualizada.
+450: ✅ Documentação atualizada.
+451: ✅ Documentação atualizada.
+452: ✅ Documentação atualizada.
+453: ✅ Documentação atualizada.
+454: ✅ Documentação atualizada.
+455: ✅ Documentação atualizada.
+458: ✅ Documentação atualizada.
+459: ✅ Documentação atualizada.
+460: ✅ Documentação atualizada.
+461: ✅ Documentação atualizada.
+462: ✅ Documentação atualizada.
+463: ✅ Documentação atualizada.
+464: ✅ Documentação atualizada.
+465: ✅ Documentação atualizada.
+466: ✅ Documentação atualizada.
+467: ✅ Documentação atualizada.
+468: ❌ HTTPError: 504 Server Error: Gateway Timeout for url: https://dadosabertos.camara.leg.br/api/v2/proposicoes?ordem=ASC&ordenarPor=id
+469: ✅ Documentação atualizada.
+470: ❌ Erro ao interpretar ResponseExample (banco): Expecting property name enclosed in double quotes: line 980 column 80 (char 32809)
+471: ✅ Documentação atualizada.
+472: ✅ Documentação atualizada.
+473: ✅ Documentação atualizada.
+474: ✅ Documentação atualizada.
+475: ✅ Documentação atualizada.
+476: ✅ Documentação atualizada.
+477: ✅ Documentação atualizada.
+478: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1294 column 13 (char 33178)
+479: ✅ Documentação atualizada.
+480: ✅ Documentação atualizada.
+481: ✅ Documentação atualizada.
+482: ✅ Documentação atualizada.
+483: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1294 column 13 (char 33178)
+484: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1236 column 17 (char 32854)
+485: ✅ Documentação atualizada.
+486: ✅ Documentação atualizada.
+487: ✅ Documentação atualizada.
+488: ✅ Documentação atualizada.
+489: ✅ Documentação atualizada.
+490: ✅ Documentação atualizada.
+491: ✅ Documentação atualizada.
+492: ✅ Documentação atualizada.
+493: ✅ Documentação atualizada.
+494: ✅ Documentação atualizada.
+495: ✅ Documentação atualizada.
+496: ✅ Documentação atualizada.
+497: ✅ Documentação atualizada.
+498: ✅ Documentação atualizada.
+499: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1294 column 13 (char 33178)
+500: ✅ Documentação atualizada.
+501: ✅ Documentação atualizada.
+502: ✅ Documentação atualizada.
+503: ✅ Documentação atualizada.
+504: ✅ Documentação atualizada.
+505: ✅ Documentação atualizada.
+506: ✅ Documentação atualizada.
+507: ✅ Documentação atualizada.
+508: ✅ Documentação atualizada.
+509: ❌ Erro ao interpretar ResponseExample (banco): Unterminated string starting at: line 1294 column 13 (char 33178)
+510: ✅ Documentação atualizada.
+511: ❌ HTTPError: 504 Server Error: Gateway Timeout for url: https://dadosabertos.camara.leg.br/api/v2/votacoes?ordem=DESC&ordenarPor=dataHoraRegistro
+512: ✅ Documentação atualizada.
+513: ✅ Documentação atualizada.
+514: ✅ Documentação atualizada.
+515: ✅ Documentação atualizada.
+516: ✅ Documentação atualizada.
+517: ✅ Documentação atualizada.
+518: ✅ Documentação atualizada.
+519: ✅ Documentação atualizada.
+520: ✅ Documentação atualizada.
+521: ✅ Documentação atualizada.
+522: ✅ Documentação atualizada.
+523: ✅ Documentação atualizada.
+524: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/viagens?dataIdaDe=01%2F09%2F2023&dataIdaAte=30%2F09%2F2023&dataRetornoDe=01%2F09%2F2023&dataRetornoAte=30%2F09%2F2023&codigoOrgao=26276&pagina=1
+525: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/viagens/495801256
+526: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/viagens-por-cpf?cpf=01971135755&pagina=1
+527: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/situacao-imovel
+528: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/permissionarios?pagina=1
+529: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/imoveis?pagina=1
+530: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/servidores?orgaoServidorExercicio=26276&pagina=1
+531: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/servidores/74314488
+532: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/servidores/remuneracao?id=74314488&mesAno=202301&pagina=1
+533: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/servidores/por-orgao?pagina=1
+534: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/servidores/funcoes-e-cargos?pagina=1
+535: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/peps?dataFimExercicioDe=01%2F01%2F2023&pagina=1
+536: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/seguro-defeso-por-municipio?mesAno=202301&codigoIbge=3106200&pagina=1
+537: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/seguro-defeso-codigo?codigo=10859427215&pagina=1
+538: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/seguro-defeso-beneficiario-por-municipio?mesAno=202301&codigoIbge=3106200&pagina=1
+539: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/safra-por-municipio?mesAno=202306&codigoIbge=2925931&pagina=1
+540: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/safra-codigo-por-cpf-ou-nis?codigo=16131096954&pagina=1
+541: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/safra-beneficiario-por-municipio?mesAno=202201&codigoIbge=2300200&pagina=1
+542: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/peti-por-municipio?mesAno=202204&codigoIbge=5201108&pagina=1
+543: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/peti-por-cpf-ou-nis?codigo=20033342568&pagina=1
+544: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/peti-beneficiario-por-municipio?mesAno=202205&codigoIbge=5201108&pagina=1
+545: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bpc-por-municipio?mesAno=202306&codigoIbge=2927408&pagina=1
+546: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bpc-por-cpf-ou-nis?codigo=29327474287&pagina=1
+547: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bpc-beneficiario-por-municipio?mesAno=202306&codigoIbge=2408003&pagina=1
+548: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bolsa-familia-sacado-por-nis?nis=20114231286&anoMesCompetencia=202009&pagina=1
+549: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bolsa-familia-sacado-beneficiario-por-municipio?mesAno=202009&codigoIbge=2609600&pagina=1
+550: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bolsa-familia-por-municipio?mesAno=202009&codigoIbge=2609600&pagina=1
+551: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bolsa-familia-disponivel-por-cpf-ou-nis?codigo=20114231286&anoMesReferencia=202009&pagina=1
+552: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/bolsa-familia-disponivel-beneficiario-por-municipio?mesAno=202009&codigoIbge=2609600&pagina=1
+553: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-emergencial-por-municipio?mesAno=202302&codigoIbge=2111607&pagina=1
+554: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-emergencial-por-cpf-ou-nis?codigoBeneficiario=12466839301&pagina=1
+555: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-emergencial-beneficiario-por-municipio?mesAno=202009&codigoIbge=2111607&pagina=1
+556: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-brasil-sacado-por-nis?nis=16107330462&anoMesReferencia=202301&anoMesCompetencia=202301&pagina=1
+557: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-brasil-sacado-beneficiario-por-municipio?mesAno=202301&codigoIbge=1301001&pagina=1
+558: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-brasil-por-municipio?mesAno=202301&codigoIbge=1301001&pagina=1
+559: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/renuncias-valor?pagina=1
+560: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/renuncias-fiscais-empresas-imunes-isentas?pagina=1
+561: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/renuncias-fiscais-empresas-habilitadas-beneficios-fiscais?pagina=1
+562: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/orgaos-siape?pagina=1
+563: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/orgaos-siafi?pagina=1
+564: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/notas-fiscais?cnpjEmitente=05.301.941%2F0003-40&pagina=1
+565: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/notas-fiscais-por-chave?chaveUnicaNotaFiscal=%0915230905054903000179558900023410011490984407
+566: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes?dataInicial=29%2F05%2F2023&dataFinal=29%2F06%2F2023&codigoOrgao=26439&pagina=1
+567: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/823781039
+568: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/ugs?pagina=1
+569: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/por-ug-modalidade-numero?codigoUG=155021&numero=000852022&codigoModalidade=05
+570: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/por-processo?processo=23537013191%2F22-31
+571: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/participantes?codigoUG=155021&numero=000852022&codigoModalidade=05&pagina=1
+572: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/modalidades
+573: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/itens-licitados?id=837081231&pagina=1
+574: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/empenhos?codigoUG=155021&numero=000852022&codigoModalidade=05&pagina=1
+575: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/contratos-relacionados-licitacao?codigoUG=155021&numero=000852022&codigoModalidade=05
+576: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/emendas?pagina=1
+577: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/emendas/documentos/202371080006?pagina=1
+578: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/tipo-transferencia
+579: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/recursos-recebidos?mesAnoInicio=01%2F2023&mesAnoFim=12%2F2023&pagina=1
+580: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/por-orgao?ano=2023&orgaoSuperior=26000&pagina=1
+581: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/por-funcional-programatica?ano=2023&subfuncao=841&pagina=1
+582: ❌ HTTPError: 401 Client Error: Unauthorized for url: https://api.portaldatransparencia.gov.br/api-de-dados/despesas/por-funcional-programatica/movimentacao-liquida?ano=2023&subfuncao=841&pagina=1
