@@ -32,7 +32,7 @@ class agenteChat:
             
             Retorne apenas o numero, fuck the explanation 
         """
-    
+        
         respotaTipoAcao = self.modelo.invoke(prompotDefineAcao) # Define qual das acoes listadas pela string acima sera executada
         id = respotaTipoAcao.content.strip()
 
@@ -42,10 +42,6 @@ class agenteChat:
         return id
         
     def controleResposta (self, msg:str): # Centro de controle de execucao, gerencia todas as funcoes e dados nescessarios
-        
-        print("===================================================")
-        print(f"Mensagem do usuario: {msg}")
-        print("===================================================")
         
         id = self.defTipoResposta(msg)
 
@@ -59,14 +55,12 @@ class agenteChat:
         print("===================================================")
         
         embedMsg = self.retEmbedMsg(msg) # gera o embedding da msg
-        idApi = self.faiss.ret_api_mais_similar(embedMsg)
-        idsEndpoints = self.faiss.ret_top_endpoints(embedMsg, idApi)
+        idsEndpoints = self.faiss.ret_top_endpoints(embedMsg)
         
         if idsEndpoints:
             ids_formatados = tuple(idsEndpoints) if len(idsEndpoints) > 1 else f"({idsEndpoints[0]})"
             
-        query = f"select id, nome, url, documentacao, tipo_resposta, texto from embeddings where id in {ids_formatados}"
-        resultadosFaiss = self.integracaoBd.executaQuery(query)
+        resultadosFaiss = self.integracaoBd.retEndpoints(ids_formatados)
         
         print(resultadosFaiss)
         print("===================================================")
@@ -90,7 +84,6 @@ class agenteChat:
         try:
             
             endpointsRelevantes = self.modelo.invoke(promptSelecaoEndpoints)
-            
             lista = ast.literal_eval(endpointsRelevantes.content.strip())
             
             print(f"Lista das tabelas importantes (filtradas): {lista}")
@@ -138,9 +131,6 @@ class agenteChat:
         for resultado in resultados:
             
             parametros = self.integracaoBd.retParametros(resultado["id"]) # passa o id do endpoint
-            
-            print(parametros)
-            print("===================================================")
             
             # Adiciona nome, link da api, link da documentacao e formato da resposta, respectivamente
             resposta += f"\n{resultado["nome"]}\nAPI: {resultado["url"]}\nDocumentacao: {resultado["documentacao"]}\nFormato da resposta: {resultado["tipo_resposta"]}\n"
