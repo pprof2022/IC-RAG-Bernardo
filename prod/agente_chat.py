@@ -31,7 +31,7 @@ class agenteChat:
             
             Retorne apenas o numero, fuck the explanation 
         """
-    
+        
         respotaTipoAcao = self.modelo.invoke(prompotDefineAcao) # Define qual das acoes listadas pela string acima sera executada
         id = respotaTipoAcao.content.strip()
         
@@ -46,14 +46,12 @@ class agenteChat:
             return
         
         embedMsg = self.retEmbedMsg(msg) # gera o embedding da msg
-        idApi = self.faiss.ret_api_mais_similar(embedMsg)
-        idsEndpoints = self.faiss.ret_top_endpoints(embedMsg, idApi)
+        idsEndpoints = self.faiss.ret_top_endpoints(embedMsg)
         
         if idsEndpoints:
             ids_formatados = tuple(idsEndpoints) if len(idsEndpoints) > 1 else f"({idsEndpoints[0]})"
             
-        query = f"select id, nome, url, documentacao, tipo_resposta, texto from embeddings where id in {ids_formatados}"
-        resultadosFaiss = self.integracaoBd.executaQuery(query)
+        resultadosFaiss = self.integracaoBd.retEndpoints(ids_formatados)
         
         promptSelecaoEndpoints = f"""
             Sua tarefa e retornar uma lista de numeros, 
@@ -71,7 +69,6 @@ class agenteChat:
         try:
             
             endpointsRelevantes = self.modelo.invoke(promptSelecaoEndpoints)
-            
             lista = ast.literal_eval(endpointsRelevantes.content.strip())
             
         except Exception as e:

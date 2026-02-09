@@ -134,74 +134,10 @@ class integracaoBD:
             self.conexao.rollback()
             raise
         
-    def retApiEmbedding(self, embed_list:List[float]): # Busca a api com o embedding mais similar da msg do usuario 
-                
-        try:
-            embed_json_string = json.dumps(embed_list)
-        except Exception as e:
-            return []
-
-        sql_query = f"""
-            ;WITH InputVector AS (
-                SELECT CAST([key] AS INT) AS idx, CAST(value AS FLOAT) AS val
-                FROM OPENJSON(N'{embed_json_string}')
-            )
-            SELECT TOP 1
-                ea.id as idApi,
-                SUM(POWER(CAST(s_vec.value AS FLOAT) - t.val, 2)) AS L2_Distance
-            FROM embeddings_api AS ea
-            CROSS APPLY OPENJSON(ea.embedding) AS s_vec
-            INNER JOIN InputVector AS t ON t.idx = s_vec.[key]
-            GROUP BY ea.id
-            ORDER BY L2_Distance ASC;
-            """
+    def retEndpoints(self, ids):
         
-        try:
-            self.cur.execute(sql_query)
-            
-            resultados = self.cur.fetchall()
-            return resultados
-            
-        except pyodbc.Error as e:
-            self.conexao.rollback()
-            raise
-    
-    def retTabelasEmbedding(self, max_tabelas: int, embed_list: List[float], idApi: int): # Busca os top X endpoints com o embedding mais similar da msg do usuario
-                
-        try:
-            embed_json_string = json.dumps(embed_list)
-        except Exception as e:
-            return []
-
-        sql_query = f"""
-            ;WITH InputVector AS (
-                SELECT CAST([key] AS INT) AS idx, CAST(value AS FLOAT) AS val
-                FROM OPENJSON(N'{embed_json_string}')
-            )
-            SELECT TOP ({max_tabelas})
-                s.id,
-                s.nome,
-                s.url,
-                s.documentacao,
-                s.tipo_resposta,
-                s.texto,
-                SUM(CAST(s_vec.value AS FLOAT) * t.val) AS DotProduct
-            FROM embeddings AS s
-            CROSS APPLY OPENJSON(s.embedding) AS s_vec
-            INNER JOIN InputVector AS t ON t.idx = s_vec.[key]
-            WHERE s.idApi = {idApi}
-            GROUP BY s.id, s.nome, s.url, s.documentacao, s.tipo_resposta, s.texto
-            ORDER BY DotProduct DESC;
-        """
-        
-        try:
-            self.cur.execute(sql_query)
-            
-            resultados = self.cur.fetchall()
-            return resultados
-            
-        except pyodbc.Error as e:
-            self.conexao.rollback()
+        query = f"select id, nome, url, documentacao, tipo_resposta, texto from embeddings where id in {ids}"
+        return self.executaQuery(query)
     
     def executaQuery(self, query: str) -> List[Dict[str, Any]]: # Executa uma query qlqr
         
@@ -247,8 +183,8 @@ class integracaoBD:
             
             return []
     
-    def retParametros(self, id): # retonar os parametros de um determinado endpoint
-        
+    def retParametros(self, id):  # retornar os parametros de um determinado endpoint
+
         query = """
             SELECT 
                 p.Name,
@@ -260,13 +196,28 @@ class integracaoBD:
                 ON pe.ApiEndpointId = e.Id
             WHERE e.Id = ?
         """
-        
+
         try:
             self.cur.execute(query, (id,))
             colunas = [desc[0] for desc in self.cur.description]
             linhas = self.cur.fetchall()
-            return [dict(zip(colunas, linha)) for linha in linhas]
-        
+
+            resultados = []
+
+            for linha in linhas:
+                registro = {}
+
+                for coluna, valor in zip(colunas, linha):
+                    if isinstance(valor, str):
+                        try:
+                            valor = valor.encode("latin1").decode("utf-8")
+                        except UnicodeError:
+                            pass
+
+                    registro[coluna] = valor
+                resultados.append(registro)
+            return resultados
+
         except Error as e:
             return []
     

@@ -41,7 +41,6 @@ class Faiss:
         for linha in resultados_banco:
             ids.append(linha["id"])
             
-            # --- AJUSTE AQUI ---
             emb = linha["embedding"]
             
             # Verifica se o que veio do banco é uma string (texto)
@@ -122,7 +121,9 @@ class Faiss:
         # Se retornar -1, significa que não encontrou nada
         return int(id_resultado) if id_resultado != -1 else None
 
-    def ret_top_endpoints(self, vetor_query, api_id, k=5):
+    def ret_top_endpoints(self, vetor_query, k=5):
+        
+        api_id = self.ret_api_mais_similar(vetor_query)
         
         # 1. Carregar índice e mapa
         index = faiss.read_index(os.path.join(self.caminhoPasta, "endpoints.index"))
