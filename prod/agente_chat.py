@@ -55,9 +55,6 @@ class agenteChat:
         query = f"select id, nome, url, documentacao, tipo_resposta, texto from embeddings where id in {ids_formatados}"
         resultadosFaiss = self.integracaoBd.executaQuery(query)
         
-        print(resultadosFaiss)
-        print("===================================================")
-        
         promptSelecaoEndpoints = f"""
             Sua tarefa e retornar uma lista de numeros, 
             que deverao ser apenas aqueles relevantes para o contexto da mensagem do usuario (formato numero -> explicacao do contexto), listados abaixo:
@@ -70,9 +67,6 @@ class agenteChat:
         promptSelecaoEndpoints += f"\n\nMensagem do usuario: {msg}"
         # Instrução final para forçar formato
         promptSelecaoEndpoints += "\nIMPORTANTE: Retorne apenas uma lista com os numeros (exemplo: [0, 2, 4]), sem explicar"
-        
-        print(f"Mensagem tradada para filtragem de endpoints: {promptSelecaoEndpoints}")
-        print("===================================")
         
         try:
             
