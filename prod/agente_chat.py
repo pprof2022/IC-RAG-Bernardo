@@ -1,4 +1,5 @@
 from bd import integracaoBD
+from classe_faiss import Faiss
 
 import ast
 import ollama
@@ -15,6 +16,7 @@ class agenteChat:
             "0": self.respostaNatural,
             "1": self.explicacaoConsulta
         }
+        self.faiss = Faiss()
     
     def defTipoResposta(self, msg:str): # Verifica que tipo de resposta deve ser feita
         
@@ -29,9 +31,8 @@ class agenteChat:
             
             Retorne apenas o numero, fuck the explanation 
         """
-        
+    
         respotaTipoAcao = self.modelo.invoke(prompotDefineAcao) # Define qual das acoes listadas pela string acima sera executada
-        
         id = respotaTipoAcao.content.strip()
         
         return id
@@ -45,12 +46,17 @@ class agenteChat:
             return
         
         embedMsg = self.retEmbedMsg(msg) # gera o embedding da msg
+        idApi = self.faiss.ret_api_mais_similar(embedMsg)
+        idsEndpoints = self.faiss.ret_top_endpoints(embedMsg, idApi)
         
-        api = self.integracaoBd.retApiEmbedding(embedMsg) # retorna a API mais relevante para a msg do usuario
+        if idsEndpoints:
+            ids_formatados = tuple(idsEndpoints) if len(idsEndpoints) > 1 else f"({idsEndpoints[0]})"
+            
+        query = f"select id, nome, url, documentacao, tipo_resposta, texto from embeddings where id in {ids_formatados}"
+        resultadosFaiss = self.integracaoBd.executaQuery(query)
         
-        apiId = api[0][0] # extrai o id da api do retorno da consulta
-        
-        resultados = self.integracaoBd.retTabelasEmbedding(5, embedMsg, apiId) # retorna os 5 endpoints mais relevante para a msg do usuario
+        print(resultadosFaiss)
+        print("===================================================")
         
         promptSelecaoEndpoints = f"""
             Sua tarefa e retornar uma lista de numeros, 
@@ -58,12 +64,15 @@ class agenteChat:
         """
         # Adiciona as descrições dos endpoints numeradas
         promptSelecaoEndpoints += "\n".join(
-            f"{i} -> {resultado[5]}" for i, resultado in enumerate(resultados)
+            f"{i} -> {resultado["texto"]}" for i, resultado in enumerate(resultadosFaiss)
         )
         # Adiciona a mensagem do usuário
         promptSelecaoEndpoints += f"\n\nMensagem do usuario: {msg}"
         # Instrução final para forçar formato
         promptSelecaoEndpoints += "\nIMPORTANTE: Retorne apenas uma lista com os numeros (exemplo: [0, 2, 4]), sem explicar"
+        
+        print(f"Mensagem tradada para filtragem de endpoints: {promptSelecaoEndpoints}")
+        print("===================================")
         
         try:
             
@@ -76,7 +85,7 @@ class agenteChat:
             
         endpointsFinais = []
         
-        for i, resultado in enumerate(resultados): # para cada id selecionado pela LLM, adiciona a descricao do respectivo endpoint
+        for i, resultado in enumerate(resultadosFaiss): # para cada id selecionado pela LLM, adiciona a descricao do respectivo endpoint
             if i in lista:
                 endpointsFinais.append(resultado)
             
@@ -104,13 +113,13 @@ class agenteChat:
         
         for resultado in resultados:
             
-            parametros = self.integracaoBd.retParametros(resultado[0]) # passa o id do endpoint
+            parametros = self.integracaoBd.retParametros(resultado["id"]) # passa o id do endpoint
             
             # Adiciona nome, link da api, link da documentacao e formato da resposta, respectivamente
-            resposta += f"\n{resultado[1]}\nAPI: {resultado[2]}\nDocumentacao: {resultado[3]}\nFormato da resposta: {resultado[4]}\n"
+            resposta += f"\n{resultado["nome"]}\nAPI: {resultado["url"]}\nDocumentacao: {resultado["documentacao"]}\nFormato da resposta: {resultado["tipo_resposta"]}\n"
             
             if parametros: # adiciona os parametros
-                resposta =+ "Parametros: \n"
+                resposta += "Parametros: \n"
                 
                 for parametro in parametros:
                     resposta += f" - {parametro["Name"]}: {parametro["Description"]}\n"

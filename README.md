@@ -34,10 +34,10 @@ IC-RAG
   Versão preparada para **ambiente de produção**, com código ajustado para o contexto real de execução e acesso ao banco de dados.  
   Inclui scripts SQL e utilitários para inicialização e carregamento de embeddings.
 
-- **`med`**  
+- **`med/`**  
   Arquivos para realização de relatórios sobre a veracidade do banco de dados
 
-- **`sql_atualizado` e `sql_original`**  
+- **`sql_atualizado/` e `sql_original/`**  
   Arquivos para reconstrução do banco de dados
 
 - **`requirements.txt`**  
