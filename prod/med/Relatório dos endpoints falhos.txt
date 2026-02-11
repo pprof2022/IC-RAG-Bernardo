@@ -1,0 +1,65 @@
+﻿583 - 619 : API fechada, precisa de chave
+620: Ocorreu um erro ao se conectar à API (Jogando no navegador pede para acessar com o gov)
+621 - 623: Não tem url de exemplo no bd
+624: Ocorreu um erro ao se conectar à API (Jogando no navegador pede para acessar com o gov)
+625: Não tem url de exemplo no bd
+626: Ocorreu um erro ao se conectar à API (Jogando no navegador pede para acessar com o gov)
+627: Não tem url de exemplo no bd
+628: Ocorreu um erro ao se conectar à API (Jogando no navegador pede para acessar com o gov)
+629 - 630: Não tem url de exemplo no bd
+631 - 634: Ocorreu um erro ao se conectar à API (Jogando no navegador pede para acessar com o gov)
+80: Timeout
+82 - 83: Estrutura do json de resposta mudou
+764: Status Code 404
+770: Estrutura do json de resposta mudou
+777: Url com um espaço em branco no final da string
+788: No bd essa é a string de exemplo curl -X POST -F tcoord=latlon -F arquivo=@arquivo_idlatlon.txt -F email=usuario@email.com https://servicodados.ibge.gov.br/api/v1/hgeohnor/arquivo. Mas mesmo o link https://servicodados.ibge.gov.br/api/v1/hgeohnor/arquivo, não funciona
+792: No bd essa é a string de exemplo curl -X POST -F pontos=[{"lat":-20.3337673,"lon":-50.5612345},{"lat":-19.1234532,"lon":-51.8456751}] https://servicodados.ibge.gov.br/api/v1/hgeohnor/pontos
+803: Url com espaço em branco no final da string
+808: Url com espaço em branco no final da string
+814: Url com espaço em branco no final da string
+875 - 876: Os parâmetros da url de exemplo está incorreta: "statusCode":400,"message":"Um ou mais períodos NÃO compartilham os mesmos indicadores! Especifique apenas períodos que possuem o mesmo valor para a propriedade versao, conforme https://servicodados.ibge.gov.br/api/v1/pesquisas/1/periodos"
+880 - 881: "statusCode":500,"message":"Internal server error"
+882 - 886: Os parâmetros da url de exemplo está incorreta: "statusCode":400,"message":"Um ou mais períodos NÃO compartilham os mesmos indicadores! Especifique apenas períodos que possuem o mesmo valor para a propriedade versao, conforme https://servicodados.ibge.gov.br/api/v1/pesquisas/1/periodos"
+887: No bd essa é a string de exemplo CURL -X POST https://servicodados.ibge.gov.br/api/v1/ppp -F arquivo=@mtnx1951.21o -F tipo-levantamento=estatico -F modelo-antena="TRM59800.00     NONE" -F altura-antena=0.1376 -F marco-ibge=SAT99612 -F email=usuario@dominio.com.br -F autorizacao-uso=true
+891: No bd essa é a string de exemplo curl -X POST -F referencialEntrada=sad69 -F tipoCoordenadaEntrada=lat_long_gms -F tipoCoordenadaSaida=lat_long_gd -F tipoEntrada=txt -F tipoSaida=arquivo -F arquivo=@idlatlon_gms.txt -F email=exemplo@ibge.gov.br https://servicodados.ibge.gov.br/api/v1/progrid/arquivo
+897 - 901: Ocorreu um erro ao se conectar à API
+907: Url com espaço em branco no final da string
+908 - 910: Ocorreu um erro ao se conectar à API
+911: Url sem o h de http
+912: Ocorreu um erro ao se conectar à API
+1 - 38: (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+753 - 757: Estrutura do JSON mudou
+130: Timeout
+131: The server is temporarily unable to service your request due to maintenance downtime or capacity problems
+154: Timeout
+159 - 160: timeout
+178: The server is temporarily unable to service your request due to maintenance downtime or capacity problems
+193: The server is temporarily unable to service your request due to maintenance downtime or capacity problems
+198: The server is temporarily unable to service your request due to maintenance downtime or capacity problems
+205: HTTPError: 500 Server Error: Internal Server Error
+206 - 238: 
+207 - 208: Timeout
+239: Retorna um xml
+240: Página não encontrada
+248 - 249: Página não encontrada
+257: HTTP status code 404 (Acho que tem um s a mais no final da URL)
+262: Url foi quebrada (quebra de linha) no bd
+272 - 273: The method is not allowed for the requested URL.
+275: Url foi quebrada (quebra de linha) no bd
+278: The requested URL was not found on the server
+280: The requested URL was not found on the server
+283: The requested URL was not found on the server (Acho que os parametros estejam errados)
+284: default backend - 404
+285 - 292: Timeout
+293: Ocorreu um erro ao se conectar à API
+294 - 298: Timeout
+299: Ocorreu um erro ao se conectar à API
+300 - 405: timeout 
+408: “message":"Data Final inválida. Data Final deve ser maior ou igual a data atual"
+410: “message":"Data Final inválida. Data Final deve ser maior ou igual a data atual"
+412 - 425: Erro 404 not found
+435: "title":"Method Not Allowed","status":405,"detail":"Method 'GET' is not supported."
+440: Recurso não encontrado. A URL passada se refere a um recurso que não existe no sistema.
+468: timeout, interno aparentemente
+524 - 582: API fechada, precisa de chave
