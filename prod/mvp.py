@@ -7,10 +7,12 @@ import re
 # config inicial ================================================================================
 
 modeloChat = ChatOllama(model="qwen2:7b", base_url="http://localhost:11434")        # LLM de conversa
+modeloClass = "gemma3:270m"                                                         # LLM para classificacao da conversa
+modeloFiltro = "qwen3:1.7b"                                                         # LLM para filtrar endpoints
 modeloEmbedding = "embeddinggemma:latest"                                           # LLM para gerar embeddings
 
 integracaoBd = integracaoBD()
-agente_chat = agenteChat(modeloChat, modeloEmbedding, integracaoBd)
+agente_chat = agenteChat(modeloChat, modeloClass, modeloFiltro, modeloEmbedding, integracaoBd)
 
 # sistema ============================================================================
 
