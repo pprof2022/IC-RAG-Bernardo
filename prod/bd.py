@@ -172,10 +172,6 @@ class integracaoBD:
     
     def executaQuery(self, query: str) -> List[Dict[str, Any]]: # Executa uma query qlqr
         
-        print("Executando consulta SQL passada por parametro")
-        print(f"Query: {query.strip()}")
-        print("=======================================")
-        
         try:
             
             self.cur.execute(query)

@@ -144,9 +144,6 @@ class agenteChat:
     
     def explicacaoConsulta(self, msg:str, resultados:list): #resposta que consulta os endpoints relevantes para a mensagem do usuario
         
-        print(f"Iniciando explicacaoConsulta para mensagem: '{msg}'.")
-        print("===================================================")
-        
         resposta = f"""Voce pode encontrar os dados desejados nessas fontes:"""
         
         for resultado in resultados:
