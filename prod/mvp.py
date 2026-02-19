@@ -8,16 +8,15 @@ import time
 # config inicial ================================================================================
 
 modeloChat = ChatOllama(model="qwen2:7b", base_url="http://localhost:11434")        # LLM de conversa
-modeloClass = "gemma3:270m"                                                         # LLM para classificacao da conversa
-modeloFiltro = "qwen3:1.7b"                                                         # LLM para filtrar endpoints
+modeloClass = "phi3:3.8b"                                                           # LLM para classificacao da conversa
 modeloEmbedding = "embeddinggemma:latest"                                           # LLM para gerar embeddings
 
 integracaoBd = integracaoBD()
-agente_chat = agenteChat(modeloChat, modeloClass, modeloFiltro, modeloEmbedding, integracaoBd)
+agente_chat = agenteChat(modeloChat, modeloClass, modeloEmbedding, integracaoBd)
 
 # sistema ============================================================================
 
-entrada = "Queria um jeito de consultar a taxa selic"
+entrada = "Onde posso encontrar a taxa Selic"
 
 while not entrada.strip().lower().startswith("sair"):
     

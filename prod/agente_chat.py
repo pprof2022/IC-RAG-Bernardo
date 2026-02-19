@@ -10,9 +10,8 @@ from sentence_transformers import CrossEncoder
 
 class agenteChat:
     
-    def __init__(self, modelo: ChatOllama, modeloClass: str, modeloFiltro: str, modeloEmbedding: str, integracaoBd: integracaoBD):
+    def __init__(self, modelo: ChatOllama, modeloClass: str, modeloEmbedding: str, integracaoBd: integracaoBD):
         self.modeloClass: str = modeloClass
-        self.modeloFiltro: str = modeloFiltro
         self.modelo: ChatOllama = modelo
         self.modeloEmbedding = modeloEmbedding
         self.integracaoBd = integracaoBd
@@ -28,7 +27,7 @@ class agenteChat:
         
         #t1 = time.time()
         
-        promptClass = f"0=conversa 1=consulta APIs\n\n{msg}\n\nResposta:"
+        promptClass = f"0=conversa normal 1=consulta sobre dados de endpoints e APIs\n\n{msg}\n\nResposta:"
         
         classificacao = ollama.generate(
             model=self.modeloClass,
