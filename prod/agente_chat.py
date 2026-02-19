@@ -40,9 +40,6 @@ class agenteChat:
         )['response'].strip()
         
         id = "0" if "0" in classificacao else "1"
-
-        print(f"Resposta Tipo Acao (LLM): {id}")
-        print("===================================================")
         
         #print(f"Tempo funcao defTipoResposta: {time.time() - t1}")
         
@@ -62,9 +59,6 @@ class agenteChat:
         )
             
         resultadosFaiss = self.integracaoBd.retEndpoints(ids_formatados)
-        
-        print(resultadosFaiss)
-        print("===================================================")
         
         pares = [
             (msg, endpoint['texto'])
@@ -91,15 +85,10 @@ class agenteChat:
             if score > THRESHOLD
         ][:3]
         
-        # 🔹 NOVA LÓGICA:
-        # Se nenhum passou no threshold, pega o melhor score (mesmo negativo)
+        # Se todos são menores que o Threshold
         if not indices_selecionados and endpoints_ranqueados:
             melhor_endpoint = endpoints_ranqueados[0][0]
             indices_selecionados = [melhor_endpoint]
-        
-        # Log
-        for endpoint, score in endpoints_ranqueados:
-            print(f"  - {endpoint['nome']}: {score:.3f}")
 
         return indices_selecionados
         
