@@ -3,6 +3,7 @@ from bd import integracaoBD
 
 from langchain_ollama import ChatOllama
 import re
+import time
 
 # config inicial ================================================================================
 
@@ -16,13 +17,15 @@ agente_chat = agenteChat(modeloChat, modeloClass, modeloFiltro, modeloEmbedding,
 
 # sistema ============================================================================
 
-entrada = "Onde eu posso encontrar os dados dos deputados da Camara dos Deputados"
+entrada = "Queria um jeito de consultar a taxa selic"
 
 while not entrada.strip().lower().startswith("sair"):
     
     entrada = re.sub(r"[^a-zA-Z0-9\s]", "", entrada)
     
+    t1 = time.time()
     agente_chat.controleResposta(entrada)
+    print(f"Tempo total: {time.time()  - t1}")
     
     entrada = input("Escreva sua pergunta: ") # proxima pergunta
     
