@@ -6,6 +6,7 @@ import ast
 import ollama
 from langchain_ollama import ChatOllama
 import re
+from sentence_transformers import CrossEncoder
 
 class agenteChat:
     
@@ -16,6 +17,7 @@ class agenteChat:
         self.modeloEmbedding = modeloEmbedding
         self.integracaoBd = integracaoBd
         self.ollamaClient = ollama.Client()
+        self.cross_encoder = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
         self.mapRespostas = {
             "0": self.respostaNatural,
             "1": self.explicacaoConsulta
@@ -49,44 +51,56 @@ class agenteChat:
         
     def filtraEndpoints(self, msg, embedMsg):
         
-        #t1 = time.time()
-        
         idsEndpoints = self.faiss.ret_top_endpoints(embedMsg)
         
-        if idsEndpoints:
-            ids_formatados = tuple(idsEndpoints) if len(idsEndpoints) > 1 else f"({idsEndpoints[0]})"
+        if not idsEndpoints:
+            return []
+        
+        ids_formatados = (
+            tuple(idsEndpoints) 
+            if len(idsEndpoints) > 1 
+            else f"({idsEndpoints[0]})"
+        )
             
         resultadosFaiss = self.integracaoBd.retEndpoints(ids_formatados)
         
         print(resultadosFaiss)
         print("===================================================")
         
-        promptSelecaoEndpoints = f"Pergunta: {msg}\n\nOpções:\n"
-        for i, resultado in enumerate(resultadosFaiss):
-            promptSelecaoEndpoints += f"{i}. {resultado['texto']}\n"
-        promptSelecaoEndpoints += "\nRetorne APENAS os números relevantes (formato: [0,1,2]):"
-        
-        print(f"Mensagem tradada para filtragem de endpoints: {promptSelecaoEndpoints}")
-        print("===================================")
-        
-        validacao = ollama.generate(
-            model="qwen2:7b",
-            prompt=promptSelecaoEndpoints,
-            options={'temperature': 0, 'num_ctx': 1024}
-        )["response"]
-        
-        nums = re.findall(r'\d+', validacao)
-        indices_selecionados = [
-            resultadosFaiss[int(n)] 
-            for n in nums 
-            if int(n) < len(resultadosFaiss)
+        pares = [
+            (msg, endpoint['texto'])
+            for endpoint in resultadosFaiss
         ]
-
-        print("Endpoints apos a filtragem da LLM:")
-        print(indices_selecionados)
-        print("===================================================")
-
-        #print(f"Tempo funcao filtraEndpoints: {time.time() - t1}")
+            
+        # Calcular scores
+        scores = self.cross_encoder.predict(pares)
+        
+        # Ranqueamento
+        endpoints_com_score = list(zip(resultadosFaiss, scores))
+        endpoints_ranqueados = sorted(
+            endpoints_com_score,
+            key=lambda x: x[1],
+            reverse=True
+        )
+        
+        # Threshold
+        THRESHOLD = 0.3
+        
+        indices_selecionados = [
+            endpoint
+            for endpoint, score in endpoints_ranqueados
+            if score > THRESHOLD
+        ][:3]
+        
+        # 🔹 NOVA LÓGICA:
+        # Se nenhum passou no threshold, pega o melhor score (mesmo negativo)
+        if not indices_selecionados and endpoints_ranqueados:
+            melhor_endpoint = endpoints_ranqueados[0][0]
+            indices_selecionados = [melhor_endpoint]
+        
+        # Log
+        for endpoint, score in endpoints_ranqueados:
+            print(f"  - {endpoint['nome']}: {score:.3f}")
 
         return indices_selecionados
         

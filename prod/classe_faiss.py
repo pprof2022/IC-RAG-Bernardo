@@ -97,49 +97,18 @@ class Faiss:
             with open(self.caminhoMapa, "w") as f:
                 json.dump(mapa, f)
 
-    def ret_api_mais_similar(self, vetor_query):
-        
-        caminho_api = os.path.join(self.caminhoPasta, "apis.index")
-        
-        if not os.path.exists(caminho_api):
-            print("Índice de APIs não encontrado.")
-            return None
-
-        # 1. Carregar o índice de APIs
-        index = faiss.read_index(caminho_api)
-        
-        # 2. Preparar o vetor de busca (Normalizar é essencial para Cosseno)
-        query_np = np.array([vetor_query]).astype('float32')
-        faiss.normalize_L2(query_np)
-        
-        # 3. Buscar a top 1 API mais próxima
-        # k=1 pois queremos apenas a API principal para depois filtrar os endpoints nela
-        distancias, indices = index.search(query_np, 1)
-        
-        id_resultado = indices[0][0]
-        
-        # Se retornar -1, significa que não encontrou nada
-        return int(id_resultado) if id_resultado != -1 else None
-
     def ret_top_endpoints(self, vetor_query, k=5):
         
-        api_id = self.ret_api_mais_similar(vetor_query)
-        
-        # 1. Carregar índice e mapa
-        index = faiss.read_index(os.path.join(self.caminhoPasta, "endpoints.index"))
-        with open(self.caminhoMapa, "r") as f:
-            mapa = json.load(f)
-        
-        # 2. Obter IDs permitidos para esta API
-        ids_permitidos = mapa.get(str(api_id), [])
-        if not ids_permitidos:
-            return []
+        # 1. Carregar índice
+        index = faiss.read_index(
+            os.path.join(self.caminhoPasta, "endpoints.index")
+        )
 
-        # 3. Configurar seletor e buscar
-        selector = faiss.IDSelectorArray(ids_permitidos)
+        # 2. Preparar query
         query_np = np.array([vetor_query]).astype('float32')
         faiss.normalize_L2(query_np)
-        
-        distancias, indices = index.search(query_np, k, params=faiss.SearchParameters(sel=selector))
-        
+
+        # 3. Buscar diretamente no índice inteiro
+        distancias, indices = index.search(query_np, k)
+
         return [int(i) for i in indices[0] if i != -1]
