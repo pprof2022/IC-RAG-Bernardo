@@ -65,6 +65,7 @@ Verifique se o OLLama está instalado e que os modelos necessários estão dispo
 ```bash
 ollama pull qwen2:7b
 ollama pull embeddinggemma:latest
+ollama pull phi3:3.8b
 ```
 
 ---
